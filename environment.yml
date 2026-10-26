@@ -40,5 +40,7 @@ dependencies:
   - torch-spline-conv
   # ---- harmony 批次校正(spamosaic/preprocessing.py: from harmony import harmonize) ----
   - harmony-pytorch
+  # ---- scanpy 平滑等依赖 skmisc.loess ----
+  - scikit-misc
 
 name: spamosaic-env
