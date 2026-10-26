@@ -42,5 +42,11 @@ dependencies:
   - harmony-pytorch
   # ---- scanpy 平滑等依赖 skmisc.loess ----
   - scikit-misc
+  # ---- 评估指标 iLISI(reproduce/code/compute_metrics/metrics.py: from scib.metrics import lisi) ----
+  # 1.1.5 要求 pandas>=2,与上面的 pandas=1.5.3 冲突,所以固定 1.1.4。
+  # 必须从源码安装(需要 g++):wheel 里预编译的 knn_graph.o 依赖 GLIBC 2.34,
+  # 在较老的系统上无法运行,iLISI 会报 graph_lisi_indices_0.txt 找不到。
+  - --no-binary scib
+  - scib==1.1.4
 
 name: spamosaic-env
