@@ -23,5 +23,22 @@ dependencies:
 - pip:
   - rpy2==3.5.15
   - matplotlib==3.7.4
+  # ---- PyTorch / PyTorch Geometric(默认 CPU 构建) ----
+  # GPU 环境请参照 docs/source/install.rst 换成与本地 CUDA 匹配的构建,
+  # 例如 CUDA 11.7:
+  #   --extra-index-url https://download.pytorch.org/whl/cu117
+  #   torch==2.0.0+cu117
+  #   --find-links https://data.pyg.org/whl/torch-2.0.0+cu117.html
+  - --extra-index-url https://download.pytorch.org/whl/cpu
+  - --find-links https://data.pyg.org/whl/torch-2.0.0+cpu.html
+  - torch==2.0.0+cpu
+  - torch-geometric==2.3.1
+  - torch-scatter
+  - torch-sparse
+  - pyg_lib
+  - torch-cluster
+  - torch-spline-conv
+  # ---- harmony 批次校正(spamosaic/preprocessing.py: from harmony import harmonize) ----
+  - harmony-pytorch
 
 name: spamosaic-env
