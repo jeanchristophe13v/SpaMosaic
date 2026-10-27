@@ -31,7 +31,7 @@ from spamosaic.train_utils import set_seeds, train_model
 import spamosaic.utils as utls
 import spamosaic.build_graph as build_graph
 import spamosaic.architectures as archs
-from spamosaic.loss import CL_loss
+from spamosaic.loss import CL_loss, BPR_loss
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -372,7 +372,7 @@ class SpaMosaic(object):
             
         return mod_model
 
-    def train(self, net, lr, use_mini_thr=8000, mini_batch_size=1024, loss_type='adapted', T=0.01, bias=0, n_epochs=100, w_rec_g=0.):
+    def train(self, net, lr, use_mini_thr=8000, mini_batch_size=1024, loss_type='adapted', T=0.01, bias=0, n_epochs=100, w_rec_g=0., score_type='dot', lambda_topola=10.0):
         """
         Train the SpaMosaic model using contrastive and reconstruction losses.
 
@@ -387,7 +387,7 @@ class SpaMosaic(object):
         mini_batch_size : int
             Size of mini-batches if needed.
         loss_type : str
-            Type of loss ('adapted' or 'ce').
+            Type of loss ('adapted', 'ce', or 'bpr').
         T : float
             Temperature for contrastive loss.
         bias : float
@@ -396,7 +396,21 @@ class SpaMosaic(object):
             Number of training epochs.
         w_rec_g : float
             Weight for reconstruction loss.
+        score_type : str
+            'dot' or 'topola'; TopoLa uses the supplied CPU float64 QR implementation.
+        lambda_topola : float
+            Positive TopoLa matrix regularization. For paper BPR+ scaling, set T to this value.
         """
+        if loss_type not in ('adapted', 'ce', 'bpr'):
+            raise ValueError("loss_type must be 'adapted', 'ce', or 'bpr'")
+        if score_type not in ('dot', 'topola'):
+            raise ValueError("score_type must be 'dot' or 'topola'")
+        if not math.isfinite(T) or T <= 0:
+            raise ValueError('T must be positive and finite')
+        if not math.isfinite(lambda_topola) or lambda_topola <= 0:
+            raise ValueError('lambda_topola must be positive and finite')
+        if loss_type == 'ce' and any(len(ms) != 2 for ms in self.bridge_batch_num_ids2mod.values()):
+            raise ValueError('ce requires exactly two modalities per bridge batch')
         # set model architectures
         mod_model = self.prepare_net(net)
 
@@ -410,6 +424,8 @@ class SpaMosaic(object):
         for bi, ms in self.bridge_batch_num_ids2mod.items():
             n_cell = self.mod_batch_split[ms[0]][bi]
             n_loss_batch = n_cell if n_cell <= use_mini_thr else mini_batch_size  # determine mini-batch size for each batch
+            if not 2 <= n_loss_batch <= n_cell:
+                raise ValueError('Contrastive batch size must be between 2 and the number of bridge spots')
             n_batch = n_cell // n_loss_batch                                      # size of mini-batches
             batch_train_meta_numbers[bi] = (True, n_cell, n_loss_batch, n_batch, len(ms), ms)
         for bi, ms in self.non_bridge_batch_num_ids2mod.items():
@@ -417,9 +433,11 @@ class SpaMosaic(object):
         # print(batch_train_meta_numbers)
 
         # detetermine contrastive learning loss 
-        if loss_type=='adapted':  # use our proposed contrastive learning loss, which can handle alignment of three or more modalities
+        if loss_type in ('adapted', 'bpr'):
             crit1 = {
-                bi:CL_loss(batch_train_meta_numbers[bi][2], rep=batch_train_meta_numbers[bi][4], bias=bias).to(self.device)
+                bi:(CL_loss(batch_train_meta_numbers[bi][2], rep=batch_train_meta_numbers[bi][4], bias=bias)
+                    if loss_type == 'adapted' else
+                    BPR_loss(batch_train_meta_numbers[bi][2], rep=batch_train_meta_numbers[bi][4])).to(self.device)
                 for bi in self.bridge_batch_num_ids
             }
         else:  
@@ -433,7 +451,7 @@ class SpaMosaic(object):
             mod_model, mod_optims, crit1, crit2, loss_type, w_rec_g,
             self.mod_graphs['attribute'], self.mod_graphs['edge'], self.mod_graphs['edgeW'], self.mod_graphs['edgeC'],
             batch_train_meta_numbers, self.mod_batch_split,
-            T, n_epochs, self.device
+            T, n_epochs, self.device, score_type=score_type, lambda_topola=lambda_topola
         )
 
         self.mod_model = mod_model

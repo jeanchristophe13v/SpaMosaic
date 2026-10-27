@@ -27,6 +27,7 @@ import torch.nn.functional as F
 from sklearn.decomposition import PCA
 from sklearn.metrics import adjusted_rand_score
 from torch_geometric.utils import negative_sampling
+from topola_D_and_S import full_topola_distance
 
 import random
 def set_seeds(seed, dt=True):
@@ -98,7 +99,7 @@ def train_model(
         mod_model, mod_optims, crit1, crit2, loss_type, w_rec_g, 
         mod_input_feat, mod_graphs_edge, mod_graphs_edge_w, mod_graphs_edge_c, 
         batch_train_meta_numbers, mod_batch_split, 
-        T, n_epochs, device
+        T, n_epochs, device, score_type='dot', lambda_topola=10.0
     ):
     """
     Train multi-modal GNN model with contrastive and reconstruction losses.
@@ -114,7 +115,7 @@ def train_model(
     crit2 : Callable
         Reconstruction loss function (e.g., MSELoss).
     loss_type : str
-        Either 'adapted' (multi-modality) or 'standard' (2-modality) contrastive loss.
+        'adapted', 'bpr' (multi-modality), or 'ce' (2-modality).
     w_rec_g : float
         Weight for graph reconstruction loss; (1 - w_rec_g) used for feature reconstruction.
     mod_input_feat : dict[str, torch.Tensor]
@@ -135,6 +136,10 @@ def train_model(
         Number of training epochs.
     device : torch.device
         Device used for training.
+    score_type : str
+        'dot' or 'topola'.
+    lambda_topola : float
+        TopoLa matrix regularization, independent of the score temperature T.
 
     Returns
     -------
@@ -189,13 +194,14 @@ def train_model(
 
             for i in range(meta[3]):
                 feat = [mod_embs[k][bi][i*meta[2]:(i+1)*meta[2]] for k in meta[5]]
-                if loss_type=='adapted':
-                    feat = torch.cat(feat)
-                    l1 += crit1[bi]((feat @ feat.t()) / T)
+                feat = torch.cat(feat)
+                scores = (feat @ feat.T) if score_type == 'dot' else full_topola_distance(feat, lambda_topola)
+                if loss_type in ('adapted', 'bpr'):
+                    l1 += crit1[bi](scores / T)
                 else:
-                    logit = (feat[0] @ feat[1].T)/T
+                    logit = scores[:meta[2], meta[2]:] / T
                     target = torch.arange(meta[2]).to(device)
-                    l1 += 0.5 * (crit1[bi](logit, target) + crit1[bi](logit.T, target))
+                    l1 += 0.5 * (crit1(logit, target) + crit1(logit.T, target))
                 l1_step += 1
         
         loss = l1/max(1, l1_step) + l2/max(1, l2_step) 

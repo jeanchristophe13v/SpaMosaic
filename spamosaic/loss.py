@@ -1,3 +1,5 @@
+from itertools import combinations
+
 import torch
 import torch.nn.functional as F
 
@@ -72,3 +74,29 @@ class CL_loss(torch.nn.Module):
         loss = -(positives - torch.log(negatives+self.bias)).mean()   # adding a non-zero constant in case grad explosion
 
         return loss
+
+
+class BPR_loss(torch.nn.Module):
+    """Mean bidirectional ranking loss over modality pairs and off-diagonal negatives.
+
+    Scores contain modality-major blocks of aligned spots, already temperature-scaled.
+    All modalities share the same score matrix, including the TopoLa transformation.
+    """
+
+    def __init__(self, batch_size, rep=2):
+        super().__init__()
+        self.batch_size = batch_size
+        self.n_mods = rep
+        self.register_buffer('negative_mask', ~torch.eye(batch_size, dtype=torch.bool))
+
+    def forward(self, scores):
+        losses = []
+        for a, b in combinations(range(self.n_mods), 2):
+            cross = scores[
+                a * self.batch_size:(a + 1) * self.batch_size,
+                b * self.batch_size:(b + 1) * self.batch_size,
+            ]
+            positive = cross.diagonal()[:, None]
+            losses.append(F.softplus(cross - positive)[self.negative_mask].mean())
+            losses.append(F.softplus(cross.T - positive)[self.negative_mask].mean())
+        return torch.stack(losses).mean()
