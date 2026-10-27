@@ -171,6 +171,14 @@ def mclust_R(adata, num_cluster, modelNames='EEE', used_obsm='emb', random_seed=
     """
 
     np.random.seed(random_seed)
+    # rpy2 需要能定位 R 安装目录:优先用已设置的 R_HOME,否则从当前 Python
+    # 所在的 conda 环境推导(sys.prefix/lib/R),避免 kernel PATH 中没有 R 导致
+    # "openrlib.R_HOME cannot be None" 报错。必须在 import rpy2 之前设置。
+    import os as _os, sys as _sys
+    if not _os.environ.get('R_HOME'):
+        _r_home = _os.path.join(_sys.prefix, 'lib', 'R')
+        if _os.path.isdir(_r_home):
+            _os.environ['R_HOME'] = _r_home
     import rpy2.robjects as robjects
     robjects.r.library("mclust")
 
