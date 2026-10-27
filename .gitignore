@@ -1,3 +1,22 @@
+# Python
 __pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Jupyter
 .ipynb_checkpoints/
-data
+
+# macOS
+.DS_Store
+._*
+
+# Local agent state
+.pi/
+
+# Local datasets (demo/data and reproduce/data stay tracked)
+/data/
+
+# Experiment outputs
+/loss_experiments/
