@@ -1,0 +1,30 @@
+{
+  "datasets": [
+    "Simulations",
+    "MB-H3K4me3"
+  ],
+  "data_root": "/data/home/jiboya/SpaMosaic/data",
+  "sim_setting": "rna-0.1-12-adt-2.1",
+  "sim_rep": "1",
+  "device": "cuda:0",
+  "seeds": [
+    1234
+  ],
+  "variants": [
+    "dot_cl",
+    "topola_cl",
+    "dot_bpr",
+    "topola_bpr"
+  ],
+  "temperatures": null,
+  "topola_lambdas": [
+    10.0
+  ],
+  "bpr_scaling": "temperature",
+  "epochs": 100,
+  "lr": 0.01,
+  "mini_batch_size": 1024,
+  "use_mini_thr": 8000,
+  "output_dir": "loss_experiments/topola_first_run",
+  "smoke_test": false
+}

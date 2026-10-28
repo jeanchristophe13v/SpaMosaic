@@ -1,0 +1,3 @@
+id,date,change,key_result
+exp001,2026-10-27,TopoLa 损失消融首跑: dot/topola × CL/BPR 四变体; Simulations + MB-H3K4me3; λ=10; T=0.1; seed1234,Simulations: dot_bpr 最优 (ARI all=0.923; iLISI=0.543); topola 两变体明显变差 (ARI≈0.55-0.59); MB 部分因 R_HOME 错误中途崩溃
+exp002,2026-10-27,修复 R_HOME 后仅重跑 MB-H3K4me3 (T=0.01); 其余同 exp001,4 变体全部完成 (无 gt; 仅 PAS/CHAOS/iLISI): 整合 dot_cl 最好 (iLISI=0.498); topola_cl=0.395; dot_bpr 批次未混 (iLISI≈0); PAS/CHAOS 各变体接近

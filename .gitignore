@@ -18,5 +18,6 @@ dist/
 # Local datasets (demo/data and reproduce/data stay tracked)
 /data/
 
-# Experiment outputs
-/loss_experiments/
+# Experiments: track index.csv / scripts / log / small csv+json;
+# ignore heavy regenerable artifacts
+/experiments/**/*.h5ad
