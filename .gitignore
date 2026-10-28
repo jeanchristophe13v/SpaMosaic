@@ -28,6 +28,8 @@ dist/
 /experiments/**/results/**/seed*/
 /experiments/**/results/runs/
 /experiments/**/results/cache/
+examples/out/
 
 # Sphinx build output
 docs/build/
+
