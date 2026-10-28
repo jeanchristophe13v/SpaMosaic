@@ -1,0 +1,14 @@
+prepare START prepare_Simulations_rep1 GPU 0
+prepare START prepare_Simulations_rep2 GPU 1
+prepare START prepare_Simulations_rep3 GPU 3
+prepare START prepare_MB-H3K4me3_rep1 GPU 5
+prepare DONE prepare_Simulations_rep1
+prepare DONE prepare_Simulations_rep3
+prepare DONE prepare_Simulations_rep2
+prepare DONE prepare_MB-H3K4me3_rep1
+pilot START pilot_Simulations_factor_topola_bpr_all_both_rep1_seed1234 GPU 0
+pilot START pilot_Simulations_reference_fixed_0_1_rep1_seed1234 GPU 1
+pilot START pilot_MB-H3K4me3_factor_topola_bpr_all_both_rep1_seed1234 GPU 3
+pilot START pilot_MB-H3K4me3_reference_fixed_0_1_rep1_seed1234 GPU 5
+pilot DONE pilot_Simulations_factor_topola_bpr_all_both_rep1_seed1234
+pilot DONE pilot_Simulations_reference_fixed_0_1_rep1_seed1234

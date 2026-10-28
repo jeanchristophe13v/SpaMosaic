@@ -1,0 +1,9 @@
+Simulations_paper_all_1e-07_rep1_seed1234 1 {'epoch': 1, 'alignment': 15447.509765625, 'reconstruction': 2.2908358573913574, 'total': 15449.80078125, 'elapsed_seconds': 0.17365741729736328}
+Simulations_paper_all_1e-07_rep1_seed1234 5 {'epoch': 5, 'alignment': 3369.31103515625, 'reconstruction': 2.055911064147949, 'total': 3371.366943359375, 'elapsed_seconds': 0.4012167453765869}
+Simulations_paper_all_1e-07_rep1_seed1234 10 {'epoch': 10, 'alignment': 1530.861083984375, 'reconstruction': 1.6070747375488281, 'total': 1532.4681396484375, 'elapsed_seconds': 0.5034000873565674}
+Simulations_paper_all_1e-07_rep1_seed1234 25 {'epoch': 25, 'alignment': 522.9624633789062, 'reconstruction': 0.9460612535476685, 'total': 523.9085083007812, 'elapsed_seconds': 0.8872644901275635}
+Simulations_paper_all_1e-07_rep1_seed1234 50 {'epoch': 50, 'alignment': 224.23379516601562, 'reconstruction': 0.7456603050231934, 'total': 224.97946166992188, 'elapsed_seconds': 1.4497098922729492}
+Simulations_paper_all_1e-07_rep1_seed1234 100 {'epoch': 100, 'alignment': 91.5243148803711, 'reconstruction': 0.7341625690460205, 'total': 92.25847625732422, 'elapsed_seconds': 2.3505606651306152}
+Simulations_paper_all_1e-07_rep1_seed1234 200 {'epoch': 200, 'alignment': 31.719511032104492, 'reconstruction': 0.7838436961174011, 'total': 32.503353118896484, 'elapsed_seconds': 18.77163600921631}
+Simulations_paper_all_1e-07_rep1_seed1234 300 {'epoch': 300, 'alignment': 14.480753898620605, 'reconstruction': 0.8202254772186279, 'total': 15.300979614257812, 'elapsed_seconds': 21.48078203201294}
+COMPLETE Simulations_paper_all_1e-07_rep1_seed1234

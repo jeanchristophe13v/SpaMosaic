@@ -1,0 +1,18 @@
+pilot_MB-H3K4me3_factor_topola_bpr_all_both_rep1_seed1234 1 {'epoch': 1, 'alignment': 33.667694091796875, 'reconstruction': 0.7451882362365723, 'total': 208.2130584716797, 'elapsed_seconds': 0.19241094589233398}
+R[write to console]:                    __           __ 
+   ____ ___  _____/ /_  _______/ /_
+  / __ `__ \/ ___/ / / / / ___/ __/
+ / / / / / / /__/ / /_/ (__  ) /_  
+/_/ /_/ /_/\___/_/\__,_/____/\__/   version 6.0.0
+Type 'citation("mclust")' for citing this R package in publications.
+
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+pilot_MB-H3K4me3_factor_topola_bpr_all_both_rep1_seed1234 2 {'epoch': 2, 'alignment': 12.233991622924805, 'reconstruction': 0.7721010446548462, 'total': 76.16069793701172, 'elapsed_seconds': 0.32955431938171387}
+COMPLETE pilot_MB-H3K4me3_factor_topola_bpr_all_both_rep1_seed1234

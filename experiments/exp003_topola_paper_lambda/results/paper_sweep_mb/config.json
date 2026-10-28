@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    "MB-H3K4me3"
+  ],
+  "data_root": "data",
+  "sim_setting": "rna-0.1-12-adt-2.1",
+  "sim_rep": "1",
+  "device": "cuda:2",
+  "seeds": [
+    1234
+  ],
+  "variants": [
+    "dot_bpr",
+    "topola_bpr"
+  ],
+  "temperatures": null,
+  "topola_lambdas": [
+    0.001,
+    1.0,
+    10.0,
+    30.0,
+    100.0,
+    300.0,
+    1000.0
+  ],
+  "bpr_scaling": "paper",
+  "epochs": 100,
+  "lr": 0.01,
+  "mini_batch_size": 1024,
+  "use_mini_thr": 8000,
+  "output_dir": "experiments/exp003_topola_paper_lambda/results/paper_sweep_mb",
+  "smoke_test": false
+}

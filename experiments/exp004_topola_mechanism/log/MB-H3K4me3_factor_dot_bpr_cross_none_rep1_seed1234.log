@@ -1,0 +1,32 @@
+MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234 1 {'epoch': 1, 'alignment': 9.243753433227539, 'reconstruction': 0.7451882362365723, 'total': 9.988941192626953, 'elapsed_seconds': 2.056325912475586}
+MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234 5 {'epoch': 5, 'alignment': 0.3811818063259125, 'reconstruction': 0.6963794231414795, 'total': 1.0775612592697144, 'elapsed_seconds': 4.246462106704712}
+MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234 10 {'epoch': 10, 'alignment': 0.18502935767173767, 'reconstruction': 0.5721868872642517, 'total': 0.757216215133667, 'elapsed_seconds': 4.684427499771118}
+MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234 25 {'epoch': 25, 'alignment': 0.08673492819070816, 'reconstruction': 0.24612444639205933, 'total': 0.3328593671321869, 'elapsed_seconds': 5.791259050369263}
+MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234 50 {'epoch': 50, 'alignment': 0.04888176918029785, 'reconstruction': 0.1367230862379074, 'total': 0.18560485541820526, 'elapsed_seconds': 7.39335823059082}
+R[write to console]:                    __           __ 
+   ____ ___  _____/ /_  _______/ /_
+  / __ `__ \/ ___/ / / / / ___/ __/
+ / / / / / / /__/ / /_/ (__  ) /_  
+/_/ /_/ /_/\___/_/\__,_/____/\__/   version 6.0.0
+Type 'citation("mclust")' for citing this R package in publications.
+
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234 100 {'epoch': 100, 'alignment': 0.03597328066825867, 'reconstruction': 0.1132717952132225, 'total': 0.14924508333206177, 'elapsed_seconds': 10.583870649337769}
+MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234 200 {'epoch': 200, 'alignment': 0.02567780762910843, 'reconstruction': 0.0964629054069519, 'total': 0.12214071303606033, 'elapsed_seconds': 125.41688990592957}
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234 300 {'epoch': 300, 'alignment': 0.02037237212061882, 'reconstruction': 0.0892118513584137, 'total': 0.10958422720432281, 'elapsed_seconds': 132.0876750946045}
+COMPLETE MB-H3K4me3_factor_dot_bpr_cross_none_rep1_seed1234

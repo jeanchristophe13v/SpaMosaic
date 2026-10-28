@@ -1,0 +1,112 @@
+Loaded Simulations/ad_rna1: (1296, 200)
+Loaded Simulations/ad_rna2: (1296, 200)
+Loaded Simulations/ad_adt1: (1296, 100)
+Loaded Simulations/ad_adt2: (1296, 100)
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+	Completed 4 / 10 iteration(s).
+	Completed 5 / 10 iteration(s).
+	Completed 6 / 10 iteration(s).
+	Completed 7 / 10 iteration(s).
+	Completed 8 / 10 iteration(s).
+Reach convergence after 8 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+	Completed 4 / 10 iteration(s).
+	Completed 5 / 10 iteration(s).
+	Completed 6 / 10 iteration(s).
+	Completed 7 / 10 iteration(s).
+	Completed 8 / 10 iteration(s).
+	Completed 9 / 10 iteration(s).
+Reach convergence after 9 iteration(s).
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4342
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:01<01:51,  1.13s/it]  2%|▏         | 2/100 [00:01<01:29,  1.10it/s]  3%|▎         | 3/100 [00:02<01:20,  1.21it/s]  4%|▍         | 4/100 [00:03<01:14,  1.28it/s]  5%|▌         | 5/100 [00:04<01:11,  1.33it/s]  6%|▌         | 6/100 [00:04<01:16,  1.22it/s]  7%|▋         | 7/100 [00:05<01:06,  1.40it/s]  8%|▊         | 8/100 [00:06<01:05,  1.41it/s]  9%|▉         | 9/100 [00:06<01:03,  1.42it/s] 10%|█         | 10/100 [00:07<01:02,  1.43it/s] 11%|█         | 11/100 [00:08<01:02,  1.41it/s] 12%|█▏        | 12/100 [00:08<01:02,  1.41it/s] 13%|█▎        | 13/100 [00:09<01:01,  1.43it/s] 14%|█▍        | 14/100 [00:10<01:00,  1.43it/s] 15%|█▌        | 15/100 [00:11<00:58,  1.45it/s] 16%|█▌        | 16/100 [00:11<00:59,  1.41it/s] 17%|█▋        | 17/100 [00:12<00:57,  1.45it/s] 18%|█▊        | 18/100 [00:13<00:54,  1.49it/s] 19%|█▉        | 19/100 [00:13<00:50,  1.61it/s] 20%|██        | 20/100 [00:13<00:39,  2.02it/s] 21%|██        | 21/100 [00:13<00:31,  2.50it/s] 22%|██▏       | 22/100 [00:14<00:25,  3.02it/s] 23%|██▎       | 23/100 [00:14<00:29,  2.62it/s] 24%|██▍       | 24/100 [00:15<00:37,  2.01it/s] 25%|██▌       | 25/100 [00:16<00:42,  1.75it/s] 26%|██▌       | 26/100 [00:16<00:45,  1.62it/s] 27%|██▋       | 27/100 [00:17<00:35,  2.06it/s] 28%|██▊       | 28/100 [00:17<00:34,  2.11it/s] 29%|██▉       | 29/100 [00:18<00:40,  1.76it/s] 30%|███       | 30/100 [00:19<00:46,  1.51it/s] 31%|███       | 31/100 [00:19<00:48,  1.42it/s] 32%|███▏      | 32/100 [00:20<00:48,  1.40it/s] 33%|███▎      | 33/100 [00:21<00:47,  1.42it/s] 34%|███▍      | 34/100 [00:21<00:42,  1.57it/s] 35%|███▌      | 35/100 [00:22<00:32,  2.00it/s] 37%|███▋      | 37/100 [00:22<00:23,  2.64it/s] 38%|███▊      | 38/100 [00:22<00:22,  2.81it/s] 40%|████      | 40/100 [00:22<00:14,  4.25it/s] 43%|████▎     | 43/100 [00:23<00:08,  6.78it/s] 45%|████▌     | 45/100 [00:23<00:07,  7.79it/s] 47%|████▋     | 47/100 [00:23<00:06,  8.64it/s] 50%|█████     | 50/100 [00:23<00:04, 10.84it/s] 52%|█████▏    | 52/100 [00:23<00:03, 12.29it/s] 55%|█████▌    | 55/100 [00:23<00:03, 14.89it/s] 58%|█████▊    | 58/100 [00:23<00:02, 17.37it/s] 61%|██████    | 61/100 [00:24<00:02, 19.29it/s] 64%|██████▍   | 64/100 [00:24<00:01, 20.07it/s] 67%|██████▋   | 67/100 [00:24<00:01, 19.54it/s] 70%|███████   | 70/100 [00:24<00:01, 18.62it/s] 73%|███████▎  | 73/100 [00:24<00:01, 20.11it/s] 76%|███████▌  | 76/100 [00:24<00:01, 21.25it/s] 79%|███████▉  | 79/100 [00:24<00:00, 22.21it/s] 82%|████████▏ | 82/100 [00:25<00:00, 22.68it/s] 85%|████████▌ | 85/100 [00:25<00:00, 22.00it/s] 88%|████████▊ | 88/100 [00:25<00:00, 22.94it/s] 91%|█████████ | 91/100 [00:25<00:00, 23.13it/s] 94%|█████████▍| 94/100 [00:25<00:00, 22.84it/s] 97%|█████████▋| 97/100 [00:25<00:00, 22.66it/s]100%|██████████| 100/100 [00:25<00:00, 22.95it/s]100%|██████████| 100/100 [00:25<00:00,  3.88it/s]
+=== Simulations: 100 kernel calls, n=2592, d=32 ===
+rho=eig_max: median=410.9 min=300.7 max=825.9
+eig_median: median=48.2  eig_min: median=20.17
+sanity trace vs n: 2592.0 vs 2592
+  lambda=   1e-07: lambda/rho=2.434e-10  ~exact projection (lambda<<eig_min)
+  lambda=   1e-05: lambda/rho=2.434e-08  ~exact projection (lambda<<eig_min)
+  lambda=   0.001: lambda/rho=2.434e-06  ~exact projection (lambda<<eig_min)
+  lambda=     0.1: lambda/rho=0.0002434  ~exact projection (lambda<<eig_min)
+  lambda=       1: lambda/rho=0.002434  ~exact projection (lambda<<eig_min)
+  lambda=      10: lambda/rho=0.02434  ~exact projection (lambda<<eig_min)
+  lambda=     100: lambda/rho=0.2434  regularization regime
+Loaded MB-H3K4me3/S1/ad_rna: (9548, 21536)
+Loaded MB-H3K4me3/S2/ad_rna: (9370, 21536)
+Loaded MB-H3K4me3/S1/ad_h3k4me3: (9548, 36768)
+Loaded MB-H3K4me3/S3/ad_h3k4me3: (2499, 36768)
+
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+Reach convergence after 3 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+Reach convergence after 2 iteration(s).
+batch0: ['rna', 'H3K4me3']
+batch1: ['rna']
+batch2: ['H3K4me3']
+------Calculating spatial graph...
+The graph contains 95480 edges, 9548 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 93700 edges, 9370 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 95480 edges, 9548 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 24990 edges, 2499 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:12002
+Searching MNN within H3K4me3
+Finding MNN between (mult, atac) using KNN (10, 10)
+Number of mnn pairs for H3K4me3:8361
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:38,  2.57it/s]  2%|▏         | 2/100 [00:00<00:28,  3.47it/s]  3%|▎         | 3/100 [00:00<00:26,  3.68it/s]  4%|▍         | 4/100 [00:01<00:23,  4.17it/s]  5%|▌         | 5/100 [00:01<00:21,  4.44it/s]  6%|▌         | 6/100 [00:01<00:21,  4.33it/s]  7%|▋         | 7/100 [00:01<00:20,  4.57it/s]  8%|▊         | 8/100 [00:01<00:19,  4.73it/s]  9%|▉         | 9/100 [00:02<00:21,  4.29it/s] 10%|█         | 10/100 [00:02<00:19,  4.58it/s] 11%|█         | 11/100 [00:02<00:19,  4.57it/s] 12%|█▏        | 12/100 [00:02<00:18,  4.78it/s] 13%|█▎        | 13/100 [00:03<00:19,  4.51it/s] 14%|█▍        | 14/100 [00:03<00:20,  4.24it/s] 15%|█▌        | 15/100 [00:03<00:22,  3.76it/s] 16%|█▌        | 16/100 [00:04<00:27,  3.08it/s] 17%|█▋        | 17/100 [00:04<00:25,  3.21it/s] 18%|█▊        | 18/100 [00:04<00:27,  2.93it/s] 19%|█▉        | 19/100 [00:05<00:28,  2.81it/s] 20%|██        | 20/100 [00:05<00:28,  2.76it/s] 21%|██        | 21/100 [00:05<00:30,  2.58it/s] 22%|██▏       | 22/100 [00:06<00:32,  2.43it/s] 23%|██▎       | 23/100 [00:07<00:38,  2.02it/s] 24%|██▍       | 24/100 [00:07<00:35,  2.14it/s] 25%|██▌       | 25/100 [00:07<00:32,  2.34it/s] 26%|██▌       | 26/100 [00:08<00:33,  2.24it/s] 27%|██▋       | 27/100 [00:08<00:34,  2.14it/s] 28%|██▊       | 28/100 [00:09<00:32,  2.20it/s] 29%|██▉       | 29/100 [00:09<00:31,  2.27it/s] 30%|███       | 30/100 [00:09<00:27,  2.56it/s] 31%|███       | 31/100 [00:10<00:25,  2.75it/s] 32%|███▏      | 32/100 [00:10<00:22,  2.97it/s] 33%|███▎      | 33/100 [00:10<00:23,  2.88it/s] 34%|███▍      | 34/100 [00:11<00:21,  3.03it/s] 35%|███▌      | 35/100 [00:11<00:21,  3.07it/s] 36%|███▌      | 36/100 [00:11<00:19,  3.25it/s] 37%|███▋      | 37/100 [00:12<00:18,  3.33it/s] 38%|███▊      | 38/100 [00:12<00:17,  3.55it/s] 39%|███▉      | 39/100 [00:12<00:16,  3.76it/s] 40%|████      | 40/100 [00:12<00:15,  3.97it/s] 41%|████      | 41/100 [00:13<00:14,  4.02it/s] 42%|████▏     | 42/100 [00:13<00:14,  4.13it/s] 43%|████▎     | 43/100 [00:13<00:12,  4.47it/s] 44%|████▍     | 44/100 [00:13<00:12,  4.44it/s] 45%|████▌     | 45/100 [00:13<00:12,  4.56it/s] 46%|████▌     | 46/100 [00:14<00:12,  4.43it/s] 47%|████▋     | 47/100 [00:14<00:12,  4.32it/s] 48%|████▊     | 48/100 [00:14<00:14,  3.66it/s] 49%|████▉     | 49/100 [00:15<00:15,  3.31it/s] 50%|█████     | 50/100 [00:15<00:16,  3.10it/s] 51%|█████     | 51/100 [00:15<00:15,  3.06it/s] 52%|█████▏    | 52/100 [00:16<00:16,  2.95it/s] 53%|█████▎    | 53/100 [00:16<00:15,  3.07it/s] 54%|█████▍    | 54/100 [00:16<00:15,  2.92it/s] 55%|█████▌    | 55/100 [00:17<00:17,  2.63it/s] 56%|█████▌    | 56/100 [00:17<00:15,  2.89it/s] 57%|█████▋    | 57/100 [00:17<00:12,  3.38it/s] 58%|█████▊    | 58/100 [00:17<00:11,  3.64it/s] 59%|█████▉    | 59/100 [00:18<00:10,  3.83it/s] 60%|██████    | 60/100 [00:18<00:09,  4.14it/s] 61%|██████    | 61/100 [00:18<00:08,  4.52it/s] 62%|██████▏   | 62/100 [00:18<00:10,  3.78it/s] 63%|██████▎   | 63/100 [00:19<00:09,  4.03it/s] 64%|██████▍   | 64/100 [00:19<00:08,  4.33it/s] 65%|██████▌   | 65/100 [00:19<00:08,  4.29it/s] 66%|██████▌   | 66/100 [00:19<00:07,  4.54it/s] 67%|██████▋   | 67/100 [00:19<00:06,  4.76it/s] 68%|██████▊   | 68/100 [00:20<00:07,  4.56it/s] 69%|██████▉   | 69/100 [00:20<00:06,  4.66it/s] 70%|███████   | 70/100 [00:20<00:06,  4.63it/s] 71%|███████   | 71/100 [00:20<00:06,  4.71it/s] 72%|███████▏  | 72/100 [00:20<00:05,  4.91it/s] 73%|███████▎  | 73/100 [00:21<00:05,  4.95it/s] 74%|███████▍  | 74/100 [00:21<00:05,  4.63it/s] 75%|███████▌  | 75/100 [00:21<00:05,  4.63it/s] 76%|███████▌  | 76/100 [00:21<00:05,  4.35it/s] 77%|███████▋  | 77/100 [00:22<00:05,  4.60it/s] 78%|███████▊  | 78/100 [00:22<00:05,  4.14it/s] 79%|███████▉  | 79/100 [00:22<00:05,  3.93it/s] 80%|████████  | 80/100 [00:22<00:05,  3.99it/s] 81%|████████  | 81/100 [00:23<00:04,  3.92it/s] 82%|████████▏ | 82/100 [00:23<00:04,  4.12it/s] 83%|████████▎ | 83/100 [00:23<00:03,  4.27it/s] 84%|████████▍ | 84/100 [00:23<00:03,  4.22it/s] 85%|████████▌ | 85/100 [00:24<00:03,  4.47it/s] 86%|████████▌ | 86/100 [00:24<00:03,  4.38it/s] 87%|████████▋ | 87/100 [00:24<00:03,  4.18it/s] 88%|████████▊ | 88/100 [00:24<00:02,  4.53it/s] 89%|████████▉ | 89/100 [00:24<00:02,  4.80it/s] 90%|█████████ | 90/100 [00:25<00:02,  4.53it/s] 91%|█████████ | 91/100 [00:25<00:02,  4.42it/s] 92%|█████████▏| 92/100 [00:25<00:01,  4.54it/s] 93%|█████████▎| 93/100 [00:25<00:01,  4.49it/s] 94%|█████████▍| 94/100 [00:26<00:01,  4.66it/s] 95%|█████████▌| 95/100 [00:26<00:01,  4.44it/s] 96%|█████████▌| 96/100 [00:26<00:00,  4.39it/s] 97%|█████████▋| 97/100 [00:26<00:00,  4.43it/s] 98%|█████████▊| 98/100 [00:26<00:00,  4.41it/s] 99%|█████████▉| 99/100 [00:27<00:00,  4.40it/s]100%|██████████| 100/100 [00:27<00:00,  4.50it/s]100%|██████████| 100/100 [00:27<00:00,  3.65it/s]
+
+=== MB-H3K4me3: 900 kernel calls, n=2048, d=32 ===
+rho=eig_max: median=344.8 min=197.6 max=679.4
+eig_median: median=47.0  eig_min: median=18.99
+sanity trace vs n: 2048.0 vs 2048
+  lambda=   1e-07: lambda/rho=2.901e-10  ~exact projection (lambda<<eig_min)
+  lambda=   1e-05: lambda/rho=2.901e-08  ~exact projection (lambda<<eig_min)
+  lambda=   0.001: lambda/rho=2.901e-06  ~exact projection (lambda<<eig_min)
+  lambda=     0.1: lambda/rho=0.0002901  ~exact projection (lambda<<eig_min)
+  lambda=       1: lambda/rho=0.002901  ~exact projection (lambda<<eig_min)
+  lambda=      10: lambda/rho=0.02901  ~exact projection (lambda<<eig_min)
+  lambda=     100: lambda/rho=0.2901  regularization regime
+
+Wrote /data/home/jiboya/SpaMosaic/experiments/exp003_topola_paper_lambda/results/lambda_scale.csv

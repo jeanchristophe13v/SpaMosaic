@@ -1,0 +1,9 @@
+Simulations_reference_random_512_1_rep1_seed1234 1 {'epoch': 1, 'alignment': 1.8770134449005127, 'reconstruction': 2.2908358573913574, 'total': 10.332208633422852, 'elapsed_seconds': 0.09873032569885254}
+Simulations_reference_random_512_1_rep1_seed1234 5 {'epoch': 5, 'alignment': 0.177449569106102, 'reconstruction': 1.9172818660736084, 'total': 2.677499294281006, 'elapsed_seconds': 0.20806479454040527}
+Simulations_reference_random_512_1_rep1_seed1234 10 {'epoch': 10, 'alignment': 0.10222069919109344, 'reconstruction': 1.2973954677581787, 'total': 1.73532235622406, 'elapsed_seconds': 0.3150148391723633}
+Simulations_reference_random_512_1_rep1_seed1234 25 {'epoch': 25, 'alignment': 0.05116654187440872, 'reconstruction': 0.7886419296264648, 'total': 1.0078461170196533, 'elapsed_seconds': 0.5766167640686035}
+Simulations_reference_random_512_1_rep1_seed1234 50 {'epoch': 50, 'alignment': 0.020349876955151558, 'reconstruction': 0.57673180103302, 'total': 0.663913369178772, 'elapsed_seconds': 1.1259171962738037}
+Simulations_reference_random_512_1_rep1_seed1234 100 {'epoch': 100, 'alignment': 0.007607271429151297, 'reconstruction': 0.4367959499359131, 'total': 0.4693865180015564, 'elapsed_seconds': 2.290137529373169}
+Simulations_reference_random_512_1_rep1_seed1234 200 {'epoch': 200, 'alignment': 0.004624657332897186, 'reconstruction': 0.35248568654060364, 'total': 0.37229833006858826, 'elapsed_seconds': 18.929243803024292}
+Simulations_reference_random_512_1_rep1_seed1234 300 {'epoch': 300, 'alignment': 0.0030576789285987616, 'reconstruction': 0.32741862535476685, 'total': 0.34051811695098877, 'elapsed_seconds': 24.370372533798218}
+COMPLETE Simulations_reference_random_512_1_rep1_seed1234

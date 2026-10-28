@@ -1,0 +1,46 @@
+Loaded Simulations/ad_rna1: (1296, 200)
+Loaded Simulations/ad_rna2: (1296, 200)
+Loaded Simulations/ad_adt1: (1296, 100)
+Loaded Simulations/ad_adt2: (1296, 100)
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+	Completed 4 / 10 iteration(s).
+	Completed 5 / 10 iteration(s).
+	Completed 6 / 10 iteration(s).
+	Completed 7 / 10 iteration(s).
+Reach convergence after 7 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+	Completed 4 / 10 iteration(s).
+	Completed 5 / 10 iteration(s).
+	Completed 6 / 10 iteration(s).
+	Completed 7 / 10 iteration(s).
+Reach convergence after 7 iteration(s).
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4400
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5435
+PREPARED /data/home/jiboya/SpaMosaic/experiments/exp004_topola_mechanism/results/cache/Simulations_rep3

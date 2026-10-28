@@ -18,9 +18,16 @@ dist/
 # Local datasets (demo/data and reproduce/data stay tracked)
 /data/
 
-# Experiments: track index.csv / scripts / log / small csv+json;
-# ignore heavy regenerable artifacts
+# Experiments: track index.csv, scripts/, log/, README/findings,
+# and top-level summary csv/json in results/ (e.g. all_metrics.csv,
+# config.json, selection.json, manifests). Ignore per-run dumps and
+# all binary/heavy artifacts.
 /experiments/**/*.h5ad
+/experiments/**/*.npz
+/experiments/**/*.pt
+/experiments/**/results/**/seed*/
+/experiments/**/results/runs/
+/experiments/**/results/cache/
 
 # Sphinx build output
 docs/build/

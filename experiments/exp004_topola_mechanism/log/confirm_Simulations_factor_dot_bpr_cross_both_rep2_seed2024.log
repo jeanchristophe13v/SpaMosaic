@@ -1,0 +1,9 @@
+confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024 1 {'epoch': 1, 'alignment': 1.226076364517212, 'reconstruction': 2.3268754482269287, 'total': 5.870800971984863, 'elapsed_seconds': 0.10348963737487793}
+confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024 5 {'epoch': 5, 'alignment': 0.1727345734834671, 'reconstruction': 1.7317193746566772, 'total': 2.231001853942871, 'elapsed_seconds': 0.2836616039276123}
+confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024 10 {'epoch': 10, 'alignment': 0.1497761458158493, 'reconstruction': 1.0684535503387451, 'total': 1.5013755559921265, 'elapsed_seconds': 0.4095878601074219}
+confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024 25 {'epoch': 25, 'alignment': 0.11623633652925491, 'reconstruction': 0.7681634426116943, 'total': 1.104140043258667, 'elapsed_seconds': 0.7995977401733398}
+confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024 50 {'epoch': 50, 'alignment': 0.09444592148065567, 'reconstruction': 0.5659259557723999, 'total': 0.838918149471283, 'elapsed_seconds': 1.374035358428955}
+confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024 100 {'epoch': 100, 'alignment': 0.0707671195268631, 'reconstruction': 0.4170822203159332, 'total': 0.6216318011283875, 'elapsed_seconds': 2.3298516273498535}
+confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024 200 {'epoch': 200, 'alignment': 0.03785933926701546, 'reconstruction': 0.36433565616607666, 'total': 0.473766565322876, 'elapsed_seconds': 18.483365058898926}
+confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024 300 {'epoch': 300, 'alignment': 0.029109254479408264, 'reconstruction': 0.34900274872779846, 'total': 0.43314188718795776, 'elapsed_seconds': 20.97677183151245}
+COMPLETE confirm_Simulations_factor_dot_bpr_cross_both_rep2_seed2024

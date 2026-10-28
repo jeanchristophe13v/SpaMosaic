@@ -42,7 +42,7 @@ PARAMS = {
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--datasets', nargs='+', choices=PARAMS, default=list(PARAMS))
-    parser.add_argument('--data-root', type=Path, default=ROOT / 'data')
+    parser.add_argument('--data-root', type=Path, default=ROOT / 'data' / 'processed')
     parser.add_argument('--sim-setting', default='rna-0.1-12-adt-2.1')
     parser.add_argument('--sim-rep', choices=['1', '2', '3'], default='1')
     parser.add_argument('--device', default='cuda:0')

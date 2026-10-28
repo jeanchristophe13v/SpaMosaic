@@ -1,0 +1,3 @@
+pilot_Simulations_factor_topola_bpr_all_both_rep1_seed1234 1 {'epoch': 1, 'alignment': 1.7122138738632202, 'reconstruction': 2.2908358573913574, 'total': 14.702869415283203, 'elapsed_seconds': 0.7902052402496338}
+pilot_Simulations_factor_topola_bpr_all_both_rep1_seed1234 2 {'epoch': 2, 'alignment': 0.8629940152168274, 'reconstruction': 2.240926742553711, 'total': 8.496869087219238, 'elapsed_seconds': 0.8329176902770996}
+COMPLETE pilot_Simulations_factor_topola_bpr_all_both_rep1_seed1234

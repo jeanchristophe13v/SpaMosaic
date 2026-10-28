@@ -1,0 +1,38 @@
+Loaded MB-H3K4me3/S1/ad_rna: (9548, 21536)
+Loaded MB-H3K4me3/S2/ad_rna: (9370, 21536)
+Loaded MB-H3K4me3/S1/ad_h3k4me3: (9548, 36768)
+Loaded MB-H3K4me3/S3/ad_h3k4me3: (2499, 36768)
+MB-H3K4me3: no gt in notebook inputs; evaluating PAS, CHAOS, iLISI only.
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+Reach convergence after 3 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+Reach convergence after 2 iteration(s).
+batch0: ['rna', 'H3K4me3']
+batch1: ['rna']
+batch2: ['H3K4me3']
+------Calculating spatial graph...
+The graph contains 95480 edges, 9548 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 93700 edges, 9370 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 95480 edges, 9548 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 24990 edges, 2499 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:11932
+Searching MNN within H3K4me3
+Finding MNN between (mult, atac) using KNN (10, 10)
+Number of mnn pairs for H3K4me3:8281
+PREPARED /data/home/jiboya/SpaMosaic/experiments/exp004_topola_mechanism/results/cache/MB-H3K4me3_rep1

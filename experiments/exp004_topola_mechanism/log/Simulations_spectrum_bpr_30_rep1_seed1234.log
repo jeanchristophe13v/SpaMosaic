@@ -1,0 +1,9 @@
+Simulations_spectrum_bpr_30_rep1_seed1234 1 {'epoch': 1, 'alignment': 1.7482854127883911, 'reconstruction': 2.2908358573913574, 'total': 12.2769775390625, 'elapsed_seconds': 1.2828764915466309}
+Simulations_spectrum_bpr_30_rep1_seed1234 5 {'epoch': 5, 'alignment': 0.2570466995239258, 'reconstruction': 1.8475602865219116, 'total': 3.3158016204833984, 'elapsed_seconds': 1.4351022243499756}
+Simulations_spectrum_bpr_30_rep1_seed1234 10 {'epoch': 10, 'alignment': 0.1624813675880432, 'reconstruction': 1.2407605648040771, 'total': 2.1688480377197266, 'elapsed_seconds': 1.5433049201965332}
+Simulations_spectrum_bpr_30_rep1_seed1234 25 {'epoch': 25, 'alignment': 0.09740438312292099, 'reconstruction': 0.8423755168914795, 'total': 1.3987457752227783, 'elapsed_seconds': 1.8500847816467285}
+Simulations_spectrum_bpr_30_rep1_seed1234 50 {'epoch': 50, 'alignment': 0.07031301409006119, 'reconstruction': 0.633622407913208, 'total': 1.035247802734375, 'elapsed_seconds': 2.3296401500701904}
+Simulations_spectrum_bpr_30_rep1_seed1234 100 {'epoch': 100, 'alignment': 0.033833932131528854, 'reconstruction': 0.4999764859676361, 'total': 0.6932346820831299, 'elapsed_seconds': 3.54886794090271}
+Simulations_spectrum_bpr_30_rep1_seed1234 200 {'epoch': 200, 'alignment': 0.014093415811657906, 'reconstruction': 0.42488783597946167, 'total': 0.5053889155387878, 'elapsed_seconds': 22.959432125091553}
+Simulations_spectrum_bpr_30_rep1_seed1234 300 {'epoch': 300, 'alignment': 0.01050746813416481, 'reconstruction': 0.3949243426322937, 'total': 0.45494261384010315, 'elapsed_seconds': 25.796607971191406}
+COMPLETE Simulations_spectrum_bpr_30_rep1_seed1234

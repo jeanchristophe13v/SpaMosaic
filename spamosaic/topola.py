@@ -81,3 +81,13 @@ def compute_topola(C, Z, lambda_topola=10.0):
     # 第三步：完整 D_lambda 计算完成后，再抽取右上角 C-Z 块。
     S_lambda = D_lambda[0:N, N:2*N]        # [N,N]
     return D_lambda, S_lambda
+
+
+def reference_topola_features(query, reference, regularization):
+    """Whiten query using a shared reference; preserve both gradient paths."""
+    r = reference.to(torch.float64)
+    q = query.to(torch.float64)
+    chol = torch.linalg.cholesky(
+        r.T @ r + regularization * torch.eye(r.shape[1], device=r.device, dtype=r.dtype)
+    )
+    return torch.linalg.solve_triangular(chol, q.T, upper=False).T.to(query.dtype)

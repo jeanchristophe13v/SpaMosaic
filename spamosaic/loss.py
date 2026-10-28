@@ -100,3 +100,28 @@ class BPR_loss(torch.nn.Module):
             losses.append(F.softplus(cross - positive)[self.negative_mask].mean())
             losses.append(F.softplus(cross.T - positive)[self.negative_mask].mean())
         return torch.stack(losses).mean()
+
+
+class PairedAlignmentLoss(torch.nn.Module):
+    """Two modality-major blocks; matched spots positive, self excluded."""
+
+    def __init__(self, batch_size: int, objective: str, negatives: str):
+        super().__init__()
+        rows = torch.arange(2 * batch_size)
+        positive = (rows + batch_size) % (2 * batch_size)
+        candidates = rows[:, None] != rows[None, :]
+        if negatives == "cross":
+            candidates &= (rows[:, None] // batch_size != rows[None, :] // batch_size)
+        negative_mask = candidates.clone()
+        negative_mask[rows, positive] = False
+        self.register_buffer("positive", positive)
+        self.register_buffer("candidates", candidates)
+        self.register_buffer("negative_mask", negative_mask)
+        self.objective = objective
+
+    def forward(self, scores: torch.Tensor) -> torch.Tensor:
+        positive = scores.gather(1, self.positive[:, None])
+        if self.objective == "cl":
+            return (torch.logsumexp(scores.masked_fill(~self.candidates, -torch.inf), dim=1)
+                    - positive[:, 0]).mean()
+        return F.softplus(scores - positive)[self.negative_mask].mean()

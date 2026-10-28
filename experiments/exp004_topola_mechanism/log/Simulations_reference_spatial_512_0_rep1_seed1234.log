@@ -1,0 +1,9 @@
+Simulations_reference_spatial_512_0_rep1_seed1234 1 {'epoch': 1, 'alignment': 2.2968060970306396, 'reconstruction': 2.2908358573913574, 'total': 4.587641716003418, 'elapsed_seconds': 0.10251355171203613}
+Simulations_reference_spatial_512_0_rep1_seed1234 5 {'epoch': 5, 'alignment': 0.27022576332092285, 'reconstruction': 1.659830093383789, 'total': 1.930055856704712, 'elapsed_seconds': 0.20319914817810059}
+Simulations_reference_spatial_512_0_rep1_seed1234 10 {'epoch': 10, 'alignment': 0.1436890810728073, 'reconstruction': 0.9938783645629883, 'total': 1.137567400932312, 'elapsed_seconds': 0.30339789390563965}
+Simulations_reference_spatial_512_0_rep1_seed1234 25 {'epoch': 25, 'alignment': 0.061406783759593964, 'reconstruction': 0.700581967830658, 'total': 0.7619887590408325, 'elapsed_seconds': 0.5649299621582031}
+Simulations_reference_spatial_512_0_rep1_seed1234 50 {'epoch': 50, 'alignment': 0.029345696792006493, 'reconstruction': 0.49827876687049866, 'total': 0.5276244878768921, 'elapsed_seconds': 0.9930522441864014}
+Simulations_reference_spatial_512_0_rep1_seed1234 100 {'epoch': 100, 'alignment': 0.016552148386836052, 'reconstruction': 0.36324769258499146, 'total': 0.37979984283447266, 'elapsed_seconds': 1.801103115081787}
+Simulations_reference_spatial_512_0_rep1_seed1234 200 {'epoch': 200, 'alignment': 0.011146618984639645, 'reconstruction': 0.3160400688648224, 'total': 0.3271866738796234, 'elapsed_seconds': 18.018236875534058}
+Simulations_reference_spatial_512_0_rep1_seed1234 300 {'epoch': 300, 'alignment': 0.007447267882525921, 'reconstruction': 0.3032510280609131, 'total': 0.3106983006000519, 'elapsed_seconds': 19.818567276000977}
+COMPLETE Simulations_reference_spatial_512_0_rep1_seed1234
