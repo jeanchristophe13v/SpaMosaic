@@ -1,0 +1,210 @@
+
+=== Simulations: 加载 + 预处理 ===
+  loaded ad_rna1: (1296, 200)
+  loaded ad_rna2: (1296, 200)
+  loaded ad_adt1: (1296, 100)
+  loaded ad_adt2: (1296, 100)
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+	Completed 4 / 10 iteration(s).
+	Completed 5 / 10 iteration(s).
+	Completed 6 / 10 iteration(s).
+	Completed 7 / 10 iteration(s).
+	Completed 8 / 10 iteration(s).
+Reach convergence after 8 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+	Completed 4 / 10 iteration(s).
+	Completed 5 / 10 iteration(s).
+	Completed 6 / 10 iteration(s).
+	Completed 7 / 10 iteration(s).
+	Completed 8 / 10 iteration(s).
+	Completed 9 / 10 iteration(s).
+Reach convergence after 9 iteration(s).
+  rna: [(1296, 50), (1296, 50), None]
+  adt: [(1296, 50), None, (1296, 50)]
+
+--- Simulations / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:16,  6.12it/s] 14%|█▍        | 14/100 [00:00<00:01, 62.70it/s] 27%|██▋       | 27/100 [00:00<00:00, 88.72it/s] 40%|████      | 40/100 [00:00<00:00, 103.26it/s] 53%|█████▎    | 53/100 [00:00<00:00, 111.80it/s] 66%|██████▌   | 66/100 [00:00<00:00, 117.68it/s] 79%|███████▉  | 79/100 [00:00<00:00, 121.53it/s] 92%|█████████▏| 92/100 [00:00<00:00, 124.06it/s]100%|██████████| 100/100 [00:00<00:00, 107.01it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.8817, 'ARI/slice1': 0.9441, 'ARI/slice2': 0.8628, 'ARI/slice3': 0.8429, 'F1/slice2-slice3': 0.9365, 'PAS/slice1': 0.017, 'CHAOS/slice1': 0.0964, 'PAS/slice2': 0.0494, 'CHAOS/slice2': 0.0988, 'PAS/slice3': 0.0463, 'CHAOS/slice3': 0.1008, 'iLISI/all': 0.779}
+
+--- Simulations / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 2592: diag_mean=1.026e-02 off_std=1.812e-03 -> scale 1/1.026e-02
+  1%|          | 1/100 [00:00<00:23,  4.25it/s]  3%|▎         | 3/100 [00:00<00:09,  9.90it/s]  6%|▌         | 6/100 [00:00<00:06, 14.69it/s]  8%|▊         | 8/100 [00:00<00:05, 15.88it/s] 11%|█         | 11/100 [00:00<00:04, 18.48it/s] 14%|█▍        | 14/100 [00:00<00:04, 20.20it/s] 17%|█▋        | 17/100 [00:00<00:03, 21.29it/s] 20%|██        | 20/100 [00:01<00:03, 22.22it/s] 23%|██▎       | 23/100 [00:01<00:03, 23.13it/s] 26%|██▌       | 26/100 [00:01<00:03, 24.20it/s] 29%|██▉       | 29/100 [00:01<00:02, 23.98it/s] 32%|███▏      | 32/100 [00:01<00:02, 23.55it/s] 35%|███▌      | 35/100 [00:01<00:02, 22.95it/s] 38%|███▊      | 38/100 [00:01<00:02, 21.40it/s] 41%|████      | 41/100 [00:02<00:02, 21.15it/s] 44%|████▍     | 44/100 [00:02<00:02, 21.23it/s] 47%|████▋     | 47/100 [00:02<00:02, 21.60it/s] 50%|█████     | 50/100 [00:02<00:02, 21.51it/s] 53%|█████▎    | 53/100 [00:02<00:02, 21.27it/s] 56%|█████▌    | 56/100 [00:02<00:02, 20.80it/s] 59%|█████▉    | 59/100 [00:02<00:01, 21.16it/s] 62%|██████▏   | 62/100 [00:03<00:01, 21.00it/s] 65%|██████▌   | 65/100 [00:03<00:01, 20.57it/s] 68%|██████▊   | 68/100 [00:03<00:01, 20.86it/s] 71%|███████   | 71/100 [00:03<00:01, 21.12it/s] 74%|███████▍  | 74/100 [00:03<00:01, 21.89it/s] 77%|███████▋  | 77/100 [00:03<00:01, 22.19it/s] 80%|████████  | 80/100 [00:03<00:00, 22.08it/s] 83%|████████▎ | 83/100 [00:03<00:00, 21.93it/s] 86%|████████▌ | 86/100 [00:04<00:00, 21.57it/s] 89%|████████▉ | 89/100 [00:04<00:00, 21.90it/s] 92%|█████████▏| 92/100 [00:04<00:00, 21.17it/s] 95%|█████████▌| 95/100 [00:04<00:00, 21.06it/s] 98%|█████████▊| 98/100 [00:04<00:00, 21.53it/s]100%|██████████| 100/100 [00:04<00:00, 20.92it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.9149, 'ARI/slice1': 0.9759, 'ARI/slice2': 0.8982, 'ARI/slice3': 0.8732, 'F1/slice2-slice3': 0.9407, 'PAS/slice1': 0.0147, 'CHAOS/slice1': 0.0963, 'PAS/slice2': 0.0401, 'CHAOS/slice2': 0.101, 'PAS/slice3': 0.0448, 'CHAOS/slice3': 0.0987, 'iLISI/all': 0.7841}
+
+--- Simulations / topola_raw ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:22,  4.35it/s]  3%|▎         | 3/100 [00:00<00:10,  8.95it/s]  5%|▌         | 5/100 [00:00<00:09, 10.41it/s]  7%|▋         | 7/100 [00:00<00:07, 12.75it/s] 10%|█         | 10/100 [00:00<00:05, 15.74it/s] 12%|█▏        | 12/100 [00:00<00:05, 15.10it/s] 15%|█▌        | 15/100 [00:01<00:04, 17.29it/s] 17%|█▋        | 17/100 [00:01<00:05, 15.95it/s] 20%|██        | 20/100 [00:01<00:05, 15.32it/s] 23%|██▎       | 23/100 [00:01<00:04, 17.06it/s] 26%|██▌       | 26/100 [00:01<00:03, 18.97it/s] 28%|██▊       | 28/100 [00:01<00:03, 18.91it/s] 31%|███       | 31/100 [00:01<00:03, 19.82it/s] 34%|███▍      | 34/100 [00:02<00:05, 12.78it/s] 37%|███▋      | 37/100 [00:02<00:04, 15.09it/s] 39%|███▉      | 39/100 [00:02<00:04, 14.40it/s] 42%|████▏     | 42/100 [00:02<00:03, 16.04it/s] 45%|████▌     | 45/100 [00:02<00:03, 17.57it/s] 48%|████▊     | 48/100 [00:03<00:02, 18.46it/s] 50%|█████     | 50/100 [00:03<00:03, 15.60it/s] 52%|█████▏    | 52/100 [00:03<00:03, 13.50it/s] 55%|█████▌    | 55/100 [00:03<00:02, 15.67it/s] 58%|█████▊    | 58/100 [00:03<00:02, 17.69it/s] 60%|██████    | 60/100 [00:03<00:02, 17.94it/s] 63%|██████▎   | 63/100 [00:03<00:02, 17.72it/s] 65%|██████▌   | 65/100 [00:04<00:02, 17.46it/s] 67%|██████▋   | 67/100 [00:04<00:01, 16.66it/s] 70%|███████   | 70/100 [00:04<00:01, 16.44it/s] 72%|███████▏  | 72/100 [00:04<00:01, 16.65it/s] 74%|███████▍  | 74/100 [00:05<00:03,  6.88it/s] 76%|███████▌  | 76/100 [00:05<00:03,  6.84it/s] 78%|███████▊  | 78/100 [00:05<00:02,  8.05it/s] 80%|████████  | 80/100 [00:05<00:02,  8.85it/s] 82%|████████▏ | 82/100 [00:06<00:01,  9.34it/s] 84%|████████▍ | 84/100 [00:06<00:01,  8.71it/s] 86%|████████▌ | 86/100 [00:06<00:01,  9.54it/s] 89%|████████▉ | 89/100 [00:06<00:00, 12.28it/s] 92%|█████████▏| 92/100 [00:06<00:00, 14.54it/s] 95%|█████████▌| 95/100 [00:06<00:00, 16.78it/s] 97%|█████████▋| 97/100 [00:07<00:00, 16.13it/s]100%|██████████| 100/100 [00:07<00:00, 17.63it/s]100%|██████████| 100/100 [00:07<00:00, 13.90it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.5912, 'ARI/slice1': 0.984, 'ARI/slice2': 0.4839, 'ARI/slice3': 0.4584, 'F1/slice2-slice3': 0.6011, 'PAS/slice1': 0.0185, 'CHAOS/slice1': 0.0969, 'PAS/slice2': 0.1443, 'CHAOS/slice2': 0.1016, 'PAS/slice3': 0.186, 'CHAOS/slice3': 0.1034, 'iLISI/all': 0.3213}
+
+=== Lymph-S1-S2-S3: 加载 + 预处理 ===
+  loaded S1/ad_rna: (3484, 18085)
+  loaded S2/ad_rna: (3359, 18085)
+  loaded S1/ad_adt: (3484, 31)
+  loaded S3/ad_adt: (3408, 31)
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+Reach convergence after 2 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+Reach convergence after 3 iteration(s).
+  rna: [(3484, 50), (3359, 50), None]
+  adt: [(3484, 30), None, (3408, 30)]
+
+--- Lymph-S1-S2-S3 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11250
+  0%|          | 0/100 [00:00<?, ?it/s]  7%|▋         | 7/100 [00:00<00:01, 62.00it/s] 14%|█▍        | 14/100 [00:00<00:01, 63.24it/s] 21%|██        | 21/100 [00:00<00:01, 64.11it/s] 28%|██▊       | 28/100 [00:00<00:01, 64.61it/s] 35%|███▌      | 35/100 [00:00<00:01, 64.90it/s] 42%|████▏     | 42/100 [00:00<00:00, 65.08it/s] 49%|████▉     | 49/100 [00:00<00:00, 65.21it/s] 56%|█████▌    | 56/100 [00:00<00:00, 65.31it/s] 63%|██████▎   | 63/100 [00:00<00:00, 65.38it/s] 70%|███████   | 70/100 [00:01<00:00, 65.45it/s] 77%|███████▋  | 77/100 [00:01<00:00, 65.33it/s] 84%|████████▍ | 84/100 [00:01<00:00, 65.28it/s] 91%|█████████ | 91/100 [00:01<00:00, 65.34it/s] 98%|█████████▊| 98/100 [00:01<00:00, 65.30it/s]100%|██████████| 100/100 [00:01<00:00, 65.03it/s]
+R[write to console]:                    __           __ 
+   ____ ___  _____/ /_  _______/ /_
+  / __ `__ \/ ___/ / / / / ___/ __/
+ / / / / / / /__/ / /_/ (__  ) /_  
+/_/ /_/ /_/\___/_/\__,_/____/\__/   version 6.0.0
+Type 'citation("mclust")' for citing this R package in publications.
+
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.2212, 'ARI/slice1': 0.2185, 'ARI/slice2': 0.2286, 'ARI/slice3': 0.2133, 'F1/slice2-slice3': 0.3116, 'PAS/slice1': 0.1986, 'CHAOS/slice1': 0.0664, 'PAS/slice2': 0.2819, 'CHAOS/slice2': 0.0696, 'PAS/slice3': 0.1705, 'CHAOS/slice3': 0.0666, 'iLISI/all': 0.7253}
+
+--- Lymph-S1-S2-S3 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11250
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 6968: diag_mean=4.282e-03 off_std=7.555e-04 -> scale 1/4.282e-03
+  1%|          | 1/100 [00:00<00:28,  3.48it/s]  2%|▏         | 2/100 [00:00<00:20,  4.67it/s]  3%|▎         | 3/100 [00:00<00:19,  4.88it/s]  3%|▎         | 3/100 [00:00<00:23,  4.17it/s]
+Traceback (most recent call last):
+  File "notes/quicktest_topola/run_quicktest.py", line 239, in <module>
+    main()
+  File "notes/quicktest_topola/run_quicktest.py", line 215, in main
+    scores, train_seconds, diag = run_arm(dataset, variant, input_dict, raw, layout, args)
+  File "notes/quicktest_topola/run_quicktest.py", line 175, in run_arm
+    model.train(net='wlgcn', lr=0.01, T=P['T'], n_epochs=args.epochs, **kwargs)
+  File "/data/home/jiboya/SpaMosaic/spamosaic/framework.py", line 450, in train
+    mod_model, loss_cl, loss_rec = train_model(
+  File "/data/home/jiboya/SpaMosaic/spamosaic/train_utils.py", line 198, in train_model
+    scores = (feat @ feat.T) if score_type == 'dot' else full_topola_distance(feat, lambda_topola)
+  File "notes/quicktest_topola/run_quicktest.py", line 149, in calibrated
+    D = _raw_topola(features, regularization)
+  File "/data/home/jiboya/SpaMosaic/spamosaic/topola.py", line 63, in full_topola_distance
+    raise FloatingPointError('Nonfinite full TopoLa distance')
+FloatingPointError: Nonfinite full TopoLa distance
+ERROR conda.cli.main_run:execute(148): `conda run python notes/quicktest_topola/run_quicktest.py --device cuda:5 --datasets Simulations Lymph-S1-S2-S3 Tonsil-S1-S2-S3 --variants dot topola_cal topola_raw --epochs 100 --tag r1` failed. (See above for error)

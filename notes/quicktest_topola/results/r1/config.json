@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    "Simulations",
+    "Lymph-S1-S2-S3",
+    "Tonsil-S1-S2-S3"
+  ],
+  "variants": [
+    "dot",
+    "topola_cal",
+    "topola_raw"
+  ],
+  "device": "cuda:5",
+  "seed": 1234,
+  "epochs": 100,
+  "lambda_topola": 10.0,
+  "sim_setting": "rna-0.1-12-adt-2.1",
+  "sim_rep": "1",
+  "tag": "r1",
+  "out_dir": "/data/home/jiboya/SpaMosaic/notes/quicktest_topola/results"
+}

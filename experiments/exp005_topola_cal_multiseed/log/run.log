@@ -1,0 +1,1048 @@
+[setup] framework.CL_loss -> StableCL_loss (logsumexp)
+
+=== Simulations: 加载 + 预处理 ===
+  loaded ad_rna1: (1296, 200)
+  loaded ad_rna2: (1296, 200)
+  loaded ad_adt1: (1296, 100)
+  loaded ad_adt2: (1296, 100)
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+	Completed 4 / 10 iteration(s).
+	Completed 5 / 10 iteration(s).
+	Completed 6 / 10 iteration(s).
+	Completed 7 / 10 iteration(s).
+	Completed 8 / 10 iteration(s).
+Reach convergence after 8 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+	Completed 4 / 10 iteration(s).
+	Completed 5 / 10 iteration(s).
+	Completed 6 / 10 iteration(s).
+	Completed 7 / 10 iteration(s).
+	Completed 8 / 10 iteration(s).
+	Completed 9 / 10 iteration(s).
+Reach convergence after 9 iteration(s).
+  rna: [(1296, 50), (1296, 50), None]
+  adt: [(1296, 50), None, (1296, 50)]
+
+--- Simulations / seed 1234 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:22,  4.40it/s] 14%|█▍        | 14/100 [00:00<00:01, 52.10it/s] 27%|██▋       | 27/100 [00:00<00:00, 78.56it/s] 40%|████      | 40/100 [00:00<00:00, 95.58it/s] 54%|█████▍    | 54/100 [00:00<00:00, 108.55it/s] 68%|██████▊   | 68/100 [00:00<00:00, 116.96it/s] 82%|████████▏ | 82/100 [00:00<00:00, 122.39it/s] 96%|█████████▌| 96/100 [00:00<00:00, 126.11it/s]100%|██████████| 100/100 [00:00<00:00, 101.98it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.8847, 'ARI/slice1': 0.9461, 'ARI/slice2': 0.8673, 'ARI/slice3': 0.8451, 'F1/slice2-slice3': 0.9342, 'PAS/slice1': 0.0162, 'CHAOS/slice1': 0.0964, 'PAS/slice2': 0.0455, 'CHAOS/slice2': 0.1004, 'PAS/slice3': 0.044, 'CHAOS/slice3': 0.1015, 'iLISI/all': 0.7738}
+
+--- Simulations / seed 1234 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 2592: diag_mean=1.026e-02 off_std=1.812e-03 -> scale 1/1.026e-02
+  1%|          | 1/100 [00:00<00:10,  9.55it/s]  4%|▍         | 4/100 [00:00<00:04, 19.25it/s]  7%|▋         | 7/100 [00:00<00:04, 22.48it/s] 10%|█         | 10/100 [00:00<00:03, 22.71it/s] 13%|█▎        | 13/100 [00:00<00:03, 23.74it/s] 16%|█▌        | 16/100 [00:00<00:03, 24.34it/s] 19%|█▉        | 19/100 [00:00<00:03, 24.37it/s] 22%|██▏       | 22/100 [00:00<00:03, 24.56it/s] 25%|██▌       | 25/100 [00:01<00:03, 24.54it/s] 28%|██▊       | 28/100 [00:01<00:02, 24.57it/s] 31%|███       | 31/100 [00:01<00:02, 24.48it/s] 34%|███▍      | 34/100 [00:01<00:02, 23.60it/s] 37%|███▋      | 37/100 [00:01<00:02, 24.05it/s] 40%|████      | 40/100 [00:01<00:02, 24.00it/s] 43%|████▎     | 43/100 [00:01<00:02, 24.40it/s] 46%|████▌     | 46/100 [00:01<00:02, 24.28it/s] 49%|████▉     | 49/100 [00:02<00:02, 24.44it/s] 52%|█████▏    | 52/100 [00:02<00:01, 24.48it/s] 55%|█████▌    | 55/100 [00:02<00:01, 24.66it/s] 58%|█████▊    | 58/100 [00:02<00:01, 24.07it/s] 61%|██████    | 61/100 [00:02<00:01, 24.06it/s] 64%|██████▍   | 64/100 [00:02<00:01, 24.27it/s] 67%|██████▋   | 67/100 [00:02<00:01, 24.03it/s] 70%|███████   | 70/100 [00:02<00:01, 24.19it/s] 73%|███████▎  | 73/100 [00:03<00:01, 24.57it/s] 76%|███████▌  | 76/100 [00:03<00:00, 24.83it/s] 79%|███████▉  | 79/100 [00:03<00:00, 25.18it/s] 82%|████████▏ | 82/100 [00:03<00:00, 25.04it/s] 85%|████████▌ | 85/100 [00:03<00:00, 25.49it/s] 88%|████████▊ | 88/100 [00:03<00:00, 24.34it/s] 91%|█████████ | 91/100 [00:03<00:00, 25.17it/s] 94%|█████████▍| 94/100 [00:03<00:00, 24.47it/s] 97%|█████████▋| 97/100 [00:04<00:00, 25.24it/s]100%|██████████| 100/100 [00:04<00:00, 25.44it/s]100%|██████████| 100/100 [00:04<00:00, 24.29it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.9179, 'ARI/slice1': 0.9739, 'ARI/slice2': 0.9005, 'ARI/slice3': 0.8816, 'F1/slice2-slice3': 0.9431, 'PAS/slice1': 0.0154, 'CHAOS/slice1': 0.0963, 'PAS/slice2': 0.0378, 'CHAOS/slice2': 0.101, 'PAS/slice3': 0.0409, 'CHAOS/slice3': 0.0985, 'iLISI/all': 0.802}
+
+--- Simulations / seed 2024 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s] 12%|█▏        | 12/100 [00:00<00:00, 114.66it/s] 25%|██▌       | 25/100 [00:00<00:00, 118.07it/s] 38%|███▊      | 38/100 [00:00<00:00, 120.35it/s] 51%|█████     | 51/100 [00:00<00:00, 122.15it/s] 64%|██████▍   | 64/100 [00:00<00:00, 123.70it/s] 77%|███████▋  | 77/100 [00:00<00:00, 124.77it/s] 90%|█████████ | 90/100 [00:00<00:00, 125.35it/s]100%|██████████| 100/100 [00:00<00:00, 123.51it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.8891, 'ARI/slice1': 0.9654, 'ARI/slice2': 0.8617, 'ARI/slice3': 0.844, 'F1/slice2-slice3': 0.9384, 'PAS/slice1': 0.0154, 'CHAOS/slice1': 0.0964, 'PAS/slice2': 0.0394, 'CHAOS/slice2': 0.0998, 'PAS/slice3': 0.0517, 'CHAOS/slice3': 0.0985, 'iLISI/all': 0.7864}
+
+--- Simulations / seed 2024 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 2592: diag_mean=1.032e-02 off_std=1.821e-03 -> scale 1/1.032e-02
+  1%|          | 1/100 [00:00<00:26,  3.72it/s]  4%|▍         | 4/100 [00:00<00:08, 11.55it/s]  7%|▋         | 7/100 [00:00<00:05, 16.36it/s] 10%|█         | 10/100 [00:00<00:04, 18.96it/s] 13%|█▎        | 13/100 [00:00<00:04, 21.09it/s] 16%|█▌        | 16/100 [00:00<00:03, 22.68it/s] 19%|█▉        | 19/100 [00:00<00:03, 23.89it/s] 22%|██▏       | 22/100 [00:01<00:03, 24.70it/s] 25%|██▌       | 25/100 [00:01<00:03, 24.54it/s] 28%|██▊       | 28/100 [00:01<00:02, 25.91it/s] 32%|███▏      | 32/100 [00:01<00:02, 27.38it/s] 35%|███▌      | 35/100 [00:01<00:02, 27.20it/s] 38%|███▊      | 38/100 [00:01<00:02, 26.21it/s] 41%|████      | 41/100 [00:01<00:02, 25.04it/s] 44%|████▍     | 44/100 [00:01<00:02, 25.09it/s] 47%|████▋     | 47/100 [00:02<00:02, 26.11it/s] 51%|█████     | 51/100 [00:02<00:01, 27.34it/s] 54%|█████▍    | 54/100 [00:02<00:01, 27.90it/s] 57%|█████▋    | 57/100 [00:02<00:01, 27.22it/s] 60%|██████    | 60/100 [00:02<00:02, 17.26it/s] 63%|██████▎   | 63/100 [00:03<00:04,  8.95it/s] 65%|██████▌   | 65/100 [00:03<00:04,  7.15it/s] 67%|██████▋   | 67/100 [00:04<00:05,  6.07it/s] 69%|██████▉   | 69/100 [00:04<00:05,  5.43it/s] 70%|███████   | 70/100 [00:05<00:05,  5.26it/s] 71%|███████   | 71/100 [00:05<00:05,  5.34it/s] 72%|███████▏  | 72/100 [00:05<00:05,  5.41it/s] 75%|███████▌  | 75/100 [00:05<00:02,  8.49it/s] 77%|███████▋  | 77/100 [00:05<00:02, 10.25it/s] 79%|███████▉  | 79/100 [00:05<00:01, 11.85it/s] 82%|████████▏ | 82/100 [00:05<00:01, 14.49it/s] 85%|████████▌ | 85/100 [00:06<00:00, 17.39it/s] 88%|████████▊ | 88/100 [00:06<00:00, 19.30it/s] 91%|█████████ | 91/100 [00:06<00:00, 18.61it/s] 94%|█████████▍| 94/100 [00:06<00:00, 19.79it/s] 97%|█████████▋| 97/100 [00:06<00:00, 20.55it/s]100%|██████████| 100/100 [00:06<00:00, 22.53it/s]100%|██████████| 100/100 [00:06<00:00, 14.85it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.9102, 'ARI/slice1': 0.9786, 'ARI/slice2': 0.9108, 'ARI/slice3': 0.8457, 'F1/slice2-slice3': 0.9362, 'PAS/slice1': 0.0131, 'CHAOS/slice1': 0.0963, 'PAS/slice2': 0.037, 'CHAOS/slice2': 0.0993, 'PAS/slice3': 0.0525, 'CHAOS/slice3': 0.0998, 'iLISI/all': 0.7771}
+
+--- Simulations / seed 2025 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:16,  5.91it/s]  3%|▎         | 3/100 [00:00<00:11,  8.23it/s]  4%|▍         | 4/100 [00:00<00:13,  6.87it/s]  6%|▌         | 6/100 [00:00<00:11,  8.09it/s]  7%|▋         | 7/100 [00:00<00:13,  7.02it/s]  9%|▉         | 9/100 [00:01<00:11,  8.03it/s] 10%|█         | 10/100 [00:01<00:12,  7.09it/s] 12%|█▏        | 12/100 [00:01<00:11,  7.98it/s] 13%|█▎        | 13/100 [00:01<00:12,  7.12it/s] 15%|█▌        | 15/100 [00:01<00:10,  8.03it/s] 16%|█▌        | 16/100 [00:02<00:11,  7.17it/s] 18%|█▊        | 18/100 [00:02<00:10,  8.11it/s] 19%|█▉        | 19/100 [00:02<00:10,  7.76it/s] 21%|██        | 21/100 [00:02<00:08,  8.99it/s] 22%|██▏       | 22/100 [00:02<00:08,  9.01it/s] 25%|██▌       | 25/100 [00:02<00:05, 12.54it/s] 27%|██▋       | 27/100 [00:03<00:05, 12.68it/s] 29%|██▉       | 29/100 [00:03<00:06, 11.03it/s] 31%|███       | 31/100 [00:03<00:05, 11.80it/s] 33%|███▎      | 33/100 [00:03<00:05, 11.98it/s] 35%|███▌      | 35/100 [00:03<00:05, 11.03it/s] 37%|███▋      | 37/100 [00:03<00:05, 12.12it/s] 39%|███▉      | 39/100 [00:04<00:05, 11.57it/s] 41%|████      | 41/100 [00:04<00:04, 12.28it/s] 50%|█████     | 50/100 [00:04<00:01, 27.85it/s] 59%|█████▉    | 59/100 [00:04<00:00, 41.60it/s] 71%|███████   | 71/100 [00:04<00:00, 59.42it/s] 83%|████████▎ | 83/100 [00:04<00:00, 74.63it/s] 95%|█████████▌| 95/100 [00:04<00:00, 85.60it/s]100%|██████████| 100/100 [00:04<00:00, 20.63it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.8831, 'ARI/slice1': 0.9503, 'ARI/slice2': 0.8509, 'ARI/slice3': 0.8521, 'F1/slice2-slice3': 0.9352, 'PAS/slice1': 0.0185, 'CHAOS/slice1': 0.0973, 'PAS/slice2': 0.0494, 'CHAOS/slice2': 0.0989, 'PAS/slice3': 0.0471, 'CHAOS/slice3': 0.1015, 'iLISI/all': 0.7746}
+
+--- Simulations / seed 2025 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 2592: diag_mean=1.020e-02 off_std=1.802e-03 -> scale 1/1.020e-02
+  1%|          | 1/100 [00:00<00:14,  6.95it/s]  2%|▏         | 2/100 [00:00<00:11,  8.41it/s]  3%|▎         | 3/100 [00:00<00:10,  9.06it/s]  4%|▍         | 4/100 [00:00<00:10,  9.33it/s]  5%|▌         | 5/100 [00:00<00:10,  9.43it/s]  8%|▊         | 8/100 [00:00<00:05, 15.38it/s] 11%|█         | 11/100 [00:00<00:04, 19.12it/s] 14%|█▍        | 14/100 [00:00<00:04, 21.45it/s] 17%|█▋        | 17/100 [00:01<00:04, 20.10it/s] 20%|██        | 20/100 [00:01<00:03, 21.45it/s] 23%|██▎       | 23/100 [00:01<00:03, 20.78it/s] 26%|██▌       | 26/100 [00:01<00:03, 22.29it/s] 29%|██▉       | 29/100 [00:01<00:02, 24.11it/s] 32%|███▏      | 32/100 [00:01<00:02, 24.25it/s] 35%|███▌      | 35/100 [00:01<00:02, 25.31it/s] 38%|███▊      | 38/100 [00:01<00:02, 26.41it/s] 41%|████      | 41/100 [00:01<00:02, 27.04it/s] 44%|████▍     | 44/100 [00:02<00:02, 27.36it/s] 47%|████▋     | 47/100 [00:02<00:01, 27.79it/s] 50%|█████     | 50/100 [00:02<00:01, 28.22it/s] 53%|█████▎    | 53/100 [00:02<00:01, 28.38it/s] 56%|█████▌    | 56/100 [00:02<00:01, 28.25it/s] 59%|█████▉    | 59/100 [00:02<00:01, 28.14it/s] 62%|██████▏   | 62/100 [00:02<00:01, 28.42it/s] 65%|██████▌   | 65/100 [00:02<00:01, 28.08it/s] 68%|██████▊   | 68/100 [00:02<00:01, 28.07it/s] 71%|███████   | 71/100 [00:03<00:01, 27.14it/s] 74%|███████▍  | 74/100 [00:03<00:00, 27.14it/s] 77%|███████▋  | 77/100 [00:03<00:00, 26.21it/s] 80%|████████  | 80/100 [00:03<00:00, 26.37it/s] 83%|████████▎ | 83/100 [00:03<00:00, 27.18it/s] 86%|████████▌ | 86/100 [00:03<00:00, 27.78it/s] 90%|█████████ | 90/100 [00:03<00:00, 28.60it/s] 93%|█████████▎| 93/100 [00:03<00:00, 27.81it/s] 97%|█████████▋| 97/100 [00:03<00:00, 28.58it/s]100%|██████████| 100/100 [00:04<00:00, 28.92it/s]100%|██████████| 100/100 [00:04<00:00, 24.44it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.9142, 'ARI/slice1': 0.9724, 'ARI/slice2': 0.9019, 'ARI/slice3': 0.8719, 'F1/slice2-slice3': 0.9444, 'PAS/slice1': 0.0154, 'CHAOS/slice1': 0.0963, 'PAS/slice2': 0.0332, 'CHAOS/slice2': 0.0993, 'PAS/slice3': 0.0463, 'CHAOS/slice3': 0.0977, 'iLISI/all': 0.7726}
+
+--- Simulations / seed 2026 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:13,  7.24it/s]  4%|▍         | 4/100 [00:00<00:05, 16.38it/s]  7%|▋         | 7/100 [00:00<00:04, 18.94it/s] 19%|█▉        | 19/100 [00:00<00:01, 51.14it/s] 31%|███       | 31/100 [00:00<00:00, 72.69it/s] 44%|████▍     | 44/100 [00:00<00:00, 89.12it/s] 57%|█████▋    | 57/100 [00:00<00:00, 99.59it/s] 70%|███████   | 70/100 [00:00<00:00, 107.33it/s] 83%|████████▎ | 83/100 [00:01<00:00, 112.90it/s] 96%|█████████▌| 96/100 [00:01<00:00, 116.40it/s]100%|██████████| 100/100 [00:01<00:00, 85.84it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.8782, 'ARI/slice1': 0.9594, 'ARI/slice2': 0.8493, 'ARI/slice3': 0.8295, 'F1/slice2-slice3': 0.9364, 'PAS/slice1': 0.0185, 'CHAOS/slice1': 0.0972, 'PAS/slice2': 0.0502, 'CHAOS/slice2': 0.0992, 'PAS/slice3': 0.0656, 'CHAOS/slice3': 0.0987, 'iLISI/all': 0.7892}
+
+--- Simulations / seed 2026 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 2592: diag_mean=1.027e-02 off_std=1.812e-03 -> scale 1/1.027e-02
+  1%|          | 1/100 [00:00<01:17,  1.28it/s]  2%|▏         | 2/100 [00:01<01:09,  1.41it/s]  3%|▎         | 3/100 [00:01<00:45,  2.14it/s]  5%|▌         | 5/100 [00:01<00:25,  3.75it/s]  7%|▋         | 7/100 [00:02<00:17,  5.21it/s]  8%|▊         | 8/100 [00:02<00:16,  5.67it/s] 10%|█         | 10/100 [00:02<00:12,  7.28it/s] 11%|█         | 11/100 [00:02<00:11,  7.74it/s] 13%|█▎        | 13/100 [00:02<00:09,  9.07it/s] 15%|█▌        | 15/100 [00:02<00:08, 10.08it/s] 17%|█▋        | 17/100 [00:02<00:07, 10.79it/s] 19%|█▉        | 19/100 [00:03<00:08, 10.01it/s] 22%|██▏       | 22/100 [00:03<00:06, 12.57it/s] 25%|██▌       | 25/100 [00:03<00:05, 14.91it/s] 27%|██▋       | 27/100 [00:03<00:04, 15.75it/s] 29%|██▉       | 29/100 [00:03<00:04, 16.12it/s] 32%|███▏      | 32/100 [00:03<00:03, 17.56it/s] 35%|███▌      | 35/100 [00:03<00:03, 19.57it/s] 38%|███▊      | 38/100 [00:04<00:03, 17.46it/s] 40%|████      | 40/100 [00:04<00:03, 16.57it/s] 42%|████▏     | 42/100 [00:04<00:04, 11.82it/s] 44%|████▍     | 44/100 [00:04<00:05, 10.28it/s] 46%|████▌     | 46/100 [00:04<00:04, 10.95it/s] 48%|████▊     | 48/100 [00:05<00:04, 11.69it/s] 50%|█████     | 50/100 [00:05<00:04, 10.77it/s] 52%|█████▏    | 52/100 [00:05<00:04, 10.61it/s] 54%|█████▍    | 54/100 [00:05<00:04, 10.11it/s] 56%|█████▌    | 56/100 [00:05<00:04, 10.33it/s] 58%|█████▊    | 58/100 [00:06<00:03, 10.79it/s] 60%|██████    | 60/100 [00:06<00:03, 11.37it/s] 62%|██████▏   | 62/100 [00:06<00:03, 12.08it/s] 64%|██████▍   | 64/100 [00:06<00:02, 12.41it/s] 66%|██████▌   | 66/100 [00:06<00:02, 12.27it/s] 68%|██████▊   | 68/100 [00:06<00:02, 12.50it/s] 70%|███████   | 70/100 [00:07<00:02, 11.45it/s] 72%|███████▏  | 72/100 [00:07<00:02, 12.15it/s] 75%|███████▌  | 75/100 [00:07<00:01, 14.83it/s] 78%|███████▊  | 78/100 [00:07<00:01, 16.68it/s] 81%|████████  | 81/100 [00:07<00:01, 17.70it/s] 84%|████████▍ | 84/100 [00:07<00:00, 19.22it/s] 87%|████████▋ | 87/100 [00:07<00:00, 21.02it/s] 90%|█████████ | 90/100 [00:08<00:00, 21.89it/s] 93%|█████████▎| 93/100 [00:08<00:00, 22.76it/s] 96%|█████████▌| 96/100 [00:08<00:00, 23.83it/s] 99%|█████████▉| 99/100 [00:08<00:00, 24.96it/s]100%|██████████| 100/100 [00:08<00:00, 11.89it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.9174, 'ARI/slice1': 0.9825, 'ARI/slice2': 0.8969, 'ARI/slice3': 0.8754, 'F1/slice2-slice3': 0.9479, 'PAS/slice1': 0.0131, 'CHAOS/slice1': 0.0963, 'PAS/slice2': 0.0355, 'CHAOS/slice2': 0.0988, 'PAS/slice3': 0.0424, 'CHAOS/slice3': 0.0973, 'iLISI/all': 0.7615}
+
+--- Simulations / seed 2027 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  6%|▌         | 6/100 [00:00<00:01, 57.78it/s] 13%|█▎        | 13/100 [00:00<00:01, 62.42it/s] 20%|██        | 20/100 [00:00<00:01, 64.15it/s] 27%|██▋       | 27/100 [00:00<00:01, 64.20it/s] 35%|███▌      | 35/100 [00:00<00:00, 66.83it/s] 42%|████▏     | 42/100 [00:00<00:00, 66.85it/s] 50%|█████     | 50/100 [00:00<00:00, 68.00it/s] 57%|█████▋    | 57/100 [00:00<00:00, 63.26it/s] 65%|██████▌   | 65/100 [00:00<00:00, 65.83it/s] 73%|███████▎  | 73/100 [00:01<00:00, 68.77it/s] 81%|████████  | 81/100 [00:01<00:00, 70.97it/s] 90%|█████████ | 90/100 [00:01<00:00, 74.27it/s] 98%|█████████▊| 98/100 [00:01<00:00, 65.09it/s]100%|██████████| 100/100 [00:01<00:00, 62.66it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.8685, 'ARI/slice1': 0.943, 'ARI/slice2': 0.8232, 'ARI/slice3': 0.8445, 'F1/slice2-slice3': 0.9295, 'PAS/slice1': 0.0216, 'CHAOS/slice1': 0.0977, 'PAS/slice2': 0.0579, 'CHAOS/slice2': 0.0982, 'PAS/slice3': 0.054, 'CHAOS/slice3': 0.1011, 'iLISI/all': 0.7821}
+
+--- Simulations / seed 2027 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 12960 edges, 1296 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (mult, rna) using KNN (10, 10)
+Number of mnn pairs for rna:4248
+Searching MNN within adt
+Finding MNN between (mult, adt) using KNN (10, 10)
+Number of mnn pairs for adt:5300
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 2592: diag_mean=1.034e-02 off_std=1.824e-03 -> scale 1/1.034e-02
+  1%|          | 1/100 [00:00<00:23,  4.27it/s]  2%|▏         | 2/100 [00:00<00:20,  4.86it/s]  4%|▍         | 4/100 [00:00<00:12,  7.68it/s]  6%|▌         | 6/100 [00:00<00:10,  9.27it/s]  8%|▊         | 8/100 [00:00<00:08, 10.53it/s] 10%|█         | 10/100 [00:01<00:09,  9.99it/s] 12%|█▏        | 12/100 [00:01<00:07, 11.38it/s] 15%|█▌        | 15/100 [00:01<00:05, 14.76it/s] 18%|█▊        | 18/100 [00:01<00:04, 17.43it/s] 21%|██        | 21/100 [00:01<00:04, 18.85it/s] 24%|██▍       | 24/100 [00:01<00:03, 19.99it/s] 27%|██▋       | 27/100 [00:01<00:03, 20.47it/s] 30%|███       | 30/100 [00:02<00:03, 21.54it/s] 33%|███▎      | 33/100 [00:02<00:02, 22.35it/s] 36%|███▌      | 36/100 [00:02<00:02, 22.70it/s] 39%|███▉      | 39/100 [00:02<00:02, 22.69it/s] 42%|████▏     | 42/100 [00:02<00:02, 22.63it/s] 45%|████▌     | 45/100 [00:02<00:02, 21.60it/s] 48%|████▊     | 48/100 [00:02<00:02, 22.24it/s] 51%|█████     | 51/100 [00:02<00:02, 22.37it/s] 54%|█████▍    | 54/100 [00:03<00:01, 23.03it/s] 57%|█████▋    | 57/100 [00:03<00:01, 22.65it/s] 60%|██████    | 60/100 [00:03<00:01, 22.42it/s] 63%|██████▎   | 63/100 [00:03<00:01, 22.04it/s] 66%|██████▌   | 66/100 [00:03<00:01, 23.37it/s] 69%|██████▉   | 69/100 [00:03<00:01, 24.28it/s] 72%|███████▏  | 72/100 [00:03<00:01, 25.10it/s] 75%|███████▌  | 75/100 [00:03<00:00, 25.57it/s] 78%|███████▊  | 78/100 [00:04<00:00, 26.43it/s] 81%|████████  | 81/100 [00:04<00:00, 25.84it/s] 84%|████████▍ | 84/100 [00:04<00:00, 25.48it/s] 87%|████████▋ | 87/100 [00:04<00:00, 25.86it/s] 90%|█████████ | 90/100 [00:04<00:00, 25.96it/s] 93%|█████████▎| 93/100 [00:04<00:00, 26.21it/s] 96%|█████████▌| 96/100 [00:04<00:00, 26.40it/s] 99%|█████████▉| 99/100 [00:04<00:00, 26.63it/s]100%|██████████| 100/100 [00:04<00:00, 20.49it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/sklearn/cluster/_kmeans.py:1416: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+  scores: {'ARI/all': 0.9201, 'ARI/slice1': 0.9888, 'ARI/slice2': 0.9128, 'ARI/slice3': 0.8618, 'F1/slice2-slice3': 0.9498, 'PAS/slice1': 0.0131, 'CHAOS/slice1': 0.0963, 'PAS/slice2': 0.0378, 'CHAOS/slice2': 0.0967, 'PAS/slice3': 0.0502, 'CHAOS/slice3': 0.0982, 'iLISI/all': 0.7809}
+
+=== Lymph-S1-S2-S3: 加载 + 预处理 ===
+  loaded S1/ad_rna: (3484, 18085)
+  loaded S2/ad_rna: (3359, 18085)
+  loaded S1/ad_adt: (3484, 31)
+  loaded S3/ad_adt: (3408, 31)
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+Reach convergence after 2 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+Reach convergence after 3 iteration(s).
+  rna: [(3484, 50), (3359, 50), None]
+  adt: [(3484, 30), None, (3408, 30)]
+
+--- Lymph-S1-S2-S3 / seed 1234 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  6%|▌         | 6/100 [00:00<00:01, 53.30it/s] 12%|█▏        | 12/100 [00:00<00:01, 53.51it/s] 18%|█▊        | 18/100 [00:00<00:01, 53.38it/s] 24%|██▍       | 24/100 [00:00<00:01, 53.59it/s] 30%|███       | 30/100 [00:00<00:01, 53.93it/s] 36%|███▌      | 36/100 [00:00<00:01, 54.28it/s] 42%|████▏     | 42/100 [00:00<00:01, 54.53it/s] 48%|████▊     | 48/100 [00:00<00:00, 54.45it/s] 54%|█████▍    | 54/100 [00:00<00:00, 54.39it/s] 60%|██████    | 60/100 [00:01<00:00, 54.39it/s] 66%|██████▌   | 66/100 [00:01<00:00, 55.56it/s] 72%|███████▏  | 72/100 [00:01<00:00, 56.73it/s] 78%|███████▊  | 78/100 [00:01<00:00, 57.59it/s] 84%|████████▍ | 84/100 [00:01<00:00, 58.19it/s] 90%|█████████ | 90/100 [00:01<00:00, 58.61it/s] 96%|█████████▌| 96/100 [00:01<00:00, 58.92it/s]100%|██████████| 100/100 [00:01<00:00, 56.14it/s]
+R[write to console]:                    __           __ 
+   ____ ___  _____/ /_  _______/ /_
+  / __ `__ \/ ___/ / / / / ___/ __/
+ / / / / / / /__/ / /_/ (__  ) /_  
+/_/ /_/ /_/\___/_/\__,_/____/\__/   version 6.0.0
+Type 'citation("mclust")' for citing this R package in publications.
+
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.2209, 'ARI/slice1': 0.2171, 'ARI/slice2': 0.215, 'ARI/slice3': 0.2075, 'F1/slice2-slice3': 0.3061, 'PAS/slice1': 0.2417, 'CHAOS/slice1': 0.0651, 'PAS/slice2': 0.3171, 'CHAOS/slice2': 0.0689, 'PAS/slice3': 0.223, 'CHAOS/slice3': 0.0671, 'iLISI/all': 0.7358}
+
+--- Lymph-S1-S2-S3 / seed 1234 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 6968: diag_mean=4.282e-03 off_std=7.555e-04 -> scale 1/4.282e-03
+  1%|          | 1/100 [00:00<00:20,  4.79it/s]  2%|▏         | 2/100 [00:00<00:17,  5.51it/s]  3%|▎         | 3/100 [00:00<00:16,  5.99it/s]  4%|▍         | 4/100 [00:00<00:15,  6.15it/s]  5%|▌         | 5/100 [00:00<00:15,  6.23it/s]  6%|▌         | 6/100 [00:01<00:21,  4.33it/s]  7%|▋         | 7/100 [00:01<00:28,  3.28it/s]  8%|▊         | 8/100 [00:01<00:25,  3.59it/s]  9%|▉         | 9/100 [00:02<00:23,  3.87it/s] 10%|█         | 10/100 [00:02<00:22,  4.03it/s] 11%|█         | 11/100 [00:02<00:21,  4.16it/s] 12%|█▏        | 12/100 [00:02<00:20,  4.31it/s] 13%|█▎        | 13/100 [00:03<00:31,  2.78it/s] 14%|█▍        | 14/100 [00:03<00:27,  3.10it/s] 15%|█▌        | 15/100 [00:03<00:27,  3.09it/s] 16%|█▌        | 16/100 [00:04<00:25,  3.29it/s] 17%|█▋        | 17/100 [00:04<00:24,  3.41it/s] 18%|█▊        | 18/100 [00:05<00:31,  2.58it/s] 19%|█▉        | 19/100 [00:05<00:27,  2.94it/s] 20%|██        | 20/100 [00:05<00:26,  3.03it/s] 21%|██        | 21/100 [00:05<00:23,  3.36it/s] 22%|██▏       | 22/100 [00:06<00:21,  3.59it/s] 23%|██▎       | 23/100 [00:06<00:26,  2.90it/s] 24%|██▍       | 24/100 [00:07<00:32,  2.34it/s] 25%|██▌       | 25/100 [00:07<00:27,  2.76it/s] 26%|██▌       | 26/100 [00:07<00:23,  3.14it/s] 27%|██▋       | 27/100 [00:07<00:19,  3.67it/s] 28%|██▊       | 28/100 [00:07<00:17,  4.22it/s] 29%|██▉       | 29/100 [00:08<00:15,  4.67it/s] 30%|███       | 30/100 [00:08<00:13,  5.10it/s] 31%|███       | 31/100 [00:08<00:12,  5.45it/s] 32%|███▏      | 32/100 [00:08<00:11,  5.82it/s] 33%|███▎      | 33/100 [00:08<00:11,  6.04it/s] 34%|███▍      | 34/100 [00:08<00:11,  5.81it/s] 35%|███▌      | 35/100 [00:09<00:10,  5.95it/s] 36%|███▌      | 36/100 [00:09<00:10,  6.14it/s] 37%|███▋      | 37/100 [00:09<00:10,  6.25it/s] 38%|███▊      | 38/100 [00:09<00:11,  5.53it/s] 39%|███▉      | 39/100 [00:09<00:11,  5.20it/s] 40%|████      | 40/100 [00:10<00:12,  4.74it/s] 41%|████      | 41/100 [00:10<00:15,  3.90it/s] 42%|████▏     | 42/100 [00:10<00:18,  3.16it/s] 43%|████▎     | 43/100 [00:11<00:19,  2.88it/s] 44%|████▍     | 44/100 [00:11<00:18,  3.02it/s] 45%|████▌     | 45/100 [00:11<00:17,  3.17it/s] 46%|████▌     | 46/100 [00:12<00:15,  3.55it/s] 47%|████▋     | 47/100 [00:12<00:13,  3.84it/s] 48%|████▊     | 48/100 [00:12<00:13,  3.74it/s] 49%|████▉     | 49/100 [00:12<00:12,  3.99it/s] 50%|█████     | 50/100 [00:12<00:10,  4.57it/s] 51%|█████     | 51/100 [00:13<00:10,  4.90it/s] 52%|█████▏    | 52/100 [00:13<00:08,  5.38it/s] 53%|█████▎    | 53/100 [00:13<00:08,  5.76it/s] 54%|█████▍    | 54/100 [00:13<00:07,  5.99it/s] 55%|█████▌    | 55/100 [00:13<00:07,  6.19it/s] 56%|█████▌    | 56/100 [00:13<00:07,  5.79it/s] 57%|█████▋    | 57/100 [00:14<00:07,  6.14it/s] 58%|█████▊    | 58/100 [00:14<00:06,  6.21it/s] 59%|█████▉    | 59/100 [00:14<00:06,  5.99it/s] 60%|██████    | 60/100 [00:14<00:06,  5.91it/s] 61%|██████    | 61/100 [00:14<00:06,  6.11it/s] 62%|██████▏   | 62/100 [00:14<00:05,  6.34it/s] 63%|██████▎   | 63/100 [00:15<00:06,  5.35it/s] 64%|██████▍   | 64/100 [00:15<00:06,  5.52it/s] 65%|██████▌   | 65/100 [00:15<00:06,  5.68it/s] 66%|██████▌   | 66/100 [00:15<00:06,  5.31it/s] 67%|██████▋   | 67/100 [00:16<00:07,  4.15it/s] 68%|██████▊   | 68/100 [00:16<00:10,  3.14it/s] 69%|██████▉   | 69/100 [00:17<00:12,  2.55it/s] 70%|███████   | 70/100 [00:17<00:13,  2.23it/s] 71%|███████   | 71/100 [00:18<00:14,  1.95it/s] 72%|███████▏  | 72/100 [00:18<00:13,  2.09it/s] 73%|███████▎  | 73/100 [00:19<00:12,  2.17it/s] 74%|███████▍  | 74/100 [00:19<00:11,  2.34it/s] 75%|███████▌  | 75/100 [00:19<00:08,  2.94it/s] 76%|███████▌  | 76/100 [00:19<00:06,  3.53it/s] 77%|███████▋  | 77/100 [00:20<00:07,  3.26it/s] 78%|███████▊  | 78/100 [00:20<00:05,  3.81it/s] 79%|███████▉  | 79/100 [00:20<00:05,  4.12it/s] 80%|████████  | 80/100 [00:20<00:04,  4.61it/s] 81%|████████  | 81/100 [00:20<00:03,  5.00it/s] 82%|████████▏ | 82/100 [00:21<00:03,  5.08it/s] 83%|████████▎ | 83/100 [00:21<00:03,  4.92it/s] 84%|████████▍ | 84/100 [00:21<00:04,  3.20it/s] 85%|████████▌ | 85/100 [00:22<00:04,  3.49it/s] 86%|████████▌ | 86/100 [00:22<00:03,  3.85it/s] 87%|████████▋ | 87/100 [00:22<00:03,  4.04it/s] 88%|████████▊ | 88/100 [00:22<00:02,  4.23it/s] 89%|████████▉ | 89/100 [00:22<00:02,  4.06it/s] 90%|█████████ | 90/100 [00:23<00:02,  3.82it/s] 91%|█████████ | 91/100 [00:23<00:02,  3.38it/s] 92%|█████████▏| 92/100 [00:23<00:02,  3.35it/s] 93%|█████████▎| 93/100 [00:24<00:02,  3.29it/s] 94%|█████████▍| 94/100 [00:24<00:01,  3.07it/s] 95%|█████████▌| 95/100 [00:24<00:01,  3.08it/s] 96%|█████████▌| 96/100 [00:25<00:01,  3.15it/s] 97%|█████████▋| 97/100 [00:25<00:01,  2.93it/s] 98%|█████████▊| 98/100 [00:25<00:00,  3.07it/s] 99%|█████████▉| 99/100 [00:26<00:00,  2.52it/s]100%|██████████| 100/100 [00:27<00:00,  1.89it/s]100%|██████████| 100/100 [00:27<00:00,  3.66it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.1704, 'ARI/slice1': 0.1738, 'ARI/slice2': 0.1734, 'ARI/slice3': 0.174, 'F1/slice2-slice3': 0.3183, 'PAS/slice1': 0.1493, 'CHAOS/slice1': 0.0648, 'PAS/slice2': 0.2096, 'CHAOS/slice2': 0.0701, 'PAS/slice3': 0.1511, 'CHAOS/slice3': 0.0663, 'iLISI/all': 0.6159}
+
+--- Lymph-S1-S2-S3 / seed 2024 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:12,  8.12it/s]  3%|▎         | 3/100 [00:00<00:09,  9.89it/s]  4%|▍         | 4/100 [00:00<00:09,  9.85it/s]  6%|▌         | 6/100 [00:00<00:10,  9.20it/s]  7%|▋         | 7/100 [00:00<00:10,  9.19it/s]  8%|▊         | 8/100 [00:00<00:11,  8.36it/s]  9%|▉         | 9/100 [00:01<00:11,  7.60it/s] 11%|█         | 11/100 [00:01<00:11,  7.59it/s] 12%|█▏        | 12/100 [00:01<00:11,  7.49it/s] 13%|█▎        | 13/100 [00:01<00:11,  7.71it/s] 14%|█▍        | 14/100 [00:01<00:12,  7.09it/s] 15%|█▌        | 15/100 [00:01<00:12,  6.74it/s] 16%|█▌        | 16/100 [00:02<00:12,  6.88it/s] 17%|█▋        | 17/100 [00:02<00:11,  7.40it/s] 18%|█▊        | 18/100 [00:02<00:11,  7.29it/s] 19%|█▉        | 19/100 [00:02<00:11,  6.83it/s] 21%|██        | 21/100 [00:02<00:10,  7.25it/s] 22%|██▏       | 22/100 [00:02<00:10,  7.10it/s] 23%|██▎       | 23/100 [00:02<00:10,  7.61it/s] 25%|██▌       | 25/100 [00:03<00:08,  9.33it/s] 27%|██▋       | 27/100 [00:03<00:06, 11.42it/s] 30%|███       | 30/100 [00:03<00:05, 13.03it/s] 33%|███▎      | 33/100 [00:03<00:04, 15.58it/s] 35%|███▌      | 35/100 [00:03<00:04, 15.72it/s] 37%|███▋      | 37/100 [00:03<00:04, 15.27it/s] 40%|████      | 40/100 [00:03<00:03, 16.92it/s] 43%|████▎     | 43/100 [00:04<00:03, 16.96it/s] 45%|████▌     | 45/100 [00:04<00:03, 16.56it/s] 48%|████▊     | 48/100 [00:04<00:02, 18.87it/s] 54%|█████▍    | 54/100 [00:04<00:01, 28.08it/s] 60%|██████    | 60/100 [00:04<00:01, 35.40it/s] 66%|██████▌   | 66/100 [00:04<00:00, 41.36it/s] 72%|███████▏  | 72/100 [00:04<00:00, 45.77it/s] 78%|███████▊  | 78/100 [00:04<00:00, 49.05it/s] 84%|████████▍ | 84/100 [00:05<00:00, 51.73it/s] 90%|█████████ | 90/100 [00:05<00:00, 53.97it/s] 96%|█████████▌| 96/100 [00:05<00:00, 55.53it/s]100%|██████████| 100/100 [00:05<00:00, 18.82it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.2385, 'ARI/slice1': 0.2508, 'ARI/slice2': 0.2374, 'ARI/slice3': 0.2339, 'F1/slice2-slice3': 0.3142, 'PAS/slice1': 0.2078, 'CHAOS/slice1': 0.0657, 'PAS/slice2': 0.2733, 'CHAOS/slice2': 0.0704, 'PAS/slice3': 0.1981, 'CHAOS/slice3': 0.0668, 'iLISI/all': 0.7061}
+
+--- Lymph-S1-S2-S3 / seed 2024 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 6968: diag_mean=4.278e-03 off_std=7.543e-04 -> scale 1/4.278e-03
+  1%|          | 1/100 [00:00<00:39,  2.51it/s]  2%|▏         | 2/100 [00:00<00:29,  3.30it/s]  3%|▎         | 3/100 [00:00<00:23,  4.11it/s]  4%|▍         | 4/100 [00:00<00:20,  4.76it/s]  5%|▌         | 5/100 [00:01<00:18,  5.23it/s]  6%|▌         | 6/100 [00:01<00:18,  5.20it/s]  7%|▋         | 7/100 [00:01<00:17,  5.20it/s]  8%|▊         | 8/100 [00:01<00:17,  5.34it/s]  9%|▉         | 9/100 [00:01<00:16,  5.55it/s] 10%|█         | 10/100 [00:02<00:15,  5.64it/s] 11%|█         | 11/100 [00:02<00:15,  5.75it/s] 12%|█▏        | 12/100 [00:02<00:15,  5.68it/s] 13%|█▎        | 13/100 [00:02<00:16,  5.30it/s] 14%|█▍        | 14/100 [00:02<00:16,  5.22it/s] 15%|█▌        | 15/100 [00:02<00:15,  5.42it/s] 16%|█▌        | 16/100 [00:03<00:14,  5.63it/s] 17%|█▋        | 17/100 [00:03<00:14,  5.82it/s] 18%|█▊        | 18/100 [00:03<00:13,  5.95it/s] 19%|█▉        | 19/100 [00:03<00:13,  6.06it/s] 20%|██        | 20/100 [00:03<00:12,  6.22it/s] 21%|██        | 21/100 [00:03<00:12,  6.33it/s] 22%|██▏       | 22/100 [00:04<00:12,  6.28it/s] 23%|██▎       | 23/100 [00:04<00:12,  6.30it/s] 24%|██▍       | 24/100 [00:04<00:12,  6.28it/s] 25%|██▌       | 25/100 [00:04<00:12,  5.82it/s] 26%|██▌       | 26/100 [00:04<00:13,  5.67it/s] 27%|██▋       | 27/100 [00:04<00:12,  6.00it/s] 28%|██▊       | 28/100 [00:05<00:12,  5.99it/s] 29%|██▉       | 29/100 [00:05<00:12,  5.71it/s] 30%|███       | 30/100 [00:05<00:12,  5.64it/s] 31%|███       | 31/100 [00:05<00:13,  5.16it/s] 32%|███▏      | 32/100 [00:05<00:12,  5.39it/s] 33%|███▎      | 33/100 [00:06<00:11,  5.65it/s] 34%|███▍      | 34/100 [00:06<00:12,  5.32it/s] 35%|███▌      | 35/100 [00:06<00:11,  5.56it/s] 36%|███▌      | 36/100 [00:06<00:10,  5.91it/s] 37%|███▋      | 37/100 [00:06<00:10,  6.06it/s] 38%|███▊      | 38/100 [00:06<00:10,  6.09it/s] 39%|███▉      | 39/100 [00:06<00:09,  6.23it/s] 40%|████      | 40/100 [00:07<00:09,  6.35it/s] 41%|████      | 41/100 [00:07<00:09,  6.41it/s] 42%|████▏     | 42/100 [00:07<00:08,  6.54it/s] 43%|████▎     | 43/100 [00:07<00:08,  6.67it/s] 44%|████▍     | 44/100 [00:07<00:08,  6.58it/s] 45%|████▌     | 45/100 [00:07<00:08,  6.48it/s] 46%|████▌     | 46/100 [00:08<00:08,  6.47it/s] 47%|████▋     | 47/100 [00:08<00:08,  6.52it/s] 48%|████▊     | 48/100 [00:08<00:08,  6.49it/s] 49%|████▉     | 49/100 [00:08<00:07,  6.43it/s] 50%|█████     | 50/100 [00:08<00:07,  6.51it/s] 51%|█████     | 51/100 [00:08<00:07,  6.52it/s] 52%|█████▏    | 52/100 [00:08<00:07,  6.49it/s] 53%|█████▎    | 53/100 [00:09<00:07,  6.42it/s] 54%|█████▍    | 54/100 [00:09<00:07,  6.43it/s] 55%|█████▌    | 55/100 [00:09<00:06,  6.58it/s] 56%|█████▌    | 56/100 [00:09<00:06,  6.43it/s] 57%|█████▋    | 57/100 [00:09<00:06,  6.26it/s] 58%|█████▊    | 58/100 [00:09<00:06,  6.33it/s] 59%|█████▉    | 59/100 [00:10<00:06,  6.26it/s] 60%|██████    | 60/100 [00:10<00:06,  6.21it/s] 61%|██████    | 61/100 [00:10<00:08,  4.73it/s] 62%|██████▏   | 62/100 [00:10<00:07,  5.03it/s] 63%|██████▎   | 63/100 [00:10<00:07,  5.22it/s] 64%|██████▍   | 64/100 [00:11<00:06,  5.54it/s] 65%|██████▌   | 65/100 [00:11<00:06,  5.71it/s] 66%|██████▌   | 66/100 [00:11<00:06,  5.45it/s] 67%|██████▋   | 67/100 [00:11<00:07,  4.44it/s] 68%|██████▊   | 68/100 [00:11<00:06,  4.76it/s] 69%|██████▉   | 69/100 [00:12<00:06,  5.17it/s] 70%|███████   | 70/100 [00:12<00:05,  5.34it/s] 71%|███████   | 71/100 [00:12<00:06,  4.39it/s] 72%|███████▏  | 72/100 [00:12<00:05,  4.86it/s] 73%|███████▎  | 73/100 [00:12<00:05,  5.09it/s] 74%|███████▍  | 74/100 [00:13<00:04,  5.33it/s] 75%|███████▌  | 75/100 [00:13<00:04,  5.71it/s] 76%|███████▌  | 76/100 [00:13<00:04,  5.97it/s] 77%|███████▋  | 77/100 [00:13<00:03,  6.21it/s] 78%|███████▊  | 78/100 [00:13<00:03,  6.31it/s] 79%|███████▉  | 79/100 [00:13<00:03,  6.52it/s] 80%|████████  | 80/100 [00:13<00:02,  6.72it/s] 81%|████████  | 81/100 [00:14<00:02,  6.83it/s] 82%|████████▏ | 82/100 [00:14<00:02,  6.88it/s] 83%|████████▎ | 83/100 [00:14<00:02,  6.84it/s] 84%|████████▍ | 84/100 [00:14<00:02,  6.66it/s] 85%|████████▌ | 85/100 [00:14<00:02,  6.29it/s] 86%|████████▌ | 86/100 [00:14<00:02,  6.29it/s] 87%|████████▋ | 87/100 [00:15<00:02,  6.30it/s] 88%|████████▊ | 88/100 [00:15<00:02,  5.99it/s] 89%|████████▉ | 89/100 [00:15<00:02,  4.00it/s] 90%|█████████ | 90/100 [00:15<00:02,  4.35it/s] 91%|█████████ | 91/100 [00:16<00:01,  4.73it/s] 92%|█████████▏| 92/100 [00:16<00:01,  5.00it/s] 93%|█████████▎| 93/100 [00:16<00:01,  5.28it/s] 94%|█████████▍| 94/100 [00:16<00:01,  4.93it/s] 95%|█████████▌| 95/100 [00:16<00:01,  4.78it/s] 96%|█████████▌| 96/100 [00:17<00:00,  5.05it/s] 97%|█████████▋| 97/100 [00:17<00:00,  4.55it/s] 98%|█████████▊| 98/100 [00:17<00:00,  4.85it/s] 99%|█████████▉| 99/100 [00:17<00:00,  3.78it/s]100%|██████████| 100/100 [00:18<00:00,  4.15it/s]100%|██████████| 100/100 [00:18<00:00,  5.55it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.1891, 'ARI/slice1': 0.1969, 'ARI/slice2': 0.2064, 'ARI/slice3': 0.1858, 'F1/slice2-slice3': 0.3415, 'PAS/slice1': 0.1277, 'CHAOS/slice1': 0.0642, 'PAS/slice2': 0.1667, 'CHAOS/slice2': 0.0694, 'PAS/slice3': 0.1224, 'CHAOS/slice3': 0.0654, 'iLISI/all': 0.6232}
+
+--- Lymph-S1-S2-S3 / seed 2025 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  6%|▌         | 6/100 [00:00<00:01, 50.86it/s] 12%|█▏        | 12/100 [00:00<00:01, 51.40it/s] 18%|█▊        | 18/100 [00:00<00:01, 51.85it/s] 24%|██▍       | 24/100 [00:00<00:01, 52.50it/s] 30%|███       | 30/100 [00:00<00:01, 52.76it/s] 36%|███▌      | 36/100 [00:00<00:01, 51.25it/s] 42%|████▏     | 42/100 [00:00<00:01, 49.77it/s] 47%|████▋     | 47/100 [00:00<00:01, 48.34it/s] 52%|█████▏    | 52/100 [00:01<00:01, 47.72it/s] 57%|█████▋    | 57/100 [00:01<00:00, 46.04it/s] 62%|██████▏   | 62/100 [00:01<00:00, 46.45it/s] 67%|██████▋   | 67/100 [00:01<00:00, 45.76it/s] 72%|███████▏  | 72/100 [00:01<00:00, 44.53it/s] 77%|███████▋  | 77/100 [00:01<00:00, 43.12it/s] 82%|████████▏ | 82/100 [00:01<00:00, 44.71it/s] 88%|████████▊ | 88/100 [00:01<00:00, 46.37it/s] 93%|█████████▎| 93/100 [00:01<00:00, 46.50it/s] 98%|█████████▊| 98/100 [00:02<00:00, 45.25it/s]100%|██████████| 100/100 [00:02<00:00, 47.24it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.2132, 'ARI/slice1': 0.229, 'ARI/slice2': 0.2255, 'ARI/slice3': 0.2167, 'F1/slice2-slice3': 0.3115, 'PAS/slice1': 0.2296, 'CHAOS/slice1': 0.0663, 'PAS/slice2': 0.2998, 'CHAOS/slice2': 0.0712, 'PAS/slice3': 0.2124, 'CHAOS/slice3': 0.0677, 'iLISI/all': 0.7322}
+
+--- Lymph-S1-S2-S3 / seed 2025 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 6968: diag_mean=4.281e-03 off_std=7.550e-04 -> scale 1/4.281e-03
+  1%|          | 1/100 [00:00<00:37,  2.66it/s]  2%|▏         | 2/100 [00:00<00:28,  3.44it/s]  3%|▎         | 3/100 [00:00<00:24,  3.97it/s]  4%|▍         | 4/100 [00:00<00:21,  4.55it/s]  5%|▌         | 5/100 [00:01<00:19,  4.98it/s]  6%|▌         | 6/100 [00:01<00:19,  4.79it/s]  7%|▋         | 7/100 [00:01<00:18,  5.04it/s]  8%|▊         | 8/100 [00:01<00:18,  4.96it/s]  9%|▉         | 9/100 [00:01<00:18,  4.95it/s] 10%|█         | 10/100 [00:02<00:18,  4.98it/s] 11%|█         | 11/100 [00:02<00:19,  4.57it/s] 12%|█▏        | 12/100 [00:02<00:17,  5.03it/s] 13%|█▎        | 13/100 [00:02<00:16,  5.22it/s] 14%|█▍        | 14/100 [00:02<00:16,  5.30it/s] 15%|█▌        | 15/100 [00:03<00:17,  4.84it/s] 16%|█▌        | 16/100 [00:03<00:16,  5.13it/s] 17%|█▋        | 17/100 [00:03<00:16,  5.00it/s] 18%|█▊        | 18/100 [00:03<00:16,  5.07it/s] 19%|█▉        | 19/100 [00:03<00:15,  5.33it/s] 20%|██        | 20/100 [00:04<00:14,  5.51it/s] 21%|██        | 21/100 [00:04<00:13,  5.91it/s] 22%|██▏       | 22/100 [00:04<00:12,  6.03it/s] 23%|██▎       | 23/100 [00:04<00:12,  6.14it/s] 24%|██▍       | 24/100 [00:04<00:13,  5.80it/s] 25%|██▌       | 25/100 [00:04<00:12,  6.06it/s] 26%|██▌       | 26/100 [00:05<00:11,  6.29it/s] 27%|██▋       | 27/100 [00:05<00:11,  6.23it/s] 28%|██▊       | 28/100 [00:05<00:11,  6.13it/s] 29%|██▉       | 29/100 [00:05<00:12,  5.86it/s] 30%|███       | 30/100 [00:05<00:11,  6.12it/s] 31%|███       | 31/100 [00:05<00:11,  6.10it/s] 32%|███▏      | 32/100 [00:06<00:10,  6.22it/s] 33%|███▎      | 33/100 [00:06<00:10,  6.15it/s] 34%|███▍      | 34/100 [00:06<00:10,  6.21it/s] 35%|███▌      | 35/100 [00:06<00:10,  6.09it/s] 36%|███▌      | 36/100 [00:06<00:10,  6.09it/s] 37%|███▋      | 37/100 [00:06<00:10,  6.25it/s] 38%|███▊      | 38/100 [00:06<00:09,  6.46it/s] 39%|███▉      | 39/100 [00:07<00:09,  6.21it/s] 40%|████      | 40/100 [00:07<00:09,  6.21it/s] 41%|████      | 41/100 [00:07<00:10,  5.87it/s] 42%|████▏     | 42/100 [00:07<00:09,  5.88it/s] 43%|████▎     | 43/100 [00:07<00:09,  5.86it/s] 44%|████▍     | 44/100 [00:07<00:09,  6.10it/s] 45%|████▌     | 45/100 [00:08<00:08,  6.25it/s] 46%|████▌     | 46/100 [00:08<00:08,  6.17it/s] 47%|████▋     | 47/100 [00:08<00:09,  5.78it/s] 48%|████▊     | 48/100 [00:08<00:08,  5.79it/s] 49%|████▉     | 49/100 [00:08<00:08,  5.84it/s] 50%|█████     | 50/100 [00:09<00:09,  5.17it/s] 51%|█████     | 51/100 [00:09<00:10,  4.71it/s] 52%|█████▏    | 52/100 [00:09<00:11,  4.31it/s] 53%|█████▎    | 53/100 [00:09<00:09,  4.72it/s] 54%|█████▍    | 54/100 [00:09<00:09,  4.97it/s] 55%|█████▌    | 55/100 [00:10<00:08,  5.11it/s] 56%|█████▌    | 56/100 [00:10<00:08,  5.24it/s] 57%|█████▋    | 57/100 [00:10<00:08,  5.17it/s] 58%|█████▊    | 58/100 [00:10<00:07,  5.51it/s] 59%|█████▉    | 59/100 [00:10<00:07,  5.72it/s] 60%|██████    | 60/100 [00:10<00:06,  5.82it/s] 61%|██████    | 61/100 [00:11<00:06,  6.00it/s] 62%|██████▏   | 62/100 [00:11<00:07,  5.26it/s] 63%|██████▎   | 63/100 [00:11<00:06,  5.36it/s] 64%|██████▍   | 64/100 [00:11<00:06,  5.32it/s] 65%|██████▌   | 65/100 [00:11<00:06,  5.16it/s] 66%|██████▌   | 66/100 [00:12<00:07,  4.78it/s] 67%|██████▋   | 67/100 [00:12<00:07,  4.63it/s] 68%|██████▊   | 68/100 [00:12<00:07,  4.21it/s] 69%|██████▉   | 69/100 [00:13<00:07,  4.01it/s] 70%|███████   | 70/100 [00:13<00:07,  3.91it/s] 71%|███████   | 71/100 [00:13<00:07,  3.82it/s] 72%|███████▏  | 72/100 [00:13<00:07,  3.79it/s] 73%|███████▎  | 73/100 [00:14<00:07,  3.80it/s] 74%|███████▍  | 74/100 [00:14<00:06,  3.83it/s] 75%|███████▌  | 75/100 [00:14<00:06,  3.87it/s] 76%|███████▌  | 76/100 [00:14<00:06,  3.95it/s] 77%|███████▋  | 77/100 [00:15<00:05,  4.09it/s] 78%|███████▊  | 78/100 [00:15<00:05,  4.23it/s] 79%|███████▉  | 79/100 [00:15<00:04,  4.25it/s] 80%|████████  | 80/100 [00:15<00:04,  4.38it/s] 81%|████████  | 81/100 [00:15<00:04,  4.65it/s] 82%|████████▏ | 82/100 [00:16<00:03,  5.06it/s] 83%|████████▎ | 83/100 [00:16<00:03,  5.05it/s] 84%|████████▍ | 84/100 [00:16<00:03,  5.14it/s] 85%|████████▌ | 85/100 [00:16<00:02,  5.47it/s] 86%|████████▌ | 86/100 [00:16<00:02,  5.69it/s] 87%|████████▋ | 87/100 [00:16<00:02,  5.88it/s] 88%|████████▊ | 88/100 [00:17<00:01,  6.01it/s] 89%|████████▉ | 89/100 [00:17<00:01,  5.96it/s] 90%|█████████ | 90/100 [00:17<00:01,  5.87it/s] 91%|█████████ | 91/100 [00:17<00:01,  5.80it/s] 92%|█████████▏| 92/100 [00:17<00:01,  5.43it/s] 93%|█████████▎| 93/100 [00:18<00:01,  5.46it/s] 94%|█████████▍| 94/100 [00:18<00:01,  5.59it/s] 95%|█████████▌| 95/100 [00:18<00:00,  5.71it/s] 96%|█████████▌| 96/100 [00:18<00:00,  4.47it/s] 97%|█████████▋| 97/100 [00:18<00:00,  4.54it/s] 98%|█████████▊| 98/100 [00:19<00:00,  4.77it/s] 99%|█████████▉| 99/100 [00:19<00:00,  3.58it/s]100%|██████████| 100/100 [00:20<00:00,  2.33it/s]100%|██████████| 100/100 [00:20<00:00,  4.93it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.1898, 'ARI/slice1': 0.1978, 'ARI/slice2': 0.2119, 'ARI/slice3': 0.1861, 'F1/slice2-slice3': 0.3253, 'PAS/slice1': 0.1438, 'CHAOS/slice1': 0.0648, 'PAS/slice2': 0.1748, 'CHAOS/slice2': 0.0691, 'PAS/slice3': 0.1326, 'CHAOS/slice3': 0.0663, 'iLISI/all': 0.6185}
+
+--- Lymph-S1-S2-S3 / seed 2026 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  5%|▌         | 5/100 [00:00<00:02, 44.06it/s] 11%|█         | 11/100 [00:00<00:01, 52.44it/s] 17%|█▋        | 17/100 [00:00<00:01, 55.32it/s] 23%|██▎       | 23/100 [00:00<00:01, 56.72it/s] 29%|██▉       | 29/100 [00:00<00:01, 57.58it/s] 35%|███▌      | 35/100 [00:00<00:01, 58.01it/s] 41%|████      | 41/100 [00:00<00:01, 58.47it/s] 47%|████▋     | 47/100 [00:00<00:00, 58.78it/s] 53%|█████▎    | 53/100 [00:00<00:00, 58.99it/s] 59%|█████▉    | 59/100 [00:01<00:00, 59.12it/s] 65%|██████▌   | 65/100 [00:01<00:00, 59.15it/s] 71%|███████   | 71/100 [00:01<00:00, 59.20it/s] 77%|███████▋  | 77/100 [00:01<00:00, 59.26it/s] 83%|████████▎ | 83/100 [00:01<00:00, 59.31it/s] 89%|████████▉ | 89/100 [00:01<00:00, 59.29it/s] 95%|█████████▌| 95/100 [00:01<00:00, 59.32it/s]100%|██████████| 100/100 [00:01<00:00, 58.24it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.2285, 'ARI/slice1': 0.2429, 'ARI/slice2': 0.2416, 'ARI/slice3': 0.227, 'F1/slice2-slice3': 0.3179, 'PAS/slice1': 0.161, 'CHAOS/slice1': 0.0652, 'PAS/slice2': 0.2388, 'CHAOS/slice2': 0.0693, 'PAS/slice3': 0.1631, 'CHAOS/slice3': 0.0655, 'iLISI/all': 0.7408}
+
+--- Lymph-S1-S2-S3 / seed 2026 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 6968: diag_mean=4.283e-03 off_std=7.548e-04 -> scale 1/4.283e-03
+  1%|          | 1/100 [00:00<00:27,  3.59it/s]  2%|▏         | 2/100 [00:00<00:20,  4.70it/s]  3%|▎         | 3/100 [00:00<00:18,  5.19it/s]  4%|▍         | 4/100 [00:00<00:17,  5.59it/s]  5%|▌         | 5/100 [00:00<00:16,  5.61it/s]  6%|▌         | 6/100 [00:01<00:17,  5.38it/s]  7%|▋         | 7/100 [00:01<00:18,  5.15it/s]  8%|▊         | 8/100 [00:01<00:17,  5.39it/s]  9%|▉         | 9/100 [00:01<00:16,  5.42it/s] 10%|█         | 10/100 [00:02<00:21,  4.13it/s] 11%|█         | 11/100 [00:02<00:21,  4.06it/s] 12%|█▏        | 12/100 [00:02<00:19,  4.46it/s] 13%|█▎        | 13/100 [00:02<00:18,  4.83it/s] 14%|█▍        | 14/100 [00:02<00:16,  5.07it/s] 15%|█▌        | 15/100 [00:03<00:16,  5.27it/s] 16%|█▌        | 16/100 [00:03<00:16,  5.04it/s] 17%|█▋        | 17/100 [00:03<00:15,  5.37it/s] 18%|█▊        | 18/100 [00:03<00:14,  5.85it/s] 19%|█▉        | 19/100 [00:03<00:16,  4.85it/s] 20%|██        | 20/100 [00:03<00:15,  5.15it/s] 21%|██        | 21/100 [00:04<00:14,  5.48it/s] 22%|██▏       | 22/100 [00:04<00:13,  5.76it/s] 23%|██▎       | 23/100 [00:04<00:13,  5.81it/s] 24%|██▍       | 24/100 [00:04<00:12,  6.08it/s] 25%|██▌       | 25/100 [00:04<00:12,  5.82it/s] 26%|██▌       | 26/100 [00:04<00:12,  5.92it/s] 27%|██▋       | 27/100 [00:05<00:14,  4.90it/s] 28%|██▊       | 28/100 [00:05<00:13,  5.18it/s] 29%|██▉       | 29/100 [00:05<00:12,  5.48it/s] 30%|███       | 30/100 [00:05<00:12,  5.61it/s] 31%|███       | 31/100 [00:05<00:12,  5.59it/s] 32%|███▏      | 32/100 [00:06<00:14,  4.59it/s] 33%|███▎      | 33/100 [00:06<00:17,  3.77it/s] 34%|███▍      | 34/100 [00:06<00:19,  3.37it/s] 35%|███▌      | 35/100 [00:07<00:20,  3.16it/s] 36%|███▌      | 36/100 [00:07<00:21,  3.03it/s] 37%|███▋      | 37/100 [00:08<00:21,  2.94it/s] 38%|███▊      | 38/100 [00:08<00:21,  2.87it/s] 39%|███▉      | 39/100 [00:08<00:22,  2.77it/s] 40%|████      | 40/100 [00:09<00:19,  3.07it/s] 41%|████      | 41/100 [00:09<00:16,  3.61it/s] 42%|████▏     | 42/100 [00:09<00:13,  4.15it/s] 43%|████▎     | 43/100 [00:09<00:12,  4.69it/s] 44%|████▍     | 44/100 [00:09<00:11,  5.03it/s] 45%|████▌     | 45/100 [00:09<00:10,  5.28it/s] 46%|████▌     | 46/100 [00:10<00:09,  5.54it/s] 47%|████▋     | 47/100 [00:10<00:09,  5.75it/s] 48%|████▊     | 48/100 [00:10<00:08,  5.82it/s] 49%|████▉     | 49/100 [00:10<00:08,  5.81it/s] 50%|█████     | 50/100 [00:10<00:09,  5.45it/s] 51%|█████     | 51/100 [00:11<00:16,  3.01it/s] 52%|█████▏    | 52/100 [00:11<00:14,  3.38it/s] 53%|█████▎    | 53/100 [00:12<00:15,  3.09it/s] 54%|█████▍    | 54/100 [00:12<00:17,  2.70it/s] 55%|█████▌    | 55/100 [00:12<00:17,  2.63it/s] 56%|█████▌    | 56/100 [00:13<00:14,  3.09it/s] 57%|█████▋    | 57/100 [00:13<00:12,  3.56it/s] 58%|█████▊    | 58/100 [00:13<00:10,  4.07it/s] 59%|█████▉    | 59/100 [00:13<00:09,  4.32it/s] 60%|██████    | 60/100 [00:14<00:12,  3.11it/s] 61%|██████    | 61/100 [00:14<00:11,  3.29it/s] 62%|██████▏   | 62/100 [00:14<00:10,  3.58it/s] 63%|██████▎   | 63/100 [00:15<00:12,  3.06it/s] 64%|██████▍   | 64/100 [00:15<00:10,  3.52it/s] 65%|██████▌   | 65/100 [00:15<00:08,  4.00it/s] 66%|██████▌   | 66/100 [00:15<00:07,  4.53it/s] 67%|██████▋   | 67/100 [00:15<00:06,  5.02it/s] 68%|██████▊   | 68/100 [00:15<00:05,  5.41it/s] 69%|██████▉   | 69/100 [00:16<00:05,  5.39it/s] 70%|███████   | 70/100 [00:16<00:05,  5.49it/s] 71%|███████   | 71/100 [00:16<00:05,  5.57it/s] 72%|███████▏  | 72/100 [00:16<00:04,  5.80it/s] 73%|███████▎  | 73/100 [00:16<00:04,  5.56it/s] 74%|███████▍  | 74/100 [00:16<00:04,  5.55it/s] 75%|███████▌  | 75/100 [00:17<00:04,  5.17it/s] 76%|███████▌  | 76/100 [00:17<00:04,  5.33it/s] 77%|███████▋  | 77/100 [00:17<00:04,  5.42it/s] 78%|███████▊  | 78/100 [00:17<00:04,  5.49it/s] 79%|███████▉  | 79/100 [00:17<00:03,  5.30it/s] 80%|████████  | 80/100 [00:18<00:04,  4.38it/s] 81%|████████  | 81/100 [00:18<00:05,  3.57it/s] 82%|████████▏ | 82/100 [00:18<00:04,  3.87it/s] 83%|████████▎ | 83/100 [00:19<00:04,  3.91it/s] 84%|████████▍ | 84/100 [00:19<00:03,  4.17it/s] 85%|████████▌ | 85/100 [00:19<00:03,  4.33it/s] 86%|████████▌ | 86/100 [00:19<00:03,  4.55it/s] 87%|████████▋ | 87/100 [00:20<00:03,  3.61it/s] 88%|████████▊ | 88/100 [00:20<00:03,  3.89it/s] 89%|████████▉ | 89/100 [00:20<00:02,  4.38it/s] 90%|█████████ | 90/100 [00:20<00:02,  4.75it/s] 91%|█████████ | 91/100 [00:20<00:01,  4.97it/s] 92%|█████████▏| 92/100 [00:21<00:01,  4.42it/s] 93%|█████████▎| 93/100 [00:21<00:01,  4.51it/s] 94%|█████████▍| 94/100 [00:21<00:01,  4.47it/s] 95%|█████████▌| 95/100 [00:21<00:01,  4.75it/s] 96%|█████████▌| 96/100 [00:22<00:01,  3.26it/s] 97%|█████████▋| 97/100 [00:22<00:00,  3.13it/s] 98%|█████████▊| 98/100 [00:22<00:00,  3.41it/s] 99%|█████████▉| 99/100 [00:23<00:00,  3.08it/s]100%|██████████| 100/100 [00:23<00:00,  2.97it/s]100%|██████████| 100/100 [00:23<00:00,  4.23it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.1737, 'ARI/slice1': 0.1787, 'ARI/slice2': 0.2042, 'ARI/slice3': 0.1932, 'F1/slice2-slice3': 0.3166, 'PAS/slice1': 0.1355, 'CHAOS/slice1': 0.0641, 'PAS/slice2': 0.1807, 'CHAOS/slice2': 0.0691, 'PAS/slice3': 0.1259, 'CHAOS/slice3': 0.0657, 'iLISI/all': 0.6223}
+
+--- Lymph-S1-S2-S3 / seed 2027 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  3%|▎         | 3/100 [00:00<00:06, 15.96it/s]  6%|▌         | 6/100 [00:00<00:05, 16.37it/s]  9%|▉         | 9/100 [00:00<00:05, 16.69it/s] 12%|█▏        | 12/100 [00:00<00:05, 16.67it/s] 15%|█▌        | 15/100 [00:00<00:05, 16.97it/s] 18%|█▊        | 18/100 [00:01<00:04, 16.86it/s] 21%|██        | 21/100 [00:01<00:04, 17.07it/s] 24%|██▍       | 24/100 [00:01<00:04, 17.29it/s] 27%|██▋       | 27/100 [00:01<00:04, 17.22it/s] 30%|███       | 30/100 [00:01<00:04, 17.17it/s] 33%|███▎      | 33/100 [00:01<00:03, 17.49it/s] 39%|███▉      | 39/100 [00:02<00:02, 25.86it/s] 45%|████▌     | 45/100 [00:02<00:01, 33.09it/s] 51%|█████     | 51/100 [00:02<00:01, 39.06it/s] 57%|█████▋    | 57/100 [00:02<00:00, 43.82it/s] 63%|██████▎   | 63/100 [00:02<00:00, 47.59it/s] 69%|██████▉   | 69/100 [00:02<00:00, 50.10it/s] 75%|███████▌  | 75/100 [00:02<00:00, 49.60it/s] 81%|████████  | 81/100 [00:02<00:00, 49.56it/s] 87%|████████▋ | 87/100 [00:02<00:00, 49.26it/s] 93%|█████████▎| 93/100 [00:03<00:00, 48.07it/s] 98%|█████████▊| 98/100 [00:03<00:00, 47.37it/s]100%|██████████| 100/100 [00:03<00:00, 31.10it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.2369, 'ARI/slice1': 0.2362, 'ARI/slice2': 0.2332, 'ARI/slice3': 0.2225, 'F1/slice2-slice3': 0.3105, 'PAS/slice1': 0.1848, 'CHAOS/slice1': 0.0663, 'PAS/slice2': 0.2566, 'CHAOS/slice2': 0.071, 'PAS/slice3': 0.1987, 'CHAOS/slice3': 0.0669, 'iLISI/all': 0.7174}
+
+--- Lymph-S1-S2-S3 / seed 2027 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 33590 edges, 3359 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34840 edges, 3484 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 34080 edges, 3408 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:8457
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:11151
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 6968: diag_mean=4.288e-03 off_std=7.558e-04 -> scale 1/4.288e-03
+  1%|          | 1/100 [00:00<00:22,  4.32it/s]  2%|▏         | 2/100 [00:00<00:21,  4.59it/s]  3%|▎         | 3/100 [00:00<00:19,  5.04it/s]  4%|▍         | 4/100 [00:00<00:18,  5.30it/s]  5%|▌         | 5/100 [00:00<00:16,  5.60it/s]  6%|▌         | 6/100 [00:01<00:16,  5.69it/s]  7%|▋         | 7/100 [00:01<00:16,  5.65it/s]  8%|▊         | 8/100 [00:01<00:15,  5.81it/s]  9%|▉         | 9/100 [00:01<00:15,  5.92it/s] 10%|█         | 10/100 [00:01<00:15,  5.97it/s] 11%|█         | 11/100 [00:01<00:14,  6.02it/s] 12%|█▏        | 12/100 [00:02<00:14,  6.08it/s] 13%|█▎        | 13/100 [00:02<00:14,  6.08it/s] 14%|█▍        | 14/100 [00:02<00:14,  6.14it/s] 15%|█▌        | 15/100 [00:02<00:16,  5.26it/s] 16%|█▌        | 16/100 [00:02<00:15,  5.58it/s] 17%|█▋        | 17/100 [00:03<00:14,  5.71it/s] 18%|█▊        | 18/100 [00:03<00:14,  5.77it/s] 19%|█▉        | 19/100 [00:03<00:13,  5.85it/s] 20%|██        | 20/100 [00:03<00:14,  5.61it/s] 21%|██        | 21/100 [00:03<00:13,  5.88it/s] 22%|██▏       | 22/100 [00:03<00:13,  5.94it/s] 23%|██▎       | 23/100 [00:04<00:13,  5.59it/s] 24%|██▍       | 24/100 [00:04<00:14,  5.38it/s] 25%|██▌       | 25/100 [00:04<00:13,  5.43it/s] 26%|██▌       | 26/100 [00:04<00:13,  5.48it/s] 27%|██▋       | 27/100 [00:04<00:13,  5.36it/s] 28%|██▊       | 28/100 [00:04<00:12,  5.56it/s] 29%|██▉       | 29/100 [00:05<00:13,  5.32it/s] 30%|███       | 30/100 [00:05<00:19,  3.68it/s] 31%|███       | 31/100 [00:06<00:25,  2.75it/s] 32%|███▏      | 32/100 [00:06<00:29,  2.31it/s] 33%|███▎      | 33/100 [00:06<00:23,  2.82it/s] 34%|███▍      | 34/100 [00:07<00:24,  2.67it/s] 35%|███▌      | 35/100 [00:07<00:25,  2.52it/s] 36%|███▌      | 36/100 [00:08<00:20,  3.07it/s] 37%|███▋      | 37/100 [00:08<00:17,  3.54it/s] 38%|███▊      | 38/100 [00:08<00:15,  4.07it/s] 39%|███▉      | 39/100 [00:08<00:13,  4.50it/s] 40%|████      | 40/100 [00:08<00:13,  4.57it/s] 41%|████      | 41/100 [00:08<00:12,  4.76it/s] 42%|████▏     | 42/100 [00:09<00:11,  5.05it/s] 43%|████▎     | 43/100 [00:09<00:11,  4.94it/s] 44%|████▍     | 44/100 [00:09<00:11,  4.81it/s] 45%|████▌     | 45/100 [00:09<00:10,  5.12it/s] 46%|████▌     | 46/100 [00:09<00:10,  5.20it/s] 47%|████▋     | 47/100 [00:10<00:09,  5.44it/s] 48%|████▊     | 48/100 [00:10<00:09,  5.25it/s] 49%|████▉     | 49/100 [00:10<00:10,  5.02it/s] 50%|█████     | 50/100 [00:10<00:09,  5.15it/s] 51%|█████     | 51/100 [00:10<00:08,  5.46it/s] 52%|█████▏    | 52/100 [00:11<00:08,  5.42it/s] 53%|█████▎    | 53/100 [00:11<00:09,  5.04it/s] 54%|█████▍    | 54/100 [00:11<00:10,  4.32it/s] 55%|█████▌    | 55/100 [00:11<00:09,  4.61it/s] 56%|█████▌    | 56/100 [00:11<00:08,  5.05it/s] 57%|█████▋    | 57/100 [00:12<00:08,  5.34it/s] 58%|█████▊    | 58/100 [00:12<00:07,  5.63it/s] 59%|█████▉    | 59/100 [00:12<00:07,  5.49it/s] 60%|██████    | 60/100 [00:12<00:07,  5.13it/s] 61%|██████    | 61/100 [00:12<00:07,  5.49it/s] 62%|██████▏   | 62/100 [00:12<00:06,  5.76it/s] 63%|██████▎   | 63/100 [00:13<00:06,  5.91it/s] 64%|██████▍   | 64/100 [00:13<00:06,  5.99it/s] 65%|██████▌   | 65/100 [00:13<00:05,  5.89it/s] 66%|██████▌   | 66/100 [00:13<00:05,  5.87it/s] 67%|██████▋   | 67/100 [00:13<00:05,  5.78it/s] 68%|██████▊   | 68/100 [00:13<00:05,  5.83it/s] 69%|██████▉   | 69/100 [00:14<00:05,  5.65it/s] 70%|███████   | 70/100 [00:14<00:05,  5.73it/s] 71%|███████   | 71/100 [00:14<00:05,  5.41it/s] 72%|███████▏  | 72/100 [00:14<00:05,  5.59it/s] 73%|███████▎  | 73/100 [00:14<00:04,  5.86it/s] 74%|███████▍  | 74/100 [00:14<00:04,  5.91it/s] 75%|███████▌  | 75/100 [00:15<00:04,  5.99it/s] 76%|███████▌  | 76/100 [00:15<00:04,  5.24it/s] 77%|███████▋  | 77/100 [00:15<00:04,  5.36it/s] 78%|███████▊  | 78/100 [00:15<00:03,  5.71it/s] 79%|███████▉  | 79/100 [00:15<00:03,  5.95it/s] 80%|████████  | 80/100 [00:16<00:03,  6.18it/s] 81%|████████  | 81/100 [00:16<00:03,  5.98it/s] 82%|████████▏ | 82/100 [00:16<00:03,  5.37it/s] 83%|████████▎ | 83/100 [00:16<00:03,  5.61it/s] 84%|████████▍ | 84/100 [00:16<00:02,  5.84it/s] 85%|████████▌ | 85/100 [00:16<00:02,  6.02it/s] 86%|████████▌ | 86/100 [00:17<00:03,  4.04it/s] 87%|████████▋ | 87/100 [00:17<00:03,  3.77it/s] 88%|████████▊ | 88/100 [00:17<00:02,  4.16it/s] 89%|████████▉ | 89/100 [00:18<00:02,  4.36it/s] 90%|█████████ | 90/100 [00:18<00:02,  4.35it/s] 91%|█████████ | 91/100 [00:18<00:01,  4.65it/s] 92%|█████████▏| 92/100 [00:18<00:01,  5.06it/s] 93%|█████████▎| 93/100 [00:18<00:01,  5.31it/s] 94%|█████████▍| 94/100 [00:18<00:01,  5.35it/s] 95%|█████████▌| 95/100 [00:19<00:00,  5.64it/s] 96%|█████████▌| 96/100 [00:19<00:00,  5.64it/s] 97%|█████████▋| 97/100 [00:19<00:00,  4.76it/s] 98%|█████████▊| 98/100 [00:19<00:00,  4.94it/s] 99%|█████████▉| 99/100 [00:19<00:00,  5.07it/s]100%|██████████| 100/100 [00:20<00:00,  5.25it/s]100%|██████████| 100/100 [00:20<00:00,  4.97it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  scores: {'ARI/all': 0.2066, 'ARI/slice1': 0.2137, 'ARI/slice2': 0.2444, 'ARI/slice3': 0.1958, 'F1/slice2-slice3': 0.3207, 'PAS/slice1': 0.1335, 'CHAOS/slice1': 0.0643, 'PAS/slice2': 0.1733, 'CHAOS/slice2': 0.0684, 'PAS/slice3': 0.1177, 'CHAOS/slice3': 0.0662, 'iLISI/all': 0.6431}
+
+=== Tonsil-S1-S2-S3: 加载 + 预处理 ===
+  loaded S1/ad_rna: (4337, 18085)
+  loaded S2/ad_rna: (4519, 18085)
+  loaded S1/ad_adt: (4337, 31)
+  loaded S3/ad_adt: (4521, 31)
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+Reach convergence after 3 iteration(s).
+Use GPU mode.
+	Initialization is completed.
+	Completed 1 / 10 iteration(s).
+	Completed 2 / 10 iteration(s).
+	Completed 3 / 10 iteration(s).
+Reach convergence after 3 iteration(s).
+  rna: [(4337, 50), (4519, 50), None]
+  adt: [(4337, 30), None, (4521, 30)]
+
+--- Tonsil-S1-S2-S3 / seed 1234 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:12,  8.03it/s]  3%|▎         | 3/100 [00:00<00:10,  9.57it/s]  5%|▌         | 5/100 [00:00<00:07, 12.81it/s]  7%|▋         | 7/100 [00:00<00:07, 12.12it/s]  9%|▉         | 9/100 [00:00<00:07, 12.88it/s] 11%|█         | 11/100 [00:00<00:06, 13.70it/s] 13%|█▎        | 13/100 [00:01<00:06, 14.03it/s] 15%|█▌        | 15/100 [00:01<00:06, 13.10it/s] 17%|█▋        | 17/100 [00:01<00:06, 12.55it/s] 19%|█▉        | 19/100 [00:01<00:05, 13.77it/s] 23%|██▎       | 23/100 [00:01<00:03, 19.89it/s] 27%|██▋       | 27/100 [00:01<00:02, 24.90it/s] 31%|███       | 31/100 [00:01<00:02, 28.77it/s] 35%|███▌      | 35/100 [00:01<00:02, 31.72it/s] 40%|████      | 40/100 [00:01<00:01, 34.54it/s] 45%|████▌     | 45/100 [00:02<00:01, 36.63it/s] 50%|█████     | 50/100 [00:02<00:01, 38.06it/s] 55%|█████▌    | 55/100 [00:02<00:01, 39.03it/s] 60%|██████    | 60/100 [00:02<00:01, 39.65it/s] 65%|██████▌   | 65/100 [00:02<00:00, 40.14it/s] 70%|███████   | 70/100 [00:02<00:00, 40.47it/s] 75%|███████▌  | 75/100 [00:02<00:00, 40.67it/s] 80%|████████  | 80/100 [00:02<00:00, 40.85it/s] 85%|████████▌ | 85/100 [00:03<00:00, 40.99it/s] 90%|█████████ | 90/100 [00:03<00:00, 41.09it/s] 95%|█████████▌| 95/100 [00:03<00:00, 41.06it/s]100%|██████████| 100/100 [00:03<00:00, 41.08it/s]100%|██████████| 100/100 [00:03<00:00, 28.97it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.1328, 'ARI/slice1': 0.1579, 'ARI/slice2': 0.1422, 'ARI/slice3': 0.1288, 'F1/slice2-slice3': 0.2326, 'PAS/slice1': 0.1008, 'CHAOS/slice1': 0.0539, 'PAS/slice2': 0.0983, 'CHAOS/slice2': 0.0528, 'PAS/slice3': 0.0843, 'CHAOS/slice3': 0.0504, 'iLISI/all': 0.8037}
+
+--- Tonsil-S1-S2-S3 / seed 1234 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 8674: diag_mean=3.459e-03 off_std=6.106e-04 -> scale 1/3.459e-03
+  1%|          | 1/100 [00:00<00:45,  2.16it/s]  2%|▏         | 2/100 [00:00<00:40,  2.43it/s]  3%|▎         | 3/100 [00:01<00:38,  2.49it/s]  4%|▍         | 4/100 [00:01<00:39,  2.45it/s]  5%|▌         | 5/100 [00:02<00:48,  1.96it/s]  6%|▌         | 6/100 [00:03<01:04,  1.47it/s]  7%|▋         | 7/100 [00:04<01:03,  1.46it/s]  8%|▊         | 8/100 [00:04<00:53,  1.73it/s]  9%|▉         | 9/100 [00:04<00:47,  1.90it/s] 10%|█         | 10/100 [00:05<00:52,  1.73it/s] 11%|█         | 11/100 [00:06<01:01,  1.45it/s] 12%|█▏        | 12/100 [00:07<01:07,  1.29it/s] 13%|█▎        | 13/100 [00:08<01:11,  1.21it/s] 14%|█▍        | 14/100 [00:08<01:00,  1.42it/s] 15%|█▌        | 15/100 [00:09<00:51,  1.66it/s] 16%|█▌        | 16/100 [00:09<00:55,  1.52it/s] 17%|█▋        | 17/100 [00:10<01:03,  1.30it/s] 18%|█▊        | 18/100 [00:11<01:06,  1.23it/s] 19%|█▉        | 19/100 [00:12<00:56,  1.44it/s] 20%|██        | 20/100 [00:12<00:55,  1.44it/s] 21%|██        | 21/100 [00:14<01:03,  1.24it/s] 22%|██▏       | 22/100 [00:15<01:06,  1.18it/s] 23%|██▎       | 23/100 [00:15<00:57,  1.33it/s] 24%|██▍       | 24/100 [00:15<00:47,  1.60it/s] 25%|██▌       | 25/100 [00:16<00:49,  1.51it/s] 26%|██▌       | 26/100 [00:17<00:53,  1.39it/s] 27%|██▋       | 27/100 [00:18<00:48,  1.50it/s] 28%|██▊       | 28/100 [00:18<00:41,  1.74it/s] 29%|██▉       | 29/100 [00:18<00:34,  2.05it/s] 30%|███       | 30/100 [00:19<00:34,  2.03it/s] 31%|███       | 31/100 [00:19<00:36,  1.89it/s] 32%|███▏      | 32/100 [00:20<00:40,  1.69it/s] 33%|███▎      | 33/100 [00:21<00:46,  1.43it/s] 34%|███▍      | 34/100 [00:22<00:51,  1.28it/s] 35%|███▌      | 35/100 [00:23<00:49,  1.30it/s] 36%|███▌      | 36/100 [00:23<00:41,  1.52it/s] 37%|███▋      | 37/100 [00:24<00:42,  1.48it/s] 38%|███▊      | 38/100 [00:25<00:54,  1.13it/s] 39%|███▉      | 39/100 [00:26<00:51,  1.19it/s] 40%|████      | 40/100 [00:27<00:47,  1.25it/s] 41%|████      | 41/100 [00:27<00:40,  1.45it/s] 42%|████▏     | 42/100 [00:28<00:40,  1.45it/s] 43%|████▎     | 43/100 [00:29<00:44,  1.27it/s] 44%|████▍     | 44/100 [00:30<00:47,  1.18it/s] 45%|████▌     | 45/100 [00:31<00:50,  1.10it/s] 46%|████▌     | 46/100 [00:32<00:47,  1.14it/s] 47%|████▋     | 47/100 [00:32<00:40,  1.30it/s] 48%|████▊     | 48/100 [00:33<00:34,  1.50it/s] 49%|████▉     | 49/100 [00:33<00:31,  1.64it/s] 50%|█████     | 50/100 [00:33<00:27,  1.81it/s] 51%|█████     | 51/100 [00:34<00:29,  1.64it/s] 52%|█████▏    | 52/100 [00:35<00:32,  1.50it/s] 53%|█████▎    | 53/100 [00:36<00:32,  1.45it/s] 54%|█████▍    | 54/100 [00:37<00:35,  1.31it/s] 55%|█████▌    | 55/100 [00:38<00:37,  1.21it/s] 56%|█████▌    | 56/100 [00:39<00:38,  1.13it/s] 57%|█████▋    | 57/100 [00:40<00:38,  1.11it/s] 58%|█████▊    | 58/100 [00:40<00:34,  1.21it/s] 59%|█████▉    | 59/100 [00:41<00:32,  1.27it/s] 60%|██████    | 60/100 [00:42<00:33,  1.19it/s] 61%|██████    | 61/100 [00:43<00:31,  1.24it/s] 62%|██████▏   | 62/100 [00:43<00:26,  1.45it/s] 63%|██████▎   | 63/100 [00:44<00:23,  1.57it/s] 64%|██████▍   | 64/100 [00:45<00:28,  1.25it/s] 65%|██████▌   | 65/100 [00:46<00:30,  1.14it/s] 66%|██████▌   | 66/100 [00:47<00:30,  1.11it/s] 67%|██████▋   | 67/100 [00:47<00:24,  1.33it/s] 68%|██████▊   | 68/100 [00:47<00:20,  1.59it/s] 69%|██████▉   | 69/100 [00:48<00:16,  1.84it/s] 70%|███████   | 70/100 [00:48<00:14,  2.03it/s] 71%|███████   | 71/100 [00:49<00:14,  2.00it/s] 72%|███████▏  | 72/100 [00:49<00:14,  1.93it/s] 73%|███████▎  | 73/100 [00:50<00:13,  2.07it/s] 74%|███████▍  | 74/100 [00:50<00:11,  2.17it/s] 75%|███████▌  | 75/100 [00:51<00:12,  2.07it/s] 76%|███████▌  | 76/100 [00:51<00:11,  2.12it/s] 77%|███████▋  | 77/100 [00:51<00:10,  2.19it/s] 78%|███████▊  | 78/100 [00:52<00:09,  2.20it/s] 79%|███████▉  | 79/100 [00:52<00:08,  2.38it/s] 80%|████████  | 80/100 [00:53<00:08,  2.49it/s] 81%|████████  | 81/100 [00:53<00:07,  2.62it/s] 82%|████████▏ | 82/100 [00:53<00:06,  2.74it/s] 83%|████████▎ | 83/100 [00:54<00:05,  2.87it/s] 84%|████████▍ | 84/100 [00:54<00:05,  2.91it/s] 85%|████████▌ | 85/100 [00:54<00:05,  2.98it/s] 86%|████████▌ | 86/100 [00:55<00:04,  3.00it/s] 87%|████████▋ | 87/100 [00:55<00:04,  3.02it/s] 88%|████████▊ | 88/100 [00:55<00:04,  2.87it/s] 89%|████████▉ | 89/100 [00:56<00:03,  2.93it/s] 90%|█████████ | 90/100 [00:56<00:03,  2.65it/s] 91%|█████████ | 91/100 [00:56<00:03,  2.65it/s] 92%|█████████▏| 92/100 [00:57<00:03,  2.66it/s] 93%|█████████▎| 93/100 [00:57<00:02,  2.79it/s] 94%|█████████▍| 94/100 [00:57<00:02,  2.86it/s] 95%|█████████▌| 95/100 [00:58<00:01,  2.73it/s] 96%|█████████▌| 96/100 [00:58<00:01,  2.67it/s] 97%|█████████▋| 97/100 [00:59<00:01,  2.66it/s] 98%|█████████▊| 98/100 [00:59<00:00,  2.79it/s] 99%|█████████▉| 99/100 [00:59<00:00,  2.82it/s]100%|██████████| 100/100 [01:00<00:00,  2.72it/s]100%|██████████| 100/100 [01:00<00:00,  1.66it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.1459, 'ARI/slice1': 0.1614, 'ARI/slice2': 0.131, 'ARI/slice3': 0.1399, 'F1/slice2-slice3': 0.2342, 'PAS/slice1': 0.0627, 'CHAOS/slice1': 0.0538, 'PAS/slice2': 0.0737, 'CHAOS/slice2': 0.053, 'PAS/slice3': 0.0597, 'CHAOS/slice3': 0.0502, 'iLISI/all': 0.7069}
+
+--- Tonsil-S1-S2-S3 / seed 2024 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  4%|▍         | 4/100 [00:00<00:02, 39.23it/s]  9%|▉         | 9/100 [00:00<00:02, 40.23it/s] 14%|█▍        | 14/100 [00:00<00:02, 40.69it/s] 19%|█▉        | 19/100 [00:00<00:01, 40.90it/s] 24%|██▍       | 24/100 [00:00<00:01, 41.02it/s] 29%|██▉       | 29/100 [00:00<00:01, 41.10it/s] 34%|███▍      | 34/100 [00:00<00:01, 41.14it/s] 39%|███▉      | 39/100 [00:00<00:01, 41.15it/s] 44%|████▍     | 44/100 [00:01<00:01, 41.17it/s] 49%|████▉     | 49/100 [00:01<00:01, 41.20it/s] 54%|█████▍    | 54/100 [00:01<00:01, 41.21it/s] 59%|█████▉    | 59/100 [00:01<00:00, 41.18it/s] 64%|██████▍   | 64/100 [00:01<00:00, 41.18it/s] 69%|██████▉   | 69/100 [00:01<00:00, 41.18it/s] 74%|███████▍  | 74/100 [00:01<00:00, 41.19it/s] 79%|███████▉  | 79/100 [00:01<00:00, 41.18it/s] 84%|████████▍ | 84/100 [00:02<00:00, 41.19it/s] 89%|████████▉ | 89/100 [00:02<00:00, 41.16it/s] 94%|█████████▍| 94/100 [00:02<00:00, 41.14it/s] 99%|█████████▉| 99/100 [00:02<00:00, 41.14it/s]100%|██████████| 100/100 [00:02<00:00, 41.08it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.1152, 'ARI/slice1': 0.1355, 'ARI/slice2': 0.1292, 'ARI/slice3': 0.112, 'F1/slice2-slice3': 0.2332, 'PAS/slice1': 0.0872, 'CHAOS/slice1': 0.0537, 'PAS/slice2': 0.0918, 'CHAOS/slice2': 0.053, 'PAS/slice3': 0.0779, 'CHAOS/slice3': 0.0502, 'iLISI/all': 0.798}
+
+--- Tonsil-S1-S2-S3 / seed 2024 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 8674: diag_mean=3.450e-03 off_std=6.086e-04 -> scale 1/3.450e-03
+  1%|          | 1/100 [00:00<00:35,  2.81it/s]  2%|▏         | 2/100 [00:00<00:32,  2.99it/s]  3%|▎         | 3/100 [00:00<00:31,  3.06it/s]  4%|▍         | 4/100 [00:01<00:31,  3.06it/s]  5%|▌         | 5/100 [00:01<00:32,  2.92it/s]  6%|▌         | 6/100 [00:02<00:32,  2.88it/s]  7%|▋         | 7/100 [00:02<00:35,  2.62it/s]  8%|▊         | 8/100 [00:02<00:34,  2.63it/s]  9%|▉         | 9/100 [00:03<00:35,  2.53it/s] 10%|█         | 10/100 [00:03<00:35,  2.57it/s] 11%|█         | 11/100 [00:04<00:36,  2.47it/s] 12%|█▏        | 12/100 [00:04<00:34,  2.59it/s] 13%|█▎        | 13/100 [00:04<00:31,  2.73it/s] 14%|█▍        | 14/100 [00:05<00:30,  2.79it/s] 15%|█▌        | 15/100 [00:05<00:29,  2.85it/s] 16%|█▌        | 16/100 [00:05<00:29,  2.84it/s] 17%|█▋        | 17/100 [00:06<00:28,  2.88it/s] 18%|█▊        | 18/100 [00:06<00:29,  2.77it/s] 19%|█▉        | 19/100 [00:06<00:29,  2.76it/s] 20%|██        | 20/100 [00:07<00:28,  2.78it/s] 21%|██        | 21/100 [00:07<00:28,  2.75it/s] 22%|██▏       | 22/100 [00:08<00:29,  2.63it/s] 23%|██▎       | 23/100 [00:08<00:34,  2.25it/s] 24%|██▍       | 24/100 [00:08<00:30,  2.49it/s] 25%|██▌       | 25/100 [00:09<00:29,  2.51it/s] 26%|██▌       | 26/100 [00:09<00:29,  2.53it/s] 27%|██▋       | 27/100 [00:10<00:30,  2.43it/s] 28%|██▊       | 28/100 [00:10<00:28,  2.57it/s] 29%|██▉       | 29/100 [00:10<00:26,  2.72it/s] 30%|███       | 30/100 [00:11<00:24,  2.81it/s] 31%|███       | 31/100 [00:11<00:26,  2.60it/s] 32%|███▏      | 32/100 [00:11<00:25,  2.68it/s] 33%|███▎      | 33/100 [00:12<00:27,  2.40it/s] 34%|███▍      | 34/100 [00:12<00:25,  2.55it/s] 35%|███▌      | 35/100 [00:13<00:24,  2.70it/s] 36%|███▌      | 36/100 [00:13<00:23,  2.76it/s] 37%|███▋      | 37/100 [00:13<00:22,  2.86it/s] 38%|███▊      | 38/100 [00:14<00:21,  2.82it/s] 39%|███▉      | 39/100 [00:14<00:23,  2.63it/s] 40%|████      | 40/100 [00:15<00:24,  2.42it/s] 41%|████      | 41/100 [00:15<00:27,  2.16it/s] 42%|████▏     | 42/100 [00:16<00:25,  2.25it/s] 43%|████▎     | 43/100 [00:16<00:24,  2.34it/s] 44%|████▍     | 44/100 [00:16<00:22,  2.47it/s] 45%|████▌     | 45/100 [00:17<00:22,  2.39it/s] 46%|████▌     | 46/100 [00:17<00:21,  2.46it/s] 47%|████▋     | 47/100 [00:17<00:20,  2.56it/s] 48%|████▊     | 48/100 [00:18<00:19,  2.66it/s] 49%|████▉     | 49/100 [00:18<00:20,  2.52it/s] 50%|█████     | 50/100 [00:19<00:20,  2.47it/s] 51%|█████     | 51/100 [00:19<00:18,  2.66it/s] 52%|█████▏    | 52/100 [00:19<00:16,  2.83it/s] 53%|█████▎    | 53/100 [00:20<00:16,  2.81it/s] 54%|█████▍    | 54/100 [00:20<00:15,  2.96it/s] 55%|█████▌    | 55/100 [00:20<00:14,  3.02it/s] 56%|█████▌    | 56/100 [00:21<00:14,  3.13it/s] 57%|█████▋    | 57/100 [00:21<00:13,  3.09it/s] 58%|█████▊    | 58/100 [00:21<00:13,  3.07it/s] 59%|█████▉    | 59/100 [00:22<00:13,  3.03it/s] 60%|██████    | 60/100 [00:22<00:13,  3.01it/s] 61%|██████    | 61/100 [00:22<00:13,  2.97it/s] 62%|██████▏   | 62/100 [00:23<00:12,  3.02it/s] 63%|██████▎   | 63/100 [00:23<00:12,  3.00it/s] 64%|██████▍   | 64/100 [00:23<00:11,  3.01it/s] 65%|██████▌   | 65/100 [00:24<00:11,  3.03it/s] 66%|██████▌   | 66/100 [00:24<00:11,  2.86it/s] 67%|██████▋   | 67/100 [00:24<00:12,  2.75it/s] 68%|██████▊   | 68/100 [00:25<00:11,  2.84it/s] 69%|██████▉   | 69/100 [00:25<00:10,  2.82it/s] 70%|███████   | 70/100 [00:25<00:10,  2.88it/s] 71%|███████   | 71/100 [00:26<00:10,  2.69it/s] 72%|███████▏  | 72/100 [00:26<00:10,  2.64it/s] 73%|███████▎  | 73/100 [00:27<00:10,  2.56it/s] 74%|███████▍  | 74/100 [00:27<00:09,  2.63it/s] 75%|███████▌  | 75/100 [00:27<00:08,  2.83it/s] 76%|███████▌  | 76/100 [00:28<00:08,  2.96it/s] 77%|███████▋  | 77/100 [00:28<00:07,  3.06it/s] 78%|███████▊  | 78/100 [00:28<00:06,  3.15it/s] 79%|███████▉  | 79/100 [00:29<00:06,  3.08it/s] 80%|████████  | 80/100 [00:29<00:06,  2.93it/s] 81%|████████  | 81/100 [00:29<00:06,  2.90it/s] 82%|████████▏ | 82/100 [00:30<00:06,  2.92it/s] 83%|████████▎ | 83/100 [00:30<00:05,  2.89it/s] 84%|████████▍ | 84/100 [00:30<00:05,  2.75it/s] 85%|████████▌ | 85/100 [00:31<00:05,  2.81it/s] 86%|████████▌ | 86/100 [00:31<00:04,  2.90it/s] 87%|████████▋ | 87/100 [00:31<00:04,  2.82it/s] 88%|████████▊ | 88/100 [00:32<00:04,  2.86it/s] 89%|████████▉ | 89/100 [00:32<00:03,  2.83it/s] 90%|█████████ | 90/100 [00:32<00:03,  2.99it/s] 91%|█████████ | 91/100 [00:33<00:02,  3.04it/s] 92%|█████████▏| 92/100 [00:33<00:02,  3.02it/s] 93%|█████████▎| 93/100 [00:33<00:02,  3.10it/s] 94%|█████████▍| 94/100 [00:34<00:01,  3.07it/s] 95%|█████████▌| 95/100 [00:34<00:01,  2.95it/s] 96%|█████████▌| 96/100 [00:34<00:01,  3.00it/s] 97%|█████████▋| 97/100 [00:35<00:00,  3.02it/s] 98%|█████████▊| 98/100 [00:35<00:00,  2.92it/s] 99%|█████████▉| 99/100 [00:35<00:00,  2.84it/s]100%|██████████| 100/100 [00:36<00:00,  2.90it/s]100%|██████████| 100/100 [00:36<00:00,  2.76it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.1481, 'ARI/slice1': 0.1563, 'ARI/slice2': 0.1562, 'ARI/slice3': 0.1393, 'F1/slice2-slice3': 0.2372, 'PAS/slice1': 0.0756, 'CHAOS/slice1': 0.0538, 'PAS/slice2': 0.0693, 'CHAOS/slice2': 0.0528, 'PAS/slice3': 0.0626, 'CHAOS/slice3': 0.0502, 'iLISI/all': 0.7054}
+
+--- Tonsil-S1-S2-S3 / seed 2025 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  4%|▍         | 4/100 [00:00<00:03, 31.89it/s]  8%|▊         | 8/100 [00:00<00:02, 34.22it/s] 12%|█▏        | 12/100 [00:00<00:02, 35.15it/s] 16%|█▌        | 16/100 [00:00<00:02, 35.58it/s] 20%|██        | 20/100 [00:00<00:02, 35.88it/s] 24%|██▍       | 24/100 [00:00<00:02, 35.93it/s] 28%|██▊       | 28/100 [00:00<00:02, 30.45it/s] 32%|███▏      | 32/100 [00:01<00:03, 19.92it/s] 35%|███▌      | 35/100 [00:01<00:03, 17.04it/s] 38%|███▊      | 38/100 [00:01<00:04, 14.83it/s] 40%|████      | 40/100 [00:01<00:04, 14.88it/s] 42%|████▏     | 42/100 [00:01<00:03, 14.86it/s] 44%|████▍     | 44/100 [00:02<00:03, 14.83it/s] 46%|████▌     | 46/100 [00:02<00:03, 13.81it/s] 48%|████▊     | 48/100 [00:02<00:03, 13.09it/s] 50%|█████     | 50/100 [00:02<00:03, 14.40it/s] 52%|█████▏    | 52/100 [00:02<00:03, 14.59it/s] 54%|█████▍    | 54/100 [00:02<00:03, 13.72it/s] 56%|█████▌    | 56/100 [00:03<00:03, 12.99it/s] 58%|█████▊    | 58/100 [00:03<00:02, 14.40it/s] 62%|██████▏   | 62/100 [00:03<00:01, 19.65it/s] 66%|██████▌   | 66/100 [00:03<00:01, 24.41it/s] 70%|███████   | 70/100 [00:03<00:01, 28.27it/s] 74%|███████▍  | 74/100 [00:03<00:00, 31.12it/s] 78%|███████▊  | 78/100 [00:03<00:00, 33.34it/s] 82%|████████▏ | 82/100 [00:03<00:00, 34.97it/s] 86%|████████▌ | 86/100 [00:03<00:00, 36.22it/s] 90%|█████████ | 90/100 [00:03<00:00, 37.16it/s] 94%|█████████▍| 94/100 [00:04<00:00, 37.91it/s] 98%|█████████▊| 98/100 [00:04<00:00, 38.46it/s]100%|██████████| 100/100 [00:04<00:00, 23.59it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.1013, 'ARI/slice1': 0.1174, 'ARI/slice2': 0.1293, 'ARI/slice3': 0.0976, 'F1/slice2-slice3': 0.234, 'PAS/slice1': 0.1111, 'CHAOS/slice1': 0.054, 'PAS/slice2': 0.1091, 'CHAOS/slice2': 0.053, 'PAS/slice3': 0.1115, 'CHAOS/slice3': 0.0502, 'iLISI/all': 0.8004}
+
+--- Tonsil-S1-S2-S3 / seed 2025 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 8674: diag_mean=3.447e-03 off_std=6.084e-04 -> scale 1/3.447e-03
+  1%|          | 1/100 [00:00<00:52,  1.89it/s]  2%|▏         | 2/100 [00:00<00:44,  2.20it/s]  3%|▎         | 3/100 [00:01<00:43,  2.21it/s]  4%|▍         | 4/100 [00:01<00:43,  2.22it/s]  5%|▌         | 5/100 [00:02<00:39,  2.43it/s]  6%|▌         | 6/100 [00:02<00:47,  1.97it/s]  7%|▋         | 7/100 [00:03<00:44,  2.11it/s]  8%|▊         | 8/100 [00:03<00:42,  2.18it/s]  9%|▉         | 9/100 [00:04<00:41,  2.21it/s] 10%|█         | 10/100 [00:04<00:37,  2.39it/s] 11%|█         | 11/100 [00:04<00:37,  2.39it/s] 12%|█▏        | 12/100 [00:05<00:38,  2.27it/s] 13%|█▎        | 13/100 [00:06<00:53,  1.62it/s] 14%|█▍        | 14/100 [00:07<01:03,  1.36it/s] 15%|█▌        | 15/100 [00:08<01:03,  1.34it/s] 16%|█▌        | 16/100 [00:08<00:59,  1.40it/s] 17%|█▋        | 17/100 [00:09<00:55,  1.49it/s] 18%|█▊        | 18/100 [00:10<00:55,  1.47it/s] 19%|█▉        | 19/100 [00:11<01:02,  1.30it/s] 20%|██        | 20/100 [00:11<00:51,  1.55it/s] 21%|██        | 21/100 [00:11<00:43,  1.81it/s] 22%|██▏       | 22/100 [00:12<00:38,  2.01it/s] 23%|██▎       | 23/100 [00:12<00:35,  2.14it/s] 24%|██▍       | 24/100 [00:13<00:39,  1.94it/s] 25%|██▌       | 25/100 [00:13<00:35,  2.09it/s] 26%|██▌       | 26/100 [00:13<00:33,  2.21it/s] 27%|██▋       | 27/100 [00:14<00:31,  2.31it/s] 28%|██▊       | 28/100 [00:14<00:30,  2.33it/s] 29%|██▉       | 29/100 [00:15<00:28,  2.52it/s] 30%|███       | 30/100 [00:15<00:26,  2.62it/s] 31%|███       | 31/100 [00:15<00:26,  2.65it/s] 32%|███▏      | 32/100 [00:16<00:26,  2.53it/s] 33%|███▎      | 33/100 [00:16<00:25,  2.60it/s] 34%|███▍      | 34/100 [00:16<00:24,  2.66it/s] 35%|███▌      | 35/100 [00:17<00:25,  2.56it/s] 36%|███▌      | 36/100 [00:17<00:24,  2.56it/s] 37%|███▋      | 37/100 [00:18<00:24,  2.57it/s] 38%|███▊      | 38/100 [00:18<00:23,  2.65it/s] 39%|███▉      | 39/100 [00:18<00:23,  2.63it/s] 40%|████      | 40/100 [00:19<00:21,  2.73it/s] 41%|████      | 41/100 [00:19<00:22,  2.66it/s] 42%|████▏     | 42/100 [00:20<00:23,  2.47it/s] 43%|████▎     | 43/100 [00:20<00:27,  2.06it/s] 44%|████▍     | 44/100 [00:21<00:30,  1.82it/s] 45%|████▌     | 45/100 [00:21<00:28,  1.96it/s] 46%|████▌     | 46/100 [00:22<00:27,  1.97it/s] 47%|████▋     | 47/100 [00:22<00:24,  2.14it/s] 48%|████▊     | 48/100 [00:23<00:23,  2.18it/s] 49%|████▉     | 49/100 [00:23<00:24,  2.05it/s] 50%|█████     | 50/100 [00:24<00:27,  1.83it/s] 51%|█████     | 51/100 [00:25<00:30,  1.61it/s] 52%|█████▏    | 52/100 [00:25<00:28,  1.69it/s] 53%|█████▎    | 53/100 [00:26<00:26,  1.77it/s] 54%|█████▍    | 54/100 [00:26<00:23,  1.96it/s] 55%|█████▌    | 55/100 [00:27<00:23,  1.88it/s] 56%|█████▌    | 56/100 [00:27<00:21,  2.09it/s] 57%|█████▋    | 57/100 [00:27<00:19,  2.17it/s] 58%|█████▊    | 58/100 [00:28<00:20,  2.07it/s] 59%|█████▉    | 59/100 [00:28<00:18,  2.18it/s] 60%|██████    | 60/100 [00:29<00:18,  2.18it/s] 61%|██████    | 61/100 [00:29<00:16,  2.38it/s] 62%|██████▏   | 62/100 [00:30<00:14,  2.55it/s] 63%|██████▎   | 63/100 [00:30<00:13,  2.68it/s] 64%|██████▍   | 64/100 [00:30<00:12,  2.81it/s] 65%|██████▌   | 65/100 [00:31<00:12,  2.78it/s] 66%|██████▌   | 66/100 [00:31<00:11,  2.85it/s] 67%|██████▋   | 67/100 [00:31<00:12,  2.73it/s] 68%|██████▊   | 68/100 [00:32<00:11,  2.70it/s] 69%|██████▉   | 69/100 [00:32<00:11,  2.60it/s] 70%|███████   | 70/100 [00:32<00:11,  2.64it/s] 71%|███████   | 71/100 [00:33<00:11,  2.63it/s] 72%|███████▏  | 72/100 [00:33<00:10,  2.75it/s] 73%|███████▎  | 73/100 [00:34<00:09,  2.77it/s] 74%|███████▍  | 74/100 [00:34<00:09,  2.73it/s] 75%|███████▌  | 75/100 [00:34<00:09,  2.64it/s] 76%|███████▌  | 76/100 [00:35<00:08,  2.69it/s] 77%|███████▋  | 77/100 [00:35<00:08,  2.74it/s] 78%|███████▊  | 78/100 [00:36<00:10,  2.10it/s] 79%|███████▉  | 79/100 [00:37<00:13,  1.57it/s] 80%|████████  | 80/100 [00:37<00:12,  1.58it/s] 81%|████████  | 81/100 [00:38<00:12,  1.56it/s] 82%|████████▏ | 82/100 [00:39<00:10,  1.67it/s] 83%|████████▎ | 83/100 [00:39<00:10,  1.58it/s] 84%|████████▍ | 84/100 [00:40<00:08,  1.80it/s] 85%|████████▌ | 85/100 [00:40<00:07,  2.00it/s] 86%|████████▌ | 86/100 [00:40<00:06,  2.16it/s] 87%|████████▋ | 87/100 [00:41<00:05,  2.23it/s] 88%|████████▊ | 88/100 [00:41<00:04,  2.44it/s] 89%|████████▉ | 89/100 [00:41<00:04,  2.58it/s] 90%|█████████ | 90/100 [00:42<00:03,  2.60it/s] 91%|█████████ | 91/100 [00:42<00:03,  2.57it/s] 92%|█████████▏| 92/100 [00:43<00:03,  2.52it/s] 93%|█████████▎| 93/100 [00:43<00:02,  2.38it/s] 94%|█████████▍| 94/100 [00:43<00:02,  2.53it/s] 95%|█████████▌| 95/100 [00:44<00:01,  2.64it/s] 96%|█████████▌| 96/100 [00:44<00:01,  2.63it/s] 97%|█████████▋| 97/100 [00:45<00:01,  2.62it/s] 98%|█████████▊| 98/100 [00:45<00:00,  2.58it/s] 99%|█████████▉| 99/100 [00:45<00:00,  2.50it/s]100%|██████████| 100/100 [00:46<00:00,  2.48it/s]100%|██████████| 100/100 [00:46<00:00,  2.16it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.167, 'ARI/slice1': 0.1585, 'ARI/slice2': 0.1766, 'ARI/slice3': 0.1633, 'F1/slice2-slice3': 0.2371, 'PAS/slice1': 0.0784, 'CHAOS/slice1': 0.0539, 'PAS/slice2': 0.0828, 'CHAOS/slice2': 0.053, 'PAS/slice3': 0.0798, 'CHAOS/slice3': 0.0502, 'iLISI/all': 0.7335}
+
+--- Tonsil-S1-S2-S3 / seed 2026 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  4%|▍         | 4/100 [00:00<00:02, 37.98it/s]  8%|▊         | 8/100 [00:00<00:02, 38.62it/s] 12%|█▏        | 12/100 [00:00<00:02, 38.94it/s] 17%|█▋        | 17/100 [00:00<00:02, 39.95it/s] 22%|██▏       | 22/100 [00:00<00:01, 40.45it/s] 27%|██▋       | 27/100 [00:00<00:01, 40.74it/s] 32%|███▏      | 32/100 [00:00<00:01, 40.91it/s] 37%|███▋      | 37/100 [00:00<00:01, 41.02it/s] 42%|████▏     | 42/100 [00:01<00:01, 41.09it/s] 47%|████▋     | 47/100 [00:01<00:01, 41.13it/s] 52%|█████▏    | 52/100 [00:01<00:01, 41.02it/s] 57%|█████▋    | 57/100 [00:01<00:01, 41.09it/s] 62%|██████▏   | 62/100 [00:01<00:00, 41.15it/s] 67%|██████▋   | 67/100 [00:01<00:00, 41.19it/s] 72%|███████▏  | 72/100 [00:01<00:00, 41.15it/s] 77%|███████▋  | 77/100 [00:01<00:00, 41.18it/s] 82%|████████▏ | 82/100 [00:02<00:00, 41.20it/s] 87%|████████▋ | 87/100 [00:02<00:00, 41.21it/s] 92%|█████████▏| 92/100 [00:02<00:00, 41.22it/s] 97%|█████████▋| 97/100 [00:02<00:00, 41.23it/s]100%|██████████| 100/100 [00:02<00:00, 40.91it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.1264, 'ARI/slice1': 0.1409, 'ARI/slice2': 0.1403, 'ARI/slice3': 0.1265, 'F1/slice2-slice3': 0.233, 'PAS/slice1': 0.0874, 'CHAOS/slice1': 0.0537, 'PAS/slice2': 0.0872, 'CHAOS/slice2': 0.053, 'PAS/slice3': 0.0752, 'CHAOS/slice3': 0.0502, 'iLISI/all': 0.8059}
+
+--- Tonsil-S1-S2-S3 / seed 2026 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 8674: diag_mean=3.449e-03 off_std=6.083e-04 -> scale 1/3.449e-03
+  1%|          | 1/100 [00:00<00:31,  3.12it/s]  2%|▏         | 2/100 [00:00<00:30,  3.17it/s]  3%|▎         | 3/100 [00:00<00:29,  3.29it/s]  4%|▍         | 4/100 [00:01<00:30,  3.20it/s]  5%|▌         | 5/100 [00:01<00:30,  3.12it/s]  6%|▌         | 6/100 [00:01<00:29,  3.14it/s]  7%|▋         | 7/100 [00:02<00:30,  3.05it/s]  8%|▊         | 8/100 [00:02<00:29,  3.15it/s]  9%|▉         | 9/100 [00:02<00:30,  2.99it/s] 10%|█         | 10/100 [00:03<00:29,  3.08it/s] 11%|█         | 11/100 [00:03<00:30,  2.90it/s] 12%|█▏        | 12/100 [00:03<00:29,  2.95it/s] 13%|█▎        | 13/100 [00:04<00:29,  2.94it/s] 14%|█▍        | 14/100 [00:04<00:30,  2.84it/s] 15%|█▌        | 15/100 [00:04<00:29,  2.88it/s] 16%|█▌        | 16/100 [00:05<00:28,  2.90it/s] 17%|█▋        | 17/100 [00:05<00:28,  2.89it/s] 18%|█▊        | 18/100 [00:06<00:27,  2.94it/s] 19%|█▉        | 19/100 [00:06<00:26,  3.01it/s] 20%|██        | 20/100 [00:06<00:27,  2.91it/s] 21%|██        | 21/100 [00:07<00:27,  2.90it/s] 22%|██▏       | 22/100 [00:07<00:27,  2.88it/s] 23%|██▎       | 23/100 [00:07<00:26,  2.92it/s] 24%|██▍       | 24/100 [00:08<00:25,  2.93it/s] 25%|██▌       | 25/100 [00:08<00:26,  2.86it/s] 26%|██▌       | 26/100 [00:08<00:26,  2.83it/s] 27%|██▋       | 27/100 [00:09<00:26,  2.80it/s] 28%|██▊       | 28/100 [00:09<00:25,  2.78it/s] 29%|██▉       | 29/100 [00:09<00:26,  2.65it/s] 30%|███       | 30/100 [00:10<00:25,  2.75it/s] 31%|███       | 31/100 [00:10<00:24,  2.81it/s] 32%|███▏      | 32/100 [00:10<00:23,  2.89it/s] 33%|███▎      | 33/100 [00:11<00:25,  2.67it/s] 34%|███▍      | 34/100 [00:11<00:23,  2.82it/s] 35%|███▌      | 35/100 [00:12<00:22,  2.85it/s] 36%|███▌      | 36/100 [00:12<00:22,  2.83it/s] 37%|███▋      | 37/100 [00:12<00:21,  2.91it/s] 38%|███▊      | 38/100 [00:13<00:21,  2.83it/s] 39%|███▉      | 39/100 [00:13<00:20,  2.93it/s] 40%|████      | 40/100 [00:13<00:20,  2.86it/s] 41%|████      | 41/100 [00:14<00:20,  2.87it/s] 42%|████▏     | 42/100 [00:14<00:20,  2.89it/s] 43%|████▎     | 43/100 [00:14<00:19,  2.91it/s] 44%|████▍     | 44/100 [00:15<00:19,  2.81it/s] 45%|████▌     | 45/100 [00:15<00:19,  2.80it/s] 46%|████▌     | 46/100 [00:15<00:19,  2.78it/s] 47%|████▋     | 47/100 [00:16<00:19,  2.78it/s] 48%|████▊     | 48/100 [00:16<00:18,  2.85it/s] 49%|████▉     | 49/100 [00:16<00:17,  2.97it/s] 50%|█████     | 50/100 [00:17<00:17,  2.86it/s] 51%|█████     | 51/100 [00:17<00:18,  2.68it/s] 52%|█████▏    | 52/100 [00:18<00:18,  2.66it/s] 53%|█████▎    | 53/100 [00:18<00:16,  2.79it/s] 54%|█████▍    | 54/100 [00:18<00:18,  2.43it/s] 55%|█████▌    | 55/100 [00:19<00:18,  2.45it/s] 56%|█████▌    | 56/100 [00:19<00:18,  2.44it/s] 57%|█████▋    | 57/100 [00:20<00:18,  2.32it/s] 58%|█████▊    | 58/100 [00:20<00:22,  1.91it/s] 59%|█████▉    | 59/100 [00:21<00:26,  1.54it/s] 60%|██████    | 60/100 [00:22<00:25,  1.59it/s] 61%|██████    | 61/100 [00:23<00:23,  1.66it/s] 62%|██████▏   | 62/100 [00:23<00:23,  1.61it/s] 63%|██████▎   | 63/100 [00:24<00:21,  1.73it/s] 64%|██████▍   | 64/100 [00:24<00:21,  1.70it/s] 65%|██████▌   | 65/100 [00:25<00:20,  1.74it/s] 66%|██████▌   | 66/100 [00:25<00:18,  1.86it/s] 67%|██████▋   | 67/100 [00:26<00:16,  2.00it/s] 68%|██████▊   | 68/100 [00:26<00:14,  2.22it/s] 69%|██████▉   | 69/100 [00:26<00:12,  2.50it/s] 70%|███████   | 70/100 [00:27<00:11,  2.61it/s] 71%|███████   | 71/100 [00:27<00:10,  2.71it/s] 72%|███████▏  | 72/100 [00:27<00:10,  2.76it/s] 73%|███████▎  | 73/100 [00:28<00:09,  2.79it/s] 74%|███████▍  | 74/100 [00:28<00:09,  2.71it/s] 75%|███████▌  | 75/100 [00:28<00:08,  2.89it/s] 76%|███████▌  | 76/100 [00:29<00:08,  2.78it/s] 77%|███████▋  | 77/100 [00:29<00:08,  2.80it/s] 78%|███████▊  | 78/100 [00:29<00:07,  2.83it/s] 79%|███████▉  | 79/100 [00:30<00:07,  2.70it/s] 80%|████████  | 80/100 [00:30<00:07,  2.84it/s] 81%|████████  | 81/100 [00:31<00:06,  2.91it/s] 82%|████████▏ | 82/100 [00:31<00:06,  2.94it/s] 83%|████████▎ | 83/100 [00:31<00:05,  2.92it/s] 84%|████████▍ | 84/100 [00:32<00:05,  2.98it/s] 85%|████████▌ | 85/100 [00:32<00:05,  2.83it/s] 86%|████████▌ | 86/100 [00:32<00:04,  3.04it/s] 87%|████████▋ | 87/100 [00:32<00:04,  3.12it/s] 88%|████████▊ | 88/100 [00:33<00:03,  3.08it/s] 89%|████████▉ | 89/100 [00:33<00:03,  3.08it/s] 90%|█████████ | 90/100 [00:33<00:03,  3.01it/s] 91%|█████████ | 91/100 [00:34<00:03,  2.84it/s] 92%|█████████▏| 92/100 [00:34<00:02,  2.70it/s] 93%|█████████▎| 93/100 [00:35<00:02,  2.62it/s] 94%|█████████▍| 94/100 [00:35<00:02,  2.59it/s] 95%|█████████▌| 95/100 [00:35<00:01,  2.61it/s] 96%|█████████▌| 96/100 [00:36<00:01,  2.68it/s] 97%|█████████▋| 97/100 [00:36<00:01,  2.69it/s] 98%|█████████▊| 98/100 [00:37<00:00,  2.68it/s] 99%|█████████▉| 99/100 [00:37<00:00,  2.72it/s]100%|██████████| 100/100 [00:37<00:00,  2.82it/s]100%|██████████| 100/100 [00:37<00:00,  2.65it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.191, 'ARI/slice1': 0.2, 'ARI/slice2': 0.1996, 'ARI/slice3': 0.177, 'F1/slice2-slice3': 0.2331, 'PAS/slice1': 0.0828, 'CHAOS/slice1': 0.054, 'PAS/slice2': 0.0845, 'CHAOS/slice2': 0.0527, 'PAS/slice3': 0.0706, 'CHAOS/slice3': 0.0501, 'iLISI/all': 0.7125}
+
+--- Tonsil-S1-S2-S3 / seed 2027 / dot ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  4%|▍         | 4/100 [00:00<00:02, 36.35it/s]  9%|▉         | 9/100 [00:00<00:02, 39.33it/s] 14%|█▍        | 14/100 [00:00<00:02, 40.23it/s] 19%|█▉        | 19/100 [00:00<00:01, 40.63it/s] 24%|██▍       | 24/100 [00:00<00:01, 40.80it/s] 29%|██▉       | 29/100 [00:00<00:01, 40.95it/s] 34%|███▍      | 34/100 [00:00<00:01, 41.04it/s] 39%|███▉      | 39/100 [00:00<00:01, 41.06it/s] 44%|████▍     | 44/100 [00:01<00:01, 40.64it/s] 49%|████▉     | 49/100 [00:01<00:02, 21.39it/s] 53%|█████▎    | 53/100 [00:02<00:04, 11.51it/s] 56%|█████▌    | 56/100 [00:03<00:05,  7.81it/s] 58%|█████▊    | 58/100 [00:03<00:05,  7.17it/s] 60%|██████    | 60/100 [00:03<00:06,  6.66it/s] 62%|██████▏   | 62/100 [00:04<00:06,  6.07it/s] 63%|██████▎   | 63/100 [00:04<00:06,  5.94it/s] 64%|██████▍   | 64/100 [00:04<00:05,  6.30it/s] 65%|██████▌   | 65/100 [00:04<00:05,  6.68it/s] 66%|██████▌   | 66/100 [00:04<00:04,  7.08it/s] 67%|██████▋   | 67/100 [00:05<00:04,  7.46it/s] 69%|██████▉   | 69/100 [00:05<00:03,  9.79it/s] 73%|███████▎  | 73/100 [00:05<00:01, 16.22it/s] 78%|███████▊  | 78/100 [00:05<00:00, 22.98it/s] 83%|████████▎ | 83/100 [00:05<00:00, 28.01it/s] 88%|████████▊ | 88/100 [00:05<00:00, 31.60it/s] 92%|█████████▏| 92/100 [00:05<00:00, 33.64it/s] 97%|█████████▋| 97/100 [00:05<00:00, 32.30it/s]100%|██████████| 100/100 [00:05<00:00, 16.79it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.1272, 'ARI/slice1': 0.1425, 'ARI/slice2': 0.1563, 'ARI/slice3': 0.1204, 'F1/slice2-slice3': 0.2326, 'PAS/slice1': 0.0932, 'CHAOS/slice1': 0.0538, 'PAS/slice2': 0.0934, 'CHAOS/slice2': 0.0529, 'PAS/slice3': 0.0931, 'CHAOS/slice3': 0.0504, 'iLISI/all': 0.7955}
+
+--- Tonsil-S1-S2-S3 / seed 2027 / topola_cal ---
+batch0: ['rna', 'adt']
+batch1: ['rna']
+batch2: ['adt']
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45190 edges, 4519 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 43370 edges, 4337 cells.
+10.0000 neighbors per cell on average.
+------Calculating spatial graph...
+The graph contains 45210 edges, 4521 cells.
+10.0000 neighbors per cell on average.
+Searching MNN within rna
+Finding MNN between (s1, s2) using KNN (10, 10)
+Number of mnn pairs for rna:14842
+Searching MNN within adt
+Finding MNN between (s1, s3) using KNN (10, 10)
+Number of mnn pairs for adt:13799
+  0%|          | 0/100 [00:00<?, ?it/s]  [calib] kernel 8674: diag_mean=3.452e-03 off_std=6.089e-04 -> scale 1/3.452e-03
+  1%|          | 1/100 [00:00<00:41,  2.36it/s]  2%|▏         | 2/100 [00:00<00:44,  2.18it/s]  3%|▎         | 3/100 [00:01<00:42,  2.27it/s]  4%|▍         | 4/100 [00:01<00:38,  2.49it/s]  5%|▌         | 5/100 [00:02<00:38,  2.49it/s]  6%|▌         | 6/100 [00:02<00:36,  2.56it/s]  7%|▋         | 7/100 [00:02<00:37,  2.48it/s]  8%|▊         | 8/100 [00:03<00:35,  2.61it/s]  9%|▉         | 9/100 [00:03<00:36,  2.49it/s] 10%|█         | 10/100 [00:04<00:36,  2.48it/s] 11%|█         | 11/100 [00:04<00:40,  2.22it/s] 12%|█▏        | 12/100 [00:05<00:44,  1.99it/s] 13%|█▎        | 13/100 [00:05<00:43,  2.02it/s] 14%|█▍        | 14/100 [00:06<00:40,  2.13it/s] 15%|█▌        | 15/100 [00:06<00:36,  2.31it/s] 16%|█▌        | 16/100 [00:06<00:35,  2.36it/s] 17%|█▋        | 17/100 [00:07<00:33,  2.46it/s] 18%|█▊        | 18/100 [00:07<00:30,  2.70it/s] 19%|█▉        | 19/100 [00:08<00:33,  2.44it/s] 20%|██        | 20/100 [00:08<00:32,  2.50it/s] 21%|██        | 21/100 [00:08<00:33,  2.33it/s] 22%|██▏       | 22/100 [00:09<00:34,  2.28it/s] 23%|██▎       | 23/100 [00:09<00:32,  2.34it/s] 24%|██▍       | 24/100 [00:10<00:32,  2.36it/s] 25%|██▌       | 25/100 [00:10<00:30,  2.43it/s] 26%|██▌       | 26/100 [00:11<00:35,  2.09it/s] 27%|██▋       | 27/100 [00:11<00:31,  2.34it/s] 28%|██▊       | 28/100 [00:11<00:29,  2.43it/s] 29%|██▉       | 29/100 [00:12<00:27,  2.56it/s] 30%|███       | 30/100 [00:12<00:27,  2.55it/s] 31%|███       | 31/100 [00:13<00:27,  2.47it/s] 32%|███▏      | 32/100 [00:13<00:26,  2.58it/s] 33%|███▎      | 33/100 [00:13<00:26,  2.53it/s] 34%|███▍      | 34/100 [00:14<00:26,  2.49it/s] 35%|███▌      | 35/100 [00:14<00:27,  2.38it/s] 36%|███▌      | 36/100 [00:15<00:29,  2.19it/s] 37%|███▋      | 37/100 [00:15<00:29,  2.14it/s] 38%|███▊      | 38/100 [00:16<00:28,  2.18it/s] 39%|███▉      | 39/100 [00:16<00:34,  1.77it/s] 40%|████      | 40/100 [00:17<00:32,  1.87it/s] 41%|████      | 41/100 [00:17<00:28,  2.07it/s] 42%|████▏     | 42/100 [00:18<00:27,  2.13it/s] 43%|████▎     | 43/100 [00:18<00:25,  2.25it/s] 44%|████▍     | 44/100 [00:19<00:23,  2.33it/s] 45%|████▌     | 45/100 [00:19<00:23,  2.34it/s] 46%|████▌     | 46/100 [00:19<00:23,  2.27it/s] 47%|████▋     | 47/100 [00:20<00:22,  2.37it/s] 48%|████▊     | 48/100 [00:20<00:23,  2.25it/s] 49%|████▉     | 49/100 [00:21<00:22,  2.29it/s] 50%|█████     | 50/100 [00:21<00:20,  2.48it/s] 51%|█████     | 51/100 [00:21<00:19,  2.46it/s] 52%|█████▏    | 52/100 [00:22<00:20,  2.39it/s] 53%|█████▎    | 53/100 [00:22<00:20,  2.27it/s] 54%|█████▍    | 54/100 [00:23<00:21,  2.12it/s] 55%|█████▌    | 55/100 [00:23<00:20,  2.18it/s] 56%|█████▌    | 56/100 [00:24<00:18,  2.36it/s] 57%|█████▋    | 57/100 [00:24<00:18,  2.29it/s] 58%|█████▊    | 58/100 [00:25<00:17,  2.36it/s] 59%|█████▉    | 59/100 [00:25<00:16,  2.50it/s] 60%|██████    | 60/100 [00:25<00:15,  2.56it/s] 61%|██████    | 61/100 [00:26<00:14,  2.68it/s] 62%|██████▏   | 62/100 [00:26<00:16,  2.27it/s] 63%|██████▎   | 63/100 [00:27<00:15,  2.32it/s] 64%|██████▍   | 64/100 [00:27<00:15,  2.38it/s] 65%|██████▌   | 65/100 [00:27<00:15,  2.33it/s] 66%|██████▌   | 66/100 [00:28<00:14,  2.42it/s] 67%|██████▋   | 67/100 [00:28<00:13,  2.39it/s] 68%|██████▊   | 68/100 [00:29<00:13,  2.37it/s] 69%|██████▉   | 69/100 [00:29<00:13,  2.37it/s] 70%|███████   | 70/100 [00:30<00:13,  2.24it/s] 71%|███████   | 71/100 [00:30<00:12,  2.23it/s] 72%|███████▏  | 72/100 [00:30<00:12,  2.29it/s] 73%|███████▎  | 73/100 [00:31<00:11,  2.40it/s] 74%|███████▍  | 74/100 [00:31<00:10,  2.40it/s] 75%|███████▌  | 75/100 [00:32<00:10,  2.47it/s] 76%|███████▌  | 76/100 [00:32<00:09,  2.54it/s] 77%|███████▋  | 77/100 [00:32<00:08,  2.63it/s] 78%|███████▊  | 78/100 [00:33<00:08,  2.74it/s] 79%|███████▉  | 79/100 [00:33<00:07,  2.86it/s] 80%|████████  | 80/100 [00:34<00:08,  2.31it/s] 81%|████████  | 81/100 [00:34<00:08,  2.21it/s] 82%|████████▏ | 82/100 [00:35<00:08,  2.23it/s] 83%|████████▎ | 83/100 [00:35<00:07,  2.38it/s] 84%|████████▍ | 84/100 [00:35<00:06,  2.30it/s] 85%|████████▌ | 85/100 [00:36<00:05,  2.52it/s] 86%|████████▌ | 86/100 [00:36<00:06,  2.02it/s] 87%|████████▋ | 87/100 [00:37<00:06,  1.92it/s] 88%|████████▊ | 88/100 [00:37<00:06,  1.99it/s] 89%|████████▉ | 89/100 [00:38<00:05,  2.15it/s] 90%|█████████ | 90/100 [00:38<00:04,  2.32it/s] 91%|█████████ | 91/100 [00:39<00:03,  2.46it/s] 92%|█████████▏| 92/100 [00:39<00:03,  2.55it/s] 93%|█████████▎| 93/100 [00:39<00:02,  2.59it/s] 94%|█████████▍| 94/100 [00:40<00:02,  2.68it/s] 95%|█████████▌| 95/100 [00:40<00:01,  2.62it/s] 96%|█████████▌| 96/100 [00:40<00:01,  2.60it/s] 97%|█████████▋| 97/100 [00:41<00:01,  2.61it/s] 98%|█████████▊| 98/100 [00:41<00:00,  2.65it/s] 99%|█████████▉| 99/100 [00:41<00:00,  2.71it/s]100%|██████████| 100/100 [00:42<00:00,  2.81it/s]100%|██████████| 100/100 [00:42<00:00,  2.36it/s]
+/data/home/jiboya/.conda/envs/spamosaic-env/lib/python3.8/site-packages/rpy2/robjects/numpy2ri.py:252: DeprecationWarning: The global conversion available with activate() is deprecated and will be removed in the next major release. Use a local converter.
+  warnings.warn('The global conversion available with activate() '
+fitting ...
+  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
+  slice1: 剔除 11 个无标签细胞
+  slice2: 剔除 1 个无标签细胞
+  slice3: 剔除 61 个无标签细胞
+  scores: {'ARI/all': 0.1948, 'ARI/slice1': 0.2041, 'ARI/slice2': 0.205, 'ARI/slice3': 0.1756, 'F1/slice2-slice3': 0.2367, 'PAS/slice1': 0.0745, 'CHAOS/slice1': 0.0538, 'PAS/slice2': 0.0728, 'CHAOS/slice2': 0.0527, 'PAS/slice3': 0.0597, 'CHAOS/slice3': 0.0501, 'iLISI/all': 0.7228}
+
+=== 汇总 ===
+            dataset metric          scope     variant    mean     std  count
+0    Lymph-S1-S2-S3    ARI            all         dot  0.2276  0.0107      5
+1    Lymph-S1-S2-S3    ARI            all  topola_cal  0.1859  0.0145      5
+2    Lymph-S1-S2-S3    ARI         slice1         dot  0.2352  0.0130      5
+3    Lymph-S1-S2-S3    ARI         slice1  topola_cal  0.1922  0.0161      5
+4    Lymph-S1-S2-S3    ARI         slice2         dot  0.2305  0.0105      5
+5    Lymph-S1-S2-S3    ARI         slice2  topola_cal  0.2080  0.0253      5
+6    Lymph-S1-S2-S3    ARI         slice3         dot  0.2215  0.0101      5
+7    Lymph-S1-S2-S3    ARI         slice3  topola_cal  0.1870  0.0085      5
+8    Lymph-S1-S2-S3  CHAOS         slice1         dot  0.0657  0.0006      5
+9    Lymph-S1-S2-S3  CHAOS         slice1  topola_cal  0.0645  0.0003      5
+10   Lymph-S1-S2-S3  CHAOS         slice2         dot  0.0701  0.0010      5
+11   Lymph-S1-S2-S3  CHAOS         slice2  topola_cal  0.0692  0.0006      5
+12   Lymph-S1-S2-S3  CHAOS         slice3         dot  0.0668  0.0008      5
+13   Lymph-S1-S2-S3  CHAOS         slice3  topola_cal  0.0660  0.0004      5
+14   Lymph-S1-S2-S3     F1  slice2-slice3         dot  0.3120  0.0044      5
+15   Lymph-S1-S2-S3     F1  slice2-slice3  topola_cal  0.3245  0.0101      5
+16   Lymph-S1-S2-S3    PAS         slice1         dot  0.2050  0.0328      5
+17   Lymph-S1-S2-S3    PAS         slice1  topola_cal  0.1379  0.0086      5
+18   Lymph-S1-S2-S3    PAS         slice2         dot  0.2771  0.0317      5
+19   Lymph-S1-S2-S3    PAS         slice2  topola_cal  0.1810  0.0167      5
+20   Lymph-S1-S2-S3    PAS         slice3         dot  0.1991  0.0226      5
+21   Lymph-S1-S2-S3    PAS         slice3  topola_cal  0.1299  0.0130      5
+22   Lymph-S1-S2-S3  iLISI            all         dot  0.7265  0.0143      5
+23   Lymph-S1-S2-S3  iLISI            all  topola_cal  0.6246  0.0108      5
+24      Simulations    ARI            all         dot  0.8807  0.0079      5
+25      Simulations    ARI            all  topola_cal  0.9160  0.0038      5
+26      Simulations    ARI         slice1         dot  0.9528  0.0094      5
+27      Simulations    ARI         slice1  topola_cal  0.9792  0.0067      5
+28      Simulations    ARI         slice2         dot  0.8505  0.0170      5
+29      Simulations    ARI         slice2  topola_cal  0.9046  0.0069      5
+30      Simulations    ARI         slice3         dot  0.8430  0.0083      5
+31      Simulations    ARI         slice3  topola_cal  0.8673  0.0141      5
+32      Simulations  CHAOS         slice1         dot  0.0970  0.0006      5
+33      Simulations  CHAOS         slice1  topola_cal  0.0963  0.0000      5
+34      Simulations  CHAOS         slice2         dot  0.0993  0.0008      5
+35      Simulations  CHAOS         slice2  topola_cal  0.0990  0.0016      5
+36      Simulations  CHAOS         slice3         dot  0.1002  0.0015      5
+37      Simulations  CHAOS         slice3  topola_cal  0.0983  0.0010      5
+38      Simulations     F1  slice2-slice3         dot  0.9347  0.0033      5
+39      Simulations     F1  slice2-slice3  topola_cal  0.9443  0.0052      5
+40      Simulations    PAS         slice1         dot  0.0181  0.0024      5
+41      Simulations    PAS         slice1  topola_cal  0.0140  0.0013      5
+42      Simulations    PAS         slice2         dot  0.0485  0.0068      5
+43      Simulations    PAS         slice2  topola_cal  0.0363  0.0020      5
+44      Simulations    PAS         slice3         dot  0.0525  0.0083      5
+45      Simulations    PAS         slice3  topola_cal  0.0465  0.0049      5
+46      Simulations  iLISI            all         dot  0.7812  0.0069      5
+47      Simulations  iLISI            all  topola_cal  0.7788  0.0148      5
+48  Tonsil-S1-S2-S3    ARI            all         dot  0.1206  0.0125      5
+49  Tonsil-S1-S2-S3    ARI            all  topola_cal  0.1694  0.0230      5
+50  Tonsil-S1-S2-S3    ARI         slice1         dot  0.1388  0.0146      5
+51  Tonsil-S1-S2-S3    ARI         slice1  topola_cal  0.1761  0.0238      5
+52  Tonsil-S1-S2-S3    ARI         slice2         dot  0.1395  0.0112      5
+53  Tonsil-S1-S2-S3    ARI         slice2  topola_cal  0.1737  0.0308      5
+54  Tonsil-S1-S2-S3    ARI         slice3         dot  0.1170  0.0127      5
+55  Tonsil-S1-S2-S3    ARI         slice3  topola_cal  0.1590  0.0185      5
+56  Tonsil-S1-S2-S3  CHAOS         slice1         dot  0.0538  0.0001      5
+57  Tonsil-S1-S2-S3  CHAOS         slice1  topola_cal  0.0539  0.0001      5
+58  Tonsil-S1-S2-S3  CHAOS         slice2         dot  0.0529  0.0001      5
+59  Tonsil-S1-S2-S3  CHAOS         slice2  topola_cal  0.0529  0.0001      5
+60  Tonsil-S1-S2-S3  CHAOS         slice3         dot  0.0503  0.0001      5
+61  Tonsil-S1-S2-S3  CHAOS         slice3  topola_cal  0.0502  0.0000      5
+62  Tonsil-S1-S2-S3     F1  slice2-slice3         dot  0.2331  0.0006      5
+63  Tonsil-S1-S2-S3     F1  slice2-slice3  topola_cal  0.2356  0.0019      5
+64  Tonsil-S1-S2-S3    PAS         slice1         dot  0.0959  0.0102      5
+65  Tonsil-S1-S2-S3    PAS         slice1  topola_cal  0.0748  0.0075      5
+66  Tonsil-S1-S2-S3    PAS         slice2         dot  0.0960  0.0083      5
+67  Tonsil-S1-S2-S3    PAS         slice2  topola_cal  0.0766  0.0067      5
+68  Tonsil-S1-S2-S3    PAS         slice3         dot  0.0884  0.0146      5
+69  Tonsil-S1-S2-S3    PAS         slice3  topola_cal  0.0665  0.0087      5
+70  Tonsil-S1-S2-S3  iLISI            all         dot  0.8007  0.0042      5
+71  Tonsil-S1-S2-S3  iLISI            all  topola_cal  0.7162  0.0118      5
