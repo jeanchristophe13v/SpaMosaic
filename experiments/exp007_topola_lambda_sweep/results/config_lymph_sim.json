@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    "Lymph-S1-S2-S3",
+    "Simulations"
+  ],
+  "variants": [
+    "topola_cal_lam"
+  ],
+  "device": "cuda:5",
+  "seeds": [
+    1234,
+    2024,
+    2025,
+    2026,
+    2027
+  ],
+  "epochs": 100,
+  "lambdas": [
+    1.0,
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0
+  ],
+  "tag": "lymph_sim",
+  "sim_setting": "rna-0.1-12-adt-2.1",
+  "sim_rep": "1",
+  "out_dir": "/data/home/jiboya/SpaMosaic/experiments/exp007_topola_lambda_sweep/scripts/../results"
+}
