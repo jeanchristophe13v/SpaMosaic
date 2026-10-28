@@ -1,58 +1,34 @@
-# AGENTS.md — SpaMosaic 项目协作规范
+# AGENTS.md
 
-SpaMosaic:基于对比学习 + GNN 的空间多组学 mosaic 整合工具(模态无关、批次校正的 latent space,下游做空间域识别与缺失组学插补)。
+SpaMosaic:空间多组学 mosaic 整合工具(对比学习 + GNN)。conda env `spamosaic-env`;rpy2/mclust 依赖 `R_HOME` 环境变量。
 
-- 运行环境: conda env `spamosaic-env`。rpy2/mclust 依赖 `R_HOME`,跑实验前需确保该环境变量已设置(exp001 曾因此崩溃,见 exp002)。
-- 数据集放在 `data/`,常用: `Simulations`(有 gt)、`MB-H3K4me3`(无 gt,只算 PAS/CHAOS/iLISI)。
-- 常用指标: ARI、F1、PAS、CHAOS、iLISI。
+## 仓库地图
 
-## 实验目录规范(重要)
+| 路径 | 是什么 | 规则 |
+|---|---|---|
+| `spamosaic/` | 算法实现:framework(主类)、loss、architectures/(网络)、topola、metrics(评估指标) | **主要开发区** |
+| `scripts/` | 入口脚本:run_demo.py、run_loss_experiments.py | 实验 driver 模板 |
+| `experiments/` | 实验记录,编号索引(见下) | 按工作流写入 |
+| `tests/` | test_smoke.py | 改 `spamosaic/` 后必跑 |
+| `notes/` | 个人笔记与方案文档 | — |
+| `examples/` | 自己的 demo 运行记录(notebook + 输出) | — |
+| `reproduce/` | 论文复现分支快照(baseline 方法、指标代码原版) | **只读** |
+| `demo/`、`docs/` | 上游原仓库的教程与用户文档 | **只读** |
+| `data/` | 本地大数据集 | 已 gitignore |
 
-所有实验统一放在 `experiments/`,**每个实验一个自包含文件夹**,内部固定三个子目录:
+## 开发约定
 
-```
-experiments/
-├── index.csv                      # 全局实验索引,只放最核心的结论
-├── exp001_topola_first_run/       # 命名: exp + 3位递增编号 + 小写蛇形短标签
-│   ├── scripts/                   # 本次实验实际运行的脚本快照(self-contained)
-│   ├── results/                   # 详细结果: config.json, metrics.csv, summary.csv, 各 variant/seed 产物
-│   └── log/                       # 本次实验的完整运行日志(如 run.log)
-└── exp002_topola_mb_rfixed/
-    └── ...
-```
+- 加网络:新文件放 `spamosaic/architectures/`,并在其 `__init__.py` 注册;改 loss 在 `spamosaic/loss.py`、`train_utils.py`。
+- **铁律**:`spamosaic/` 包内禁止 import 包外散落文件或绝对路径。指标一律 `from spamosaic import metrics`;TopoLa 一律 `from spamosaic.topola import ...`。
+- 改完跑 `python tests/test_smoke.py`(metrics 因 scib 依赖较重,不在其中)。
+- `reproduce/`、`demo/`、`docs/` 是上游/冻结内容,不修改;要用其中的代码就复制到开发区再改。
 
-### 编号规则
+## 实验工作流(必须遵守)
 
-- 文件夹名: `expNNN_short_slug`,NNN 为 3 位递增编号(新实验取 `index.csv` 中最大编号 + 1),slug 用小写蛇形命名、不超过 4 个词。
-- 同一实验的重跑/修复**不新开编号**,沿用原编号(如 exp002 是 exp001 的 MB 部分修复重跑,因改动语义上是同一次消融;若是一次新的改动探索,则新开编号)。编号一旦分配永不复用。
+1. 读 `experiments/index.csv` 取下一个编号 NNN,`mkdir -p experiments/expNNN_slug/{scripts,results,log}`(slug 小写蛇形 ≤4 词;编号永不复用)。
+2. 从 `scripts/` 复制 driver 到 `expNNN/scripts/` 并在其中修改,保证快照自包含。
+3. 运行:输出写 `results/`,日志 `2>&1 | tee .../log/run.log`。
+4. 结束后在 `index.csv` 末尾追加一行(列 `id,date,change,key_result`):change 写改动与配置;key_result 只写一行内最核心结论,详细数据看 `results/`。单元格内用 `;` 分隔、不用 `,`。
+5. 同一实验的修复重跑沿用原编号;新的改动探索开新编号。
 
-### index.csv 规范
-
-列: `id,date,change,key_result`
-
-- `change`: 本次改动细节(改了什么、跑了哪些配置)。
-- `key_result`: **一行内最核心最简洁的结论**(如最优变体 + 关键指标值),只写看全局时需要的信息;单元格内用 `;` 分隔、不要用逗号(避免 CSV 转义)。
-- 详细数据一律看对应 `expNNN_*/results/`,不往 index.csv 里堆。
-
-### 各子目录职责
-
-- `scripts/`: 当次实验**实际运行版本**的脚本快照(入口脚本 + 被修改/被依赖的自有模块,如 `run_loss_experiments.py`、`topola_D_and_S.py`)。改了代码就 copy 进来,保证不看 git 历史也能复现本次实验。
-- `results/`: 实验输出(`config.json`、`metrics.csv`、`summary.csv`、embedding 等产物)。跑实验时把脚本的 `output_dir` 指到这里。
-- `log/`: 必要的运行日志 `... 2>&1 | tee experiments/expNNN_*/log/run.log`。
-
-### 开展新实验的工作流(Agent 必须遵守)
-
-1. 读 `experiments/index.csv`,确定下一个编号 NNN,起好 slug。
-2. `mkdir -p experiments/expNNN_slug/{scripts,results,log}`。
-3. 把(修改后的)脚本快照 copy 到 `scripts/`。
-4. 运行实验:`output_dir` 指向 `results/`,日志 tee 到 `log/run.log`。
-5. 实验结束后,在 `index.csv` **末尾追加一行**,填好 date、change、key_result。
-
-### Git 策略
-
-- 入库: `experiments/index.csv`、各实验的 `scripts/`、`log/`、`results/` 下的 csv/json。
-- 忽略: `experiments/**/*.h5ad` 等大体积可再生产物(见 `.gitignore`)。
-
-### 历史说明
-
-- exp001 / exp002 由旧的 `loss_experiments/topola_first_run`、`loss_experiments/topola_mb_rfixed` 迁移而来(2026-10-27),原始内容未改动,仅按上述结构重新归位。
+Git:`index.csv`、`scripts/`、`log/`、`results/` 下 csv/json 入库;`*.h5ad`、`docs/build/` 已 ignore。

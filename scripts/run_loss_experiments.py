@@ -26,7 +26,7 @@ import time
 
 os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 VARIANTS = {
     'dot_cl': ('dot', 'adapted'),
     'topola_cl': ('topola', 'adapted'),
@@ -55,7 +55,7 @@ def main():
     parser.add_argument('--lr', type=float, default=.01)
     parser.add_argument('--mini-batch-size', type=int, default=1024)
     parser.add_argument('--use-mini-thr', type=int, default=8000)
-    parser.add_argument('--output-dir', type=Path, default=ROOT / 'loss_experiments' / time.strftime('%Y%m%d-%H%M%S'))
+    parser.add_argument('--output-dir', type=Path, default=ROOT / 'experiments' / time.strftime('%Y%m%d-%H%M%S'))
     parser.add_argument('--smoke-test', action='store_true', help='Synthetic gradients and short WLGCN training; no data or output files')
     args = parser.parse_args()
     for value in (args.temperatures or []) + args.topola_lambdas + [args.lr]:
@@ -87,8 +87,7 @@ def main():
         smoke_test(device)
         return
 
-    sys.path.insert(0, str(ROOT / 'reproduce/code/compute_metrics'))
-    import metrics
+    from spamosaic import metrics
 
     args.output_dir.mkdir(parents=True, exist_ok=False)
     with (args.output_dir / 'config.json').open('w') as f:
@@ -229,7 +228,7 @@ def smoke_test(device):
     from spamosaic.architectures.wlgcn import WLGCN
     from spamosaic.loss import CL_loss, BPR_loss
     from spamosaic.train_utils import set_seeds, train_model
-    from topola_D_and_S import full_topola_distance
+    from spamosaic.topola import full_topola_distance
 
     set_seeds(1234)
     features = torch.randn(8, 3, dtype=torch.float64, device=device, requires_grad=True)

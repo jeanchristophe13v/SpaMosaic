@@ -21,3 +21,6 @@ dist/
 # Experiments: track index.csv / scripts / log / small csv+json;
 # ignore heavy regenerable artifacts
 /experiments/**/*.h5ad
+
+# Sphinx build output
+docs/build/

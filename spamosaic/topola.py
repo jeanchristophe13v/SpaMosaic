@@ -26,7 +26,7 @@
 函数逐字提取自当前实验实现。
 
 调用示例：
-    from topola_D_and_S import compute_topola
+    from spamosaic.topola import compute_topola
     D_lambda, S_lambda = compute_topola(C, Z, lambda_topola=10.0)
 """
 from contextlib import nullcontext

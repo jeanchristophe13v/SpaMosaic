@@ -27,7 +27,7 @@ import torch.nn.functional as F
 from sklearn.decomposition import PCA
 from sklearn.metrics import adjusted_rand_score
 from torch_geometric.utils import negative_sampling
-from topola_D_and_S import full_topola_distance
+from spamosaic.topola import full_topola_distance
 
 import random
 def set_seeds(seed, dt=True):

@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 """
 SpaMosaic 源码运行示例:从仓库根目录直接运行,不需要 pip install。
-用法: python run_demo.py [--device cpu|cuda:0]
+用法: python scripts/run_demo.py [--device cpu|cuda:0]
 """
 import os
 import sys
 from os.path import join, dirname, abspath
 
 # ---- 源码运行的关键:把仓库根目录加入 sys.path,使 import spamosaic 直接用源代码 ----
-REPO_ROOT = dirname(abspath(__file__))
+REPO_ROOT = dirname(dirname(abspath(__file__)))
 sys.path.insert(0, REPO_ROOT)
 
 # CUDA >= 10.2 时需要(必须在 import torch 之前设置)
@@ -74,14 +74,14 @@ def main():
     ad_mosaic = sc.concat(ad_embs)
     utls.get_umap(ad_mosaic, use_reps=['merged_emb'])
     utls.plot_basis(ad_mosaic, basis='merged_emb_umap', color=['src'],
-                    show=True, save=join(REPO_ROOT, 'demo_out_umap.png'))
+                    show=True, save=join(REPO_ROOT, 'examples', 'human_lymph_umap.png'))
 
     utls.clustering(ad_mosaic, n_cluster=10, used_obsm='merged_emb',
                     algo='kmeans', key='kmeans')  # mclust 需要 R,失败会自动退回 kmeans
     utls.split_adata_ob(ad_embs, ad_mosaic, 'obs', 'kmeans')
     for ad in ad_embs:
         utls.plot_basis(ad, 'spatial', 'kmeans', s=70,
-                        show=True, save=join(REPO_ROOT, 'demo_out_spatial.png'))
+                        show=True, save=join(REPO_ROOT, 'examples', 'human_lymph_spatial.png'))
 
     # ========== 5. (可选)缺失模态填补 ==========
     for ads in input_dict.values():
