@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    "Tonsil-S1-S2-S2",
+    "Tonsil-S1-S2-S3"
+  ],
+  "variants": [
+    "dot",
+    "topola_cal"
+  ],
+  "device": "cuda:6",
+  "seeds": [
+    1234,
+    2024,
+    2025,
+    2026,
+    2027
+  ],
+  "epochs": 100,
+  "lambda_topola": 10.0,
+  "sim_setting": "rna-0.1-12-adt-2.1",
+  "sim_rep": "1",
+  "out_dir": "/data/home/jiboya/SpaMosaic/experiments/exp008_topola_rank_diag/results",
+  "tag": "tonsil"
+}

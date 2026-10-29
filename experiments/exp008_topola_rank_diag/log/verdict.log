@@ -1,0 +1,176 @@
+=== iLISI(本实验 vs exp005) ===
+           dataset     variant    mean     std  count  mean_exp005  std_exp005  diff_vs_exp005
+0   Lymph-S1-S2-S2         dot  0.7786  0.0024      5          NaN         NaN             NaN
+1   Lymph-S1-S2-S2  topola_cal  0.7218  0.0040      5          NaN         NaN             NaN
+2   Lymph-S1-S2-S3         dot  0.7263  0.0134      5       0.7265      0.0143         -0.0002
+3   Lymph-S1-S2-S3  topola_cal  0.6262  0.0117      5       0.6246      0.0108          0.0016
+4      Simulations         dot  0.7823  0.0091      5       0.7812      0.0069          0.0011
+5      Simulations  topola_cal  0.7729  0.0154      5       0.7788      0.0148         -0.0059
+6  Tonsil-S1-S2-S2         dot  0.8293  0.0008      5          NaN         NaN             NaN
+7  Tonsil-S1-S2-S2  topola_cal  0.7885  0.0026      5          NaN         NaN             NaN
+8  Tonsil-S1-S2-S3         dot  0.8010  0.0043      5       0.8007      0.0042          0.0002
+9  Tonsil-S1-S2-S3  topola_cal  0.7166  0.0086      5       0.7162      0.0118          0.0004
+                   mean  n_topo_lower
+dataset                              
+Lymph-S1-S2-S2  -0.0568             5
+Lymph-S1-S2-S3  -0.1001             5
+Simulations     -0.0094             3
+Tonsil-S1-S2-S2 -0.0408             5
+Tonsil-S1-S2-S3 -0.0844             5
+
+=== 余弦 FOSCTTM 绝对值(两个训练 arm) ===
+             dataset         arm  foscttm
+0     Lymph-S1-S2-S2         dot   0.0351
+45    Lymph-S1-S2-S2  topola_cal   0.0479
+90       Simulations         dot   0.3796
+135      Simulations  topola_cal   0.3653
+180  Tonsil-S1-S2-S2         dot   0.0067
+225  Tonsil-S1-S2-S2  topola_cal   0.0117
+
+H_rank 强标准满足的设置数: 0
+至少 2 个数据集下降 ≥3% 的设置数: 6
+
+=== 自检 α=100 与训练核(train_lam10)===
+dataset                   Lymph-S1-S2-S2  Simulations  Tonsil-S1-S2-S2  Lymph-S1-S2-S2_nbetter  Simulations_nbetter  Tonsil-S1-S2-S2_nbetter
+score ref    alpha                                                                                                                          
+topo  all    100.0               -0.0532       0.0010          -0.0351                       5                    0                        5
+      bridge 100.0               -0.0531       0.0012          -0.0362                       5                    0                        5
+             train_lam10          0.6510       0.1016           2.6490                       0                    0                        0
+      pair   100.0               -0.0532       0.0008          -0.0339                       5                    0                        5
+wcos  all    100.0               -0.0236       0.0009          -0.0167                       5                    0                        5
+      bridge 100.0               -0.0238       0.0012          -0.0167                       5                    0                        5
+             train_lam10          0.4689       0.0991           1.5618                       0                    0                        0
+      pair   100.0               -0.0233       0.0007          -0.0166                       5                    0                        5
+
+=== 每个数据集最好的 5 个设置 ===
+-- Lymph-S1-S2-S2
+dataset             Lymph-S1-S2-S2  Lymph-S1-S2-S2_nbetter
+score ref    alpha                                        
+topo  bridge 10.0          -0.1646                       5
+wcos  bridge 3.0           -0.1633                       5
+topo  all    10.0          -0.1620                       5
+wcos  all    3.0           -0.1586                       5
+topo  pair   10.0          -0.1561                       5
+-- Simulations
+dataset           Simulations  Simulations_nbetter
+score ref  alpha                                  
+cos   none none        0.0000                    0
+wcos  pair 100.0       0.0007                    0
+topo  pair 100.0       0.0008                    0
+wcos  all  100.0       0.0009                    0
+topo  all  100.0       0.0010                    0
+-- Tonsil-S1-S2-S2
+dataset             Tonsil-S1-S2-S2  Tonsil-S1-S2-S2_nbetter
+score ref    alpha                                          
+wcos  bridge 10.0           -0.0540                        5
+      all    10.0           -0.0527                        5
+      pair   10.0           -0.0513                        5
+topo  bridge 100.0          -0.0362                        5
+      all    100.0          -0.0351                        5
+
+=== 至少 2 个数据集下降 ≥3% 的设置 ===
+dataset             Lymph-S1-S2-S2  Simulations  Tonsil-S1-S2-S2  Lymph-S1-S2-S2_nbetter  Simulations_nbetter  Tonsil-S1-S2-S2_nbetter
+score ref    alpha                                                                                                                    
+topo  all    100.0         -0.0532       0.0010          -0.0351                       5                    0                        5
+      bridge 100.0         -0.0531       0.0012          -0.0362                       5                    0                        5
+      pair   100.0         -0.0532       0.0008          -0.0339                       5                    0                        5
+wcos  all    10.0          -0.1196       0.0088          -0.0527                       5                    0                        5
+      bridge 10.0          -0.1217       0.0106          -0.0540                       5                    0                        5
+      pair   10.0          -0.1166       0.0070          -0.0513                       5                    0                        5
+
+=== 代表设置的排序指标(均值) ===
+metric                                               FOSCTTM     MRR    Hit1   Hit10  mutual_true_frac  mutual_label_agree  mutual_pairs
+dataset         arm        score ref    alpha                                                                                           
+Lymph-S1-S2-S2  dot        cos   none   none          0.0351  0.1099  0.0430  0.2449            0.0344              0.6346       16389.6
+                           topo  bridge 1.0           0.0365  0.0526  0.0129  0.1111            0.0542              0.6240        2032.2
+                                        100.0         0.0332  0.1136  0.0442  0.2548            0.0354              0.6309       17437.6
+                                        train_lam10   0.0579  0.0406  0.0080  0.0868            0.0407              0.5592        2456.8
+                                 pair   0.0001        0.1224  0.0251  0.0036  0.0521            0.0204              0.4516        3202.4
+                           wcos  bridge 10.0          0.0308  0.1161  0.0458  0.2581            0.0368              0.6350       16105.0
+                                        3.0           0.0294  0.1162  0.0444  0.2586            0.0376              0.6323       15620.2
+                topola_cal cos   none   none          0.0479  0.1067  0.0431  0.2319            0.0339              0.6170       15604.8
+                           topo  bridge 1.0           0.0538  0.1033  0.0418  0.2257            0.0314              0.6095       16986.4
+                                        100.0         0.0481  0.1067  0.0432  0.2319            0.0338              0.6169       15659.4
+                                        train_lam10   0.0584  0.1000  0.0395  0.2203            0.0303              0.6021       17247.2
+                                 pair   0.0001        0.0910  0.0687  0.0239  0.1514            0.0227              0.5585       14414.4
+                           wcos  bridge 10.0          0.0492  0.1060  0.0429  0.2305            0.0335              0.6155       15731.0
+                                        3.0           0.0513  0.1046  0.0423  0.2273            0.0327              0.6130       15921.0
+Simulations     dot        cos   none   none          0.3796  0.0121  0.0012  0.0198            0.0017                 NaN        7476.6
+                           topo  bridge 1.0           0.3993  0.0117  0.0012  0.0194            0.0019                 NaN        8681.8
+                                        100.0         0.3800  0.0121  0.0012  0.0201            0.0018                 NaN        7536.4
+                                        train_lam10   0.4181  0.0103  0.0012  0.0174            0.0017                 NaN        7638.2
+                                 pair   0.0001        0.4220  0.0099  0.0013  0.0162            0.0018                 NaN        7135.2
+                           wcos  bridge 10.0          0.3836  0.0121  0.0012  0.0205            0.0019                 NaN        7624.2
+                                        3.0           0.3898  0.0122  0.0014  0.0204            0.0019                 NaN        7873.2
+                topola_cal cos   none   none          0.3653  0.0146  0.0026  0.0251            0.0026                 NaN        7263.8
+                           topo  bridge 1.0           0.3980  0.0134  0.0030  0.0222            0.0022                 NaN        9114.2
+                                        100.0         0.3661  0.0145  0.0026  0.0249            0.0026                 NaN        7332.2
+                                        train_lam10   0.4171  0.0121  0.0025  0.0194            0.0020                 NaN        8936.8
+                                 pair   0.0001        0.4118  0.0120  0.0022  0.0194            0.0019                 NaN        9200.6
+                           wcos  bridge 10.0          0.3720  0.0144  0.0027  0.0248            0.0026                 NaN        7550.2
+                                        3.0           0.3827  0.0140  0.0026  0.0248            0.0026                 NaN        7963.4
+Tonsil-S1-S2-S2 dot        cos   none   none          0.0067  0.2985  0.1700  0.5754            0.0840              0.7474       25809.2
+                           topo  bridge 1.0           0.0181  0.0820  0.0255  0.1823            0.1279              0.7750        3183.8
+                                        100.0         0.0064  0.3006  0.1714  0.5795            0.0858              0.7475       25541.8
+                                        train_lam10   0.0244  0.0730  0.0188  0.1744            0.0952              0.7519        4168.2
+                                 pair   0.0001        0.0537  0.0481  0.0091  0.1147            0.0446              0.6899        5855.8
+                           wcos  bridge 10.0          0.0063  0.3016  0.1727  0.5797            0.0859              0.7508       25337.8
+                                        3.0           0.0067  0.2933  0.1668  0.5646            0.0850              0.7530       24562.6
+                topola_cal cos   none   none          0.0117  0.3339  0.2104  0.5882            0.0982              0.7752       23062.4
+                           topo  bridge 1.0           0.0130  0.3281  0.2049  0.5822            0.0921              0.7681       24735.6
+                                        100.0         0.0118  0.3337  0.2101  0.5880            0.0980              0.7749       23123.6
+                                        train_lam10   0.0137  0.3262  0.2036  0.5812            0.0907              0.7644       25179.6
+                                 pair   0.0001        0.0209  0.2268  0.1154  0.4654            0.0762              0.7440       22089.8
+                           wcos  bridge 10.0          0.0120  0.3319  0.2087  0.5862            0.0975              0.7742       23168.2
+                                        3.0           0.0125  0.3288  0.2060  0.5817            0.0961              0.7726       23344.0
+
+=== H_mnn:每个组合 TopoLa 相对余弦的最大一致率增益 ===
+             dataset modality  chance  cos_pairs  cos_agree score  alpha  n_pairs  label_agree  d_agree  pair_ratio
+131  Tonsil-S1-S2-S3      adt   0.395      15342      0.552  topo   10.0    18080        0.585    0.032       1.178
+74       Simulations      adt   0.236       8160      0.687  topo    3.0    10103        0.700    0.014       1.238
+118  Tonsil-S1-S2-S3      rna   0.411      15249      0.727  topo  100.0    15831        0.733    0.006       1.038
+90   Tonsil-S1-S2-S2      rna   0.411      15249      0.727  topo  100.0    15831        0.733    0.006       1.038
+110  Tonsil-S1-S2-S2      adt   0.411      18011      0.716  wcos   10.0    18860        0.717    0.000       1.047
+27    Lymph-S1-S2-S2      adt   0.219      15370      0.604  wcos  100.0    15417        0.604   -0.001       1.003
+55    Lymph-S1-S2-S3      adt   0.105      12776      0.379  wcos  100.0    12877        0.378   -0.001       1.008
+62       Simulations      rna   0.234       7459      0.678  topo  100.0     7818        0.676   -0.002       1.048
+13    Lymph-S1-S2-S2      rna   0.219      12455      0.567  wcos  100.0    12799        0.565   -0.003       1.028
+41    Lymph-S1-S2-S3      rna   0.219      12455      0.567  wcos  100.0    12799        0.565   -0.003       1.028
+满足 H_mnn 的组合(任意设置):
+dataset          modality
+Tonsil-S1-S2-S3  adt         2
+
+=== SpaMosaic 实际 MNN(annoy)标签一致率 ===
+           dataset modality  n_pairs  agree  agree_std  cos_pairs  cos_agree
+0   Lymph-S1-S2-S2      adt  13607.0  0.604        0.0      15370      0.604
+1   Lymph-S1-S2-S2      rna   8457.0  0.594        0.0      12455      0.567
+2   Lymph-S1-S2-S3      adt  11151.0  0.393        0.0      12776      0.379
+3   Lymph-S1-S2-S3      rna   8457.0  0.594        0.0      12455      0.567
+4      Simulations      adt   5300.0  0.760        0.0       8160      0.687
+5      Simulations      rna   4248.0  0.762        0.0       7459      0.678
+6  Tonsil-S1-S2-S2      adt  16717.0  0.718        0.0      18011      0.716
+7  Tonsil-S1-S2-S2      rna  14842.0  0.731        0.0      15249      0.727
+8  Tonsil-S1-S2-S3      adt  13798.0  0.546        0.0      15342      0.552
+9  Tonsil-S1-S2-S3      rna  14842.0  0.731        0.0      15249      0.727
+
+=== H_geo ===
+eff_rank     Lymph-S1-S2-S3   dot=3.8392 topo=19.0788 n_same_dir=5
+eff_rank     Tonsil-S1-S2-S3  dot=4.2774 topo=20.8317 n_same_dir=5
+gap_s2_s3    Lymph-S1-S2-S3   dot=0.1830 topo=0.2100 n_same_dir=5
+gap_s2_s3    Tonsil-S1-S2-S3  dot=0.1164 topo=0.0876 n_same_dir=0
+rho_top3     Lymph-S1-S2-S3   dot=0.0289 topo=0.1180 n_same_dir=5
+rho_top3     Tonsil-S1-S2-S3  dot=0.0227 topo=0.0856 n_same_dir=5
+
+=== 桥接参考 RᵀR 谱 / 平均特征值 ===
+                            top1_over_mean  top3_over_mean  min_over_mean
+dataset         arm                                                      
+Lymph-S1-S2-S2  dot                 14.253           9.668          0.002
+                topola_cal           2.498           2.188          0.001
+Lymph-S1-S2-S3  dot                 13.852           9.627          0.002
+                topola_cal           2.488           2.189          0.002
+Simulations     dot                  3.496           3.036          0.045
+                topola_cal           2.986           2.393          0.585
+Tonsil-S1-S2-S2 dot                 14.823           9.092          0.002
+                topola_cal           2.339           2.040          0.000
+Tonsil-S1-S2-S3 dot                 14.949           9.108          0.001
+                topola_cal           2.477           2.114          0.000

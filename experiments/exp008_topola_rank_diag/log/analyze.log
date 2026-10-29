@@ -1,0 +1,133 @@
+  rank Simulations dot seed1234 done
+  rank Simulations dot seed2024 done
+  rank Simulations dot seed2025 done
+  rank Simulations dot seed2026 done
+  rank Simulations dot seed2027 done
+  rank Simulations topola_cal seed1234 done
+  rank Simulations topola_cal seed2024 done
+  rank Simulations topola_cal seed2025 done
+  rank Simulations topola_cal seed2026 done
+  rank Simulations topola_cal seed2027 done
+  rank Lymph-S1-S2-S2 dot seed1234 done
+  rank Lymph-S1-S2-S2 dot seed2024 done
+  rank Lymph-S1-S2-S2 dot seed2025 done
+  rank Lymph-S1-S2-S2 dot seed2026 done
+  rank Lymph-S1-S2-S2 dot seed2027 done
+  rank Lymph-S1-S2-S2 topola_cal seed1234 done
+  rank Lymph-S1-S2-S2 topola_cal seed2024 done
+  rank Lymph-S1-S2-S2 topola_cal seed2025 done
+  rank Lymph-S1-S2-S2 topola_cal seed2026 done
+  rank Lymph-S1-S2-S2 topola_cal seed2027 done
+  rank Tonsil-S1-S2-S2 dot seed1234 done
+  rank Tonsil-S1-S2-S2 dot seed2024 done
+  rank Tonsil-S1-S2-S2 dot seed2025 done
+  rank Tonsil-S1-S2-S2 dot seed2026 done
+  rank Tonsil-S1-S2-S2 dot seed2027 done
+  rank Tonsil-S1-S2-S2 topola_cal seed1234 done
+  rank Tonsil-S1-S2-S2 topola_cal seed2024 done
+  rank Tonsil-S1-S2-S2 topola_cal seed2025 done
+  rank Tonsil-S1-S2-S2 topola_cal seed2026 done
+  rank Tonsil-S1-S2-S2 topola_cal seed2027 done
+  mnn Lymph-S1-S2-S2 done
+  mnn Lymph-S1-S2-S3 done
+  mnn Simulations done
+  mnn Tonsil-S1-S2-S2 done
+  mnn Tonsil-S1-S2-S3 done
+  geometry done
+
+=== FOSCTTM 相对余弦(dot 嵌入)最好的 15 个设置,按数据集均值排序 ===
+dataset             Lymph-S1-S2-S2  Simulations  Tonsil-S1-S2-S2   worst
+score ref    alpha                                                      
+cos   none   none           0.0000       0.0000           0.0000  0.0000
+wcos  pair   100.0         -0.0233       0.0007          -0.0166  0.0007
+topo  pair   100.0         -0.0532       0.0008          -0.0339  0.0008
+wcos  all    100.0         -0.0236       0.0009          -0.0167  0.0009
+topo  all    100.0         -0.0532       0.0010          -0.0351  0.0010
+wcos  bridge 100.0         -0.0238       0.0012          -0.0167  0.0012
+topo  bridge 100.0         -0.0531       0.0012          -0.0362  0.0012
+wcos  pair   10.0          -0.1166       0.0070          -0.0513  0.0070
+      all    10.0          -0.1196       0.0088          -0.0527  0.0088
+      bridge 10.0          -0.1217       0.0106          -0.0540  0.0106
+      pair   3.0           -0.1516       0.0185           0.0192  0.0192
+      all    3.0           -0.1586       0.0226           0.0130  0.0226
+      bridge 3.0           -0.1633       0.0270           0.0074  0.0270
+             1.0           -0.1390       0.0504           0.1987  0.1987
+      all    1.0           -0.1320       0.0428           0.2159  0.2159
+
+=== MNN 标签一致率(输入特征) ===
+score                       cos   topo                                             wcos                                          
+alpha                      none 0.0001    0.1    0.3    1.0   10.0  100.0    3.0 0.0001    0.1    0.3    1.0   10.0  100.0    3.0
+dataset         modality                                                                                                         
+Lymph-S1-S2-S2  adt       0.604  0.479  0.496  0.513  0.546  0.587  0.600  0.568  0.516  0.541  0.564  0.587  0.603  0.604  0.599
+                rna       0.567  0.428  0.436  0.450  0.473  0.534  0.563  0.499  0.432  0.442  0.456  0.485  0.550  0.565  0.519
+Lymph-S1-S2-S3  adt       0.379  0.248  0.255  0.263  0.277  0.326  0.371  0.295  0.312  0.327  0.344  0.357  0.373  0.378  0.365
+                rna       0.567  0.428  0.436  0.450  0.473  0.534  0.563  0.499  0.432  0.442  0.456  0.485  0.550  0.565  0.519
+Simulations     adt       0.687  0.621  0.632  0.650  0.681  0.699  0.687  0.700  0.682  0.683  0.687  0.681  0.678  0.684  0.678
+                rna       0.678  0.535  0.567  0.610  0.653  0.668  0.676  0.670  0.633  0.636  0.634  0.632  0.648  0.672  0.634
+Tonsil-S1-S2-S2 adt       0.716  0.616  0.637  0.657  0.678  0.708  0.714  0.691  0.679  0.691  0.702  0.713  0.717  0.717  0.715
+                rna       0.727  0.625  0.651  0.674  0.692  0.722  0.733  0.703  0.673  0.691  0.711  0.727  0.730  0.729  0.732
+Tonsil-S1-S2-S3 adt       0.552  0.482  0.518  0.539  0.565  0.585  0.559  0.579  0.560  0.566  0.569  0.570  0.560  0.554  0.569
+                rna       0.727  0.625  0.651  0.674  0.692  0.722  0.733  0.703  0.673  0.691  0.711  0.727  0.730  0.729  0.732
+
+=== 几何:topola_cal − dot ===
+            dataset                  metric      dot  topola_cal  diff_mean  n_pos  n_neg
+0    Lymph-S1-S2-S2    bridge_res_mean_norm   0.0102      0.0335     0.0234      5      0
+1    Lymph-S1-S2-S2           bridge_res_ms   0.0407      0.2552     0.2145      5      0
+2    Lymph-S1-S2-S2                eff_rank   3.8973     18.9647    15.0675      5      0
+3    Lymph-S1-S2-S2               gap_s1_s2   0.1069      0.1123     0.0054      4      1
+4    Lymph-S1-S2-S2               gap_s1_s3   0.0453      0.0558     0.0105      5      0
+5    Lymph-S1-S2-S2               gap_s2_s3   0.1087      0.1458     0.0372      5      0
+6    Lymph-S1-S2-S2    gap_s2_s3_top3_share   0.7997      0.5210    -0.2787      0      5
+7    Lymph-S1-S2-S2             mod_gap_all   0.0543      0.0762     0.0220      5      0
+8    Lymph-S1-S2-S2  mod_gap_all_top3_share   0.7842      0.4622    -0.3220      0      5
+9    Lymph-S1-S2-S2                rho_rest   1.1547      0.7641    -0.3906      0      5
+10   Lymph-S1-S2-S2                rho_top3   0.0282      0.1377     0.1095      5      0
+11   Lymph-S1-S2-S2          top3_var_share   0.9024      0.2279    -0.6746      0      5
+12   Lymph-S1-S2-S3    bridge_res_mean_norm   0.0097      0.0370     0.0273      5      0
+13   Lymph-S1-S2-S3           bridge_res_ms   0.0417      0.2604     0.2187      5      0
+14   Lymph-S1-S2-S3                eff_rank   3.8392     19.0788    15.2396      5      0
+15   Lymph-S1-S2-S3               gap_s1_s2   0.1044      0.1121     0.0077      3      2
+16   Lymph-S1-S2-S3               gap_s1_s3   0.1296      0.1442     0.0146      5      0
+17   Lymph-S1-S2-S3               gap_s2_s3   0.1830      0.2100     0.0270      5      0
+18   Lymph-S1-S2-S3    gap_s2_s3_top3_share   0.8794      0.3699    -0.5095      0      5
+19   Lymph-S1-S2-S3             mod_gap_all   0.0916      0.1086     0.0171      5      0
+20   Lymph-S1-S2-S3  mod_gap_all_top3_share   0.8717      0.3475    -0.5242      0      5
+21   Lymph-S1-S2-S3                rho_rest   1.1914      0.8209    -0.3705      0      5
+22   Lymph-S1-S2-S3                rho_top3   0.0289      0.1180     0.0891      5      0
+23   Lymph-S1-S2-S3          top3_var_share   0.9039      0.2297    -0.6743      0      5
+24      Simulations    bridge_res_mean_norm   0.0534      0.0469    -0.0064      0      5
+25      Simulations           bridge_res_ms   0.3334      0.3149    -0.0184      0      5
+26      Simulations                eff_rank  20.2050     29.2258     9.0209      5      0
+27      Simulations               gap_s1_s2   0.0390      0.0428     0.0038      4      1
+28      Simulations               gap_s1_s3   0.0625      0.0538    -0.0086      0      5
+29      Simulations               gap_s2_s3   0.0773      0.0700    -0.0073      2      3
+30      Simulations    gap_s2_s3_top3_share   0.2602      0.3386     0.0784      3      2
+31      Simulations             mod_gap_all   0.0598      0.0514    -0.0083      0      5
+32      Simulations  mod_gap_all_top3_share   0.2021      0.2162     0.0140      2      3
+33      Simulations                rho_rest   0.8266      0.3959    -0.4307      0      5
+34      Simulations                rho_top3   0.1038      0.1308     0.0270      5      0
+35      Simulations          top3_var_share   0.2680      0.2161    -0.0519      0      5
+36  Tonsil-S1-S2-S2    bridge_res_mean_norm   0.0112      0.0261     0.0149      5      0
+37  Tonsil-S1-S2-S2           bridge_res_ms   0.0358      0.2089     0.1732      5      0
+38  Tonsil-S1-S2-S2                eff_rank   4.2828     20.7787    16.4959      5      0
+39  Tonsil-S1-S2-S2               gap_s1_s2   0.0186      0.0349     0.0163      5      0
+40  Tonsil-S1-S2-S2               gap_s1_s3   0.0195      0.0420     0.0225      5      0
+41  Tonsil-S1-S2-S2               gap_s2_s3   0.0205      0.0431     0.0226      5      0
+42  Tonsil-S1-S2-S2    gap_s2_s3_top3_share   0.3322      0.1155    -0.2167      1      4
+43  Tonsil-S1-S2-S2             mod_gap_all   0.0149      0.0320     0.0170      5      0
+44  Tonsil-S1-S2-S2  mod_gap_all_top3_share   0.2579      0.1474    -0.1106      1      4
+45  Tonsil-S1-S2-S2                rho_rest   1.1438      0.6188    -0.5249      0      5
+46  Tonsil-S1-S2-S2                rho_top3   0.0224      0.0839     0.0615      5      0
+47  Tonsil-S1-S2-S2          top3_var_share   0.8571      0.2036    -0.6535      0      5
+48  Tonsil-S1-S2-S3    bridge_res_mean_norm   0.0108      0.0294     0.0187      5      0
+49  Tonsil-S1-S2-S3           bridge_res_ms   0.0362      0.2121     0.1759      5      0
+50  Tonsil-S1-S2-S3                eff_rank   4.2774     20.8317    16.5543      5      0
+51  Tonsil-S1-S2-S3               gap_s1_s2   0.0177      0.0343     0.0165      5      0
+52  Tonsil-S1-S2-S3               gap_s1_s3   0.1157      0.0692    -0.0466      0      5
+53  Tonsil-S1-S2-S3               gap_s2_s3   0.1164      0.0876    -0.0288      0      5
+54  Tonsil-S1-S2-S3    gap_s2_s3_top3_share   0.8665      0.3662    -0.5003      0      5
+55  Tonsil-S1-S2-S3             mod_gap_all   0.0602      0.0507    -0.0095      0      5
+56  Tonsil-S1-S2-S3  mod_gap_all_top3_share   0.8379      0.3276    -0.5103      0      5
+57  Tonsil-S1-S2-S3                rho_rest   1.1830      0.6661    -0.5169      0      5
+58  Tonsil-S1-S2-S3                rho_top3   0.0227      0.0856     0.0630      5      0
+59  Tonsil-S1-S2-S3          top3_var_share   0.8563      0.2157    -0.6406      0      5
