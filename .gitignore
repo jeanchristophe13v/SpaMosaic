@@ -15,6 +15,9 @@ dist/
 # Local agent state
 .pi/
 
+# Papers (local only)
+/papers/*.pdf
+
 # Local datasets (demo/data and reproduce/data stay tracked)
 /data/
 
