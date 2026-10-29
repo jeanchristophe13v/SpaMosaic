@@ -71,3 +71,11 @@
 - Tonsil 的 ARI 在新 arm 下 seed 间 std 为 0.066(`topola_cal` 为 0.023,`dot` 为 0.013),配对差的符号不稳定(2/3)。
 - Lymph 的 ARI、F1、PAS 与 `topola_cal` 接近(PAS 三个切片 0.134/0.174/0.124,`topola_cal` 为 0.138/0.181/0.130)。
 - 本实验只改变了固定的标量 `k`;逐行对角异质(H2)、λ(H3)、核范围(H4)未涉及,没有对这些因素作结论。
+
+## 勘误(2026-10-29,见 exp009)
+
+- 评估时没有统一 Lymph/Tonsil 各切片的标签拼写。表中 Lymph/Tonsil 的 ARI 与 F1 是未统一标签的值(所有 arm 一样受影响);iLISI 与 Simulations 的指标不受影响。
+  本实验未保存嵌入，无法用统一标签重算。判定依据是 iLISI,所以「H_1 不成立」「无效」两条结论不受标签问题影响。
+- 预处理中的 Harmony 不确定，不同进程的预处理结果与 MNN 图不同。本实验的新 arm 与 exp005 的基线来自不同进程，配对差中含有预处理随机性。
+  同一配置跨进程重跑(exp009 对 exp005)的 5 seed 均值差:iLISI 为 −0.005 到 +0.004,Simulations ARI 为 −0.000 到 +0.005;逐 run 的 Simulations ARI 差最大约 0.011。
+  相对 topola_cal 的 iLISI 配对差(+0.004/−0.003)落在这个范围内，与「无效」一致。Simulations ARI 的 −0.013(0/5)只略大于逐 run 跨进程差，结论偏弱。

@@ -1,0 +1,11 @@
+[setup] framework.CL_loss -> StableCL_loss (logsumexp)
+逐切片:原始与统一标签的类数                         n_raw  n_unified
+dataset         scope                   
+Lymph-S1-S2-S3  slice1   10.0       10.0
+                slice2   10.0       10.0
+                slice3   10.0       10.0
+Tonsil-S1-S2-S3 slice1    4.0        4.0
+                slice2    4.0        4.0
+                slice3    4.0        4.0
+逐切片 ARI |raw - unified| 最大 = 0.000e+00
+由保存聚类重算 ARI 与 csv 的最大差 = 8.327e-17

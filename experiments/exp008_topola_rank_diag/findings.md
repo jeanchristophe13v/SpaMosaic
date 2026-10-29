@@ -116,3 +116,16 @@ Simulations 的变化幅度小得多:有效秩为 20.2→29.2,桥接残差均方
   但 slice2–slice3 质心间距在两个 S1-S2-S3 数据集上方向相反,所以 iLISI 的下降不能只用质心间距的变化解释。
 - topola_cal 嵌入的 iLISI 在 4 个真实数据集上都低于 dot,但 Tonsil-S1-S2-S2 上的 Hit@1/MRR 高于 dot。
   可见 iLISI 与逐点跨模态对应这两个指标在这里并不同向。
+
+## 勘误(2026-10-29,见 exp009)
+
+- 评估时没有统一 Lymph/Tonsil 各切片的标签拼写。Lymph S3 为 `medulla Cords`,S2 为 `medulla vessel`;Tonsil S3 为 `connective and epithelial tissue`、`germinal Center`,与 S1 拼写不同。
+- 第 1 部分(FOSCTTM/MRR/Hit@1)与第 3 部分(嵌入几何)不用标签，不受影响。
+- 第 2 部分的标签一致率与随机基线受影响，S1-S2-S3 的 adt(S1↔S3)两行影响最大。exp009 用统一标签重算 SpaMosaic 实际 MNN 的一致率:
+  - Lymph adt S1↔S3:0.393 → 0.598(随机 0.105 → 0.221);Lymph rna S1↔S2:0.594 → 0.598。
+  - Tonsil adt S1↔S3:0.546 → 0.677(随机 0.395 → 0.419);Tonsil rna S1↔S2 不受影响(0.730)。
+  - 统一标签后，两种模态的 MNN 一致率相近，第 2 部分中 ADT S1↔S3 一致率偏低的现象来自拼写差异。
+  - exp009 的 MNN 图来自另一次 Harmony 结果(Tonsil RNA 为 14819 对，本实验为 14842 对),用原标签算得的值与本实验相差 ≤0.001。
+- H_mnn 比较的是 TopoLa 与余弦互近邻对同一套标签的一致率，但两者选出的配对不同，拼写错误的影响可能不同。
+  S1↔S3 adt 两个组合的「不成立/成立」需用统一标签重算第 2 部分才能确认，本次未重算。
+- 自检中 iLISI 与 exp005 的比较跨进程进行，含 Harmony 预处理随机性(见 exp009);所报差值(−0.006 到 +0.002)在该随机性范围内。

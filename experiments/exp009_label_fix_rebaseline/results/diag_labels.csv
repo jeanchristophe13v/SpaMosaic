@@ -1,0 +1,10 @@
+dataset,section,n_cells,n_nan,n_raw_labels,n_labels,raw_labels,labels
+Simulations,S1,1296,0,5,5,0.0;1.0;2.0;3.0;4.0,0.0;1.0;2.0;3.0;4.0
+Simulations,S2,1296,0,5,5,0.0;1.0;2.0;3.0;4.0,0.0;1.0;2.0;3.0;4.0
+Simulations,S3,1296,0,5,5,0.0;1.0;2.0;3.0;4.0,0.0;1.0;2.0;3.0;4.0
+Lymph-S1-S2-S3,S1,3484,0,10,10,capsule;cortex;follicle;hilum;medulla cords;medulla sinuses;medulla vessels;pericapsular adipose tissue;subcapsular sinus;trabeculae,Capsule;Cortex;Follicle;Hilum;Medulla cords;Medulla sinuses;Medulla vessels;Pericapsular adipose tissue;Subcapsular sinus;Trabeculae
+Lymph-S1-S2-S3,S2,3359,0,10,10,capsule;cortex;follicle;hilum;medulla cords;medulla sinuses;medulla vessel;pericapsular adipose tissue;subcapsular sinus;trabeculae,Capsule;Cortex;Follicle;Hilum;Medulla cords;Medulla sinuses;Medulla vessels;Pericapsular adipose tissue;Subcapsular sinus;Trabeculae
+Lymph-S1-S2-S3,S3,3408,0,10,10,capsule;cortex;follicle;hilum;medulla Cords;medulla sinuses;medulla vessels;pericapsular adipose tissue;subcapsular sinus;trabeculae,Capsule;Cortex;Follicle;Hilum;Medulla cords;Medulla sinuses;Medulla vessels;Pericapsular adipose tissue;Subcapsular sinus;Trabeculae
+Tonsil-S1-S2-S3,S1,4337,11,4,4,connective & epithelial tissue;germinal center;lymphoid follicle;tonsillar parenchyma,Connective and epithelial tissue;Germinal Center;Lymphoid follicle;Tonsillar parenchyma
+Tonsil-S1-S2-S3,S2,4519,1,4,4,connective & epithelial tissue;germinal center;lymphoid follicle;tonsillar parenchyma,Connective and epithelial tissue;Germinal Center;Lymphoid follicle;Tonsillar parenchyma
+Tonsil-S1-S2-S3,S3,4521,61,4,4,connective and epithelial tissue;germinal Center;lymphoid follicle;tonsillar parenchyma,Connective and epithelial tissue;Germinal Center;Lymphoid follicle;Tonsillar parenchyma

@@ -43,3 +43,14 @@ Tonsil(0.075/0.077/0.067 vs 0.096/0.096/0.088)、Simulations(0.014/0.036/0.047 v
 - Simulations 的 iLISI 无变化(−0.002,不显著),因此 iLISI 下降只出现在两个真实数据集上。
 - 本实验未测量 iLISI 下降是整合变差还是指标对簇结构不敏感,没有对机制作结论。
 - 训练耗时:topola_cal 约为 dot 的 5–10 倍(见 `all_metrics.csv` 的 `train_seconds`)。
+
+## 勘误(2026-10-29,见 exp009)
+
+- 评估时没有按上游 `labd` 映射统一 Lymph/Tonsil 各切片的标签拼写(如 `medulla vessel`/`medulla vessels`、`germinal Center`/`germinal center`)。
+  受影响的是 Lymph/Tonsil 的 ARI(all) 与 F1;逐切片 ARI、iLISI、PAS、CHAOS 与 Simulations 的全部指标不受影响。
+- exp009 用统一标签重跑同一配置(dot → topola_cal,配对差，正/负):
+  - Lymph:ARI(all) 0.2202 → 0.1832,−0.037(0/5);F1 0.4568 → 0.4753,+0.019(4/1)。
+  - Tonsil:ARI(all) 0.1389 → 0.1889,+0.050(5/0);F1 0.6770 → 0.6992,+0.022(5/0)。
+- 三条判定结论不变。变化最大的是 F1 绝对值(Lymph 约 0.31 → 0.46,Tonsil 约 0.23 → 0.68);Tonsil 的 F1 配对差由 +0.003 变为 +0.022。
+- 预处理中的 Harmony 不确定，逐 run 数值不能跨进程复现。同一配置下,exp009 与本实验的逐 run 差：逐切片 ARI 最大 0.070,iLISI 最大 0.021;5 seed 均值差都在本实验 seed 间 std 的 1.44 倍以内。
+  本实验每个数据集只预处理一次，两个 arm 共用，所以配对比较不受影响;但 seed 间 std 不包含预处理随机性。
