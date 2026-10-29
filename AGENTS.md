@@ -9,7 +9,6 @@ SpaMosaic:空间多组学 mosaic 整合工具(对比学习 + GNN)。conda env `s
 | `spamosaic/` | 算法实现:framework(主类)、loss、architectures/(网络)、topola、metrics(评估指标) | **主要开发区** |
 | `scripts/` | 入口脚本:run_demo.py、run_loss_experiments.py | 实验 driver 模板 |
 | `experiments/` | 实验记录:`index.csv`(编号索引)、各 `expNNN/`(含 README、scripts、results、log、findings、summary);历史记录在 `archived/` | 按工作流写入 |
-| `tests/` | test_smoke.py | 改 `spamosaic/` 后必跑 |
 | `notes/` | 个人笔记与方案文档 | — |
 | `examples/` | 自己的 demo 运行记录(notebook + 输出) | — |
 | `reproduce/` | 论文复现分支快照(baseline 方法、指标代码原版) | **只读** |
